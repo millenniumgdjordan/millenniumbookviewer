@@ -18,6 +18,10 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script>
             app.initialize;
+            var $window = $(window);
+            $window.bind("orientationchange", function () {
+	           $window.scrollTop(1);
+            });
         </script>
         <title>Millennium Events Assets Viewer</title>
     </head>
@@ -120,6 +124,9 @@
             });
             $( document ).on("pageshow", "#groupselect", function() {
                 $( "body>[data-role='panel']" ).panel().enhanceWithin();
+                windowheight = $( window ).height();
+                var forloginwindow = (windowheight - 450)/2;
+                $("#groupselect_wrapper").css("margin-top", forloginwindow);
                 if (window.localStorage.getItem('userToken')) {
                 buildGroupPage();
                 }
