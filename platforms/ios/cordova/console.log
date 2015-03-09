@@ -1,0 +1,15 @@
+2015-02-20 09:39:29.885 Millennium Book Viewer[22251:649589] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mcarson/Library/Developer/CoreSimulator/Devices/088CF784-8DC8-4205-95C1-6720073B5CA4/data/Containers/Data/Application/A1C72A32-7DDD-48EB-A5F5-D566758C6ECA/Library/Cookies/Cookies.binarycookies
+2015-02-20 09:39:30.460 Millennium Book Viewer[22251:649589] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-20 09:39:30.460 Millennium Book Viewer[22251:649589] Multi-tasking -> Device: YES, App: YES
+2015-02-20 09:39:30.516 Millennium Book Viewer[22251:649589] Unlimited access to network resources
+2015-02-20 09:39:30.523 Millennium Book Viewer[22251:649589] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-20 09:39:31.711 Millennium Book Viewer[22251:649589] Using a WKWebView
+2015-02-20 09:39:33.285 Millennium Book Viewer[22251:649589] Started http daemon: http://192.168.10.186:12344/ 
+2015-02-20 09:39:57.021 Millennium Book Viewer[22251:652709] Terminating since there is no system app.

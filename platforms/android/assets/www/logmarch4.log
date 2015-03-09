@@ -1,0 +1,300 @@
+[36m[phonegap][39m executing 'cordova -d build ios'...
+Generating config.xml from defaults for platform "ios"
+
+Calling plugman.prepare for platform "ios"
+
+Preparing ios project
+
+Processing configuration changes for plugins.
+
+Iterating over installed plugins: [ 'com.telerik.plugins.wkwebview' ]
+
+Writing out cordova_plugins.js...
+
+Wrote out iOS Bundle Identifier to "com.millenniumgd.bookviewer"
+
+Wrote out iOS Bundle Version to "1.1.02"
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-60.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-60.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-60@2x.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-60@2x.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-60@3x.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-60@3x.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-76.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-76.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-76@2x.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-76@2x.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-small.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-small.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-small@2x.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-small@2x.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-40.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-40.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-40@2x.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-40@2x.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon@2x.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon@2x.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-72.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-72.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-72@2x.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-72@2x.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-50.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-50.png
+
+Copying icon from /Users/mcarson/Sandbox/megabook/www/res/icon/ios/icon-50@2x.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/icons/icon-50@2x.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default~iphone.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default~iphone.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default@2x~iphone.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default@2x~iphone.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default-Portrait~ipad.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Portrait~ipad.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default-Portrait@2x~ipad.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Portrait@2x~ipad.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default-Landscape~ipad.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Landscape~ipad.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default-Landscape@2x~ipad.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Landscape@2x~ipad.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default-568h@2x~iphone.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default-568h@2x~iphone.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default-667h.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default-667h.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default-736h.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default-736h.png
+
+Copying splash from /Users/mcarson/Sandbox/megabook/www/res/screen/ios/Default-Landscape-736h.png to /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Landscape-736h.png
+
+Set TARGETED_DEVICE_FAMILY to "1,2".
+
+iOS Product Name has not changed (still "Millennium Book Viewer")
+
+Running command: /Users/mcarson/Sandbox/megabook/platforms/ios/cordova/build 
+
+Build settings from command line:
+
+    ARCHS = i386
+    CONFIGURATION_BUILD_DIR = /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator
+
+    SDKROOT = iphonesimulator8.1
+    SHARED_PRECOMPS_DIR = /Users/mcarson/Sandbox/megabook/platforms/ios/build/sharedpch
+    VALID_ARCHS = i386
+
+
+=== BUILD TARGET CordovaLib OF PROJECT CordovaLib WITH CONFIGURATION Debug ===
+
+
+Check dependencies
+
+2015-03-02 16:55:43.141 xcodebuild[56610:5a03]  DeveloperPortal: Using pre-existing current store at URL (file:///Users/mcarson/Library/Developer/Xcode/DeveloperPortal%206.1.1.db).
+
+
+
+=== BUILD TARGET Millennium Book Viewer OF PROJECT Millennium Book Viewer WITH CONFIGURATION Debug ===
+
+
+Check dependencies
+
+
+
+PhaseScriptExecution Copy\ www\ directory build/Millennium\ Book\ Viewer.build/Debug-iphonesimulator/Millennium\ Book\ Viewer.build/Script-304B58A110DAC018002A0835.sh
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    /bin/sh -c \"/Users/mcarson/Sandbox/megabook/platforms/ios/build/Millennium\ Book\ Viewer.build/Debug-iphonesimulator/Millennium\ Book\ Viewer.build/Script-304B58A110DAC018002A0835.sh\"
+
+
+
+real	0m2.330s
+
+user	0m0.473s
+
+sys	0m0.731s
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-40@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-40@2x.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-40@2x.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-76.png build/emulator/Millennium\ Book\ Viewer.app/icon-76.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-76.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-72.png build/emulator/Millennium\ Book\ Viewer.app/icon-72.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-72.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-736h.png build/emulator/Millennium\ Book\ Viewer.app/Default-736h.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-736h.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon.png build/emulator/Millennium\ Book\ Viewer.app/icon.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon@2x.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon@2x.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-50.png build/emulator/Millennium\ Book\ Viewer.app/icon-50.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-50.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-60@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-60@2x.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-60@2x.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-small.png build/emulator/Millennium\ Book\ Viewer.app/icon-small.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-small.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Millennium\ Book\ Viewer.app/Default-Landscape@2x~ipad.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Landscape@2x~ipad.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Landscape~ipad.png build/emulator/Millennium\ Book\ Viewer.app/Default-Landscape~ipad.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Landscape~ipad.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Millennium\ Book\ Viewer.app/Default-Portrait@2x~ipad.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Portrait@2x~ipad.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-small@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-small@2x.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-small@2x.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Portrait~ipad.png build/emulator/Millennium\ Book\ Viewer.app/Default-Portrait~ipad.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Portrait~ipad.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-40.png build/emulator/Millennium\ Book\ Viewer.app/icon-40.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-40.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-667h.png build/emulator/Millennium\ Book\ Viewer.app/Default-667h.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-667h.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default@2x~iphone.png build/emulator/Millennium\ Book\ Viewer.app/Default@2x~iphone.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default@2x~iphone.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-60.png build/emulator/Millennium\ Book\ Viewer.app/icon-60.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-60.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default~iphone.png build/emulator/Millennium\ Book\ Viewer.app/Default~iphone.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default~iphone.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-60@3x.png build/emulator/Millennium\ Book\ Viewer.app/icon-60@3x.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-60@3x.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-568h@2x~iphone.png build/emulator/Millennium\ Book\ Viewer.app/Default-568h@2x~iphone.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-568h@2x~iphone.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Landscape-736h.png build/emulator/Millennium\ Book\ Viewer.app/Default-Landscape-736h.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Landscape-736h.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-50@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-50@2x.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-50@2x.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-76@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-76@2x.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-76@2x.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-72@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-72@2x.png
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-72@2x.png /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+ProcessInfoPlistFile build/emulator/Millennium\ Book\ Viewer.app/Info.plist Millennium\ Book\ Viewer/Millennium\ Book\ Viewer-Info.plist
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    builtin-infoPlistUtility /Users/mcarson/Sandbox/megabook/platforms/ios/Millennium\ Book\ Viewer/Millennium\ Book\ Viewer-Info.plist -genpkginfo /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/mcarson/Sandbox/megabook/platforms/ios/build/Millennium\ Book\ Viewer.build/Debug-iphonesimulator/Millennium\ Book\ Viewer.build/MainViewController-PartialInfo.plist -o /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app/Info.plist
+
+
+
+GenerateDSYMFile build/emulator/Millennium\ Book\ Viewer.app.dSYM build/emulator/Millennium\ Book\ Viewer.app/Millennium\ Book\ Viewer
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app/Millennium\ Book\ Viewer -o /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app.dSYM
+
+
+
+Touch build/emulator/Millennium\ Book\ Viewer.app
+    cd /Users/mcarson/Sandbox/megabook/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mcarson/npm/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0/bin:/Users/mcarson/.rvm/gems/ruby-2.2.0@global/bin:/Users/mcarson/.rvm/rubies/ruby-2.2.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mcarson/node_modules/.bin:/usr/local/Cellar/android-sdk/24.0.2/tools:/usr/local/Cellar/android-sdk/24.0.2/platform-tools:/Users/mcarson/.rvm/bin"
+    /usr/bin/touch -c /Users/mcarson/Sandbox/megabook/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+** BUILD SUCCEEDED **
+
+
+Command finished with error code 0: /Users/mcarson/Sandbox/megabook/platforms/ios/cordova/build 
+
+[36m[phonegap][39m completed 'cordova -d build ios'

@@ -1,0 +1,3 @@
+[36m[phonegap][39m executing 'cordova -d build ios'...
+Generating config.xml from defaults for platform "ios"
+

@@ -1,0 +1,53 @@
+{
+    "appTitle" : "Millennium Book Viewer",
+    "version" : "1.0.0",
+    "buyinggroup" : [
+        {
+            "id" : "mega",
+            "realname": "Mega Buying Group",
+            "belongsto" : ["all", "mega"],
+            "year" : [
+                {   
+                    "id" : "2014",
+                    "quarter" : [
+                        {
+                            "id" : "Q1",
+                            "event" : [
+                                {
+                                    "id" : "king4queen",
+                                    "eventcode" : " ",
+                                    "title" : "King For Queen",
+                                    "campaign" : [
+                                        {
+                                            "campaigntype" : "Direct Mail",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "king4queen_front",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "king4queen_back",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "campaigntype" : "TV Spot",
+                                             "videoUrls" : [
+                                                {
+                                                    "fileName" : "king4queen.mp4",
+                                                    "fileType" : "mp4"
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                            
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "credits":[]
+        }
+    ]
+}
