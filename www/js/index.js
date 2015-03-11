@@ -17,6 +17,8 @@
  * under the License.
  */
 
+
+//this is for the featherlite branch!!!!!
 function buildPanel () {
     var li="";
     //container for $li to be added
