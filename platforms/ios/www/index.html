@@ -16,8 +16,13 @@
         <script src="js/jquery.mobile-1.4.5.js"></script>     
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="phonegap.js"></script>
         <script>
             app.initialize;
+            function openURL(urlString){
+                myURL = encodeURI(urlString);
+                window.open(myURL, '_blank');
+            }
             var $window = $(window);
             $window.bind("orientationchange", function () {
 	           $window.scrollTop(1);
