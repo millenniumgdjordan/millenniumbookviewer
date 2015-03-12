@@ -174,8 +174,8 @@ function generateCampaignPage(i, j, k, l) {
                     swipertemplate = "notbroadsheet";
                 }
                dynamichtml += '<div class="devicewrap centered"><div class="device"><a class="arrow-left arrow-left-' + campaign.keyid + '" href="#"></a><a class="arrow-right arrow-right-' + campaign.keyid + '" href="#"></a><div class="swiper-container swiper-thumb swiper-' + campaign.keyid + '"><div class="swiper-wrapper">';
-                $.each(campaign.imageUrls, function (i, imageURLS) {
-                    dynamichtml += '<div class="swiper-slide"><a href="' + campaignimagepath +  campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension + '" data-ajax="false" class="swipebox" rel="' + campaign.keyid + '"><img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid + '/thumbs_' + imageURLS.fileName + imageURLS.fileExtension +'" /></a></div>';
+                $.each(campaign.imageUrls, function (ii, imageURLS) {
+                    dynamichtml += '<div class="swiper-slide"><a href="' + campaignimagepath +  campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension + '" data-ajax="false" class="swipebox" rel="' + i + l + campaign.keyid + '"><img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid + '/thumbs_' + imageURLS.fileName + imageURLS.fileExtension +'" /></a></div>';
                 });
                 dynamichtml += '</div></div></div><div class="titleinfo"><h2>' + campaign.campaigntype + '</h2><p>(' + campaign.details + '\" as low as ' + campaign.pricing + ')</p></div></div>';
             }

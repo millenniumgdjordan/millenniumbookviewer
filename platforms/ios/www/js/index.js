@@ -175,7 +175,7 @@ function generateCampaignPage(i, j, k, l) {
                 }
                dynamichtml += '<div class="devicewrap centered"><div class="device"><a class="arrow-left arrow-left-' + campaign.keyid + '" href="#"></a><a class="arrow-right arrow-right-' + campaign.keyid + '" href="#"></a><div class="swiper-container swiper-thumb swiper-' + campaign.keyid + '"><div class="swiper-wrapper">';
                 $.each(campaign.imageUrls, function (i, imageURLS) {
-                    dynamichtml += '<div class="swiper-slide"><a href="#popup_'+ imageURLS.fileName +'" data-rel="popup" data-position-to="window" data-transition="fade"><img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid + '/thumbs_' + imageURLS.fileName + imageURLS.fileExtension +'" /></a></div>';
+                    dynamichtml += '<div class="swiper-slide"><a href="' + campaignimagepath +  campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension + '" data-ajax="false" class="swipebox" rel="' i + campaign.keyid + '"><img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid + '/thumbs_' + imageURLS.fileName + imageURLS.fileExtension +'" /></a></div>';
                 });
                 dynamichtml += '</div></div></div><div class="titleinfo"><h2>' + campaign.campaigntype + '</h2><p>(' + campaign.details + '\" as low as ' + campaign.pricing + ')</p></div></div>';
             }
@@ -191,11 +191,6 @@ function generateCampaignPage(i, j, k, l) {
                 }
                 dynamichtml += 'Your browser does not support the video tag.</video></div><div class="titleinfo"><h2>TV</h2><P>(As low as $195.00/30:)</P></div>';
             }
-            $.each(campaign.imageUrls, function (i, imageURLS) {
-                dynamichtml += '<div data-role="popup" id="popup_' + imageURLS.fileName + '" data-overlay-theme="b" data-theme="d" data-corners="false"><a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="' + campaignimagepath + '/' + campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension + '" alt="' + imageURLS.fileName + '" /></div>';
-            });
-          
-            
         });
         dynamichtml += '</div><script type="text/javascript">$( document ).on("pageshow", "#campaignpage", function() {';
         $.each(json.buyinggroup[i].year[j].quarter[k].event[l].campaign, function (m, campaign) {
@@ -203,7 +198,7 @@ function generateCampaignPage(i, j, k, l) {
                 dynamichtml += 'var swiper_' + campaign.keyid + ' = new Swiper(".swiper-' + campaign.keyid + '",{mode:"horizontal",loop: false, spaceBetween: 20, nextButton: ".arrow-right-' + campaign.keyid + '",prevButton: ".arrow-left-' + campaign.keyid + '"});';
             }
         });
-        dynamichtml += '});</script></div>';
+        dynamichtml += '$(".swipebox").swipebox();});</script></div>';
         $(dynamichtml).appendTo($.mobile.pageContainer);
         //$.mobile.changePage("#campaignpage", {transition: "slide" });
         $( ":mobile-pagecontainer" ).pagecontainer( "change", "#campaignpage", { transition: "slide" } );

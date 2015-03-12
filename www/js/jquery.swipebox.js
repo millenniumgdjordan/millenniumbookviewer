@@ -3,7 +3,6 @@
 ;( function ( window, document, $, undefined ) {
 
 	$.swipebox = function( elem, options ) {
-
 		// Default options
 		var ui,
 			defaults = {
@@ -591,7 +590,6 @@
 			 * Set current slide
 			 */
 			setSlide : function ( index, isFirst ) {
-
 				isFirst = isFirst || false;
 
 				var slider = $( '#swipebox-slider' );
