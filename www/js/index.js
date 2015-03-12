@@ -195,7 +195,7 @@ function generateCampaignPage(i, j, k, l) {
                 dynamichtml += 'Your browser does not support the video tag.</video></div><div class="titleinfo"><h2>TV</h2><P>(As low as $195.00/30:)</P></div>';
             }
             $.each(campaign.imageUrls, function (i, imageURLS) {
-                dynamichtml += '<div class="featherlight" id="popup_' + imageURLS.fileName + '"><a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="' + campaignimagepath + '/' + campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension + '" alt="' + imageURLS.fileName + '" /></div>';
+                dynamichtml += '<div class="featherlight" id="popup_' + imageURLS.fileName + '"><img src="' + campaignimagepath + '/' + campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension + '" alt="' + imageURLS.fileName + '" /></div>';
             });
           
             
