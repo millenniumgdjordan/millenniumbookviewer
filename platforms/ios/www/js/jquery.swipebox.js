@@ -3,12 +3,11 @@
 ;( function ( window, document, $, undefined ) {
 
 	$.swipebox = function( elem, options ) {
-
 		// Default options
 		var ui,
 			defaults = {
 				useCSS : true,
-				useSVG : true,
+				useSVG : false,
 				initialIndexOnArray : 0,
 				removeBarsOnMobile : true,
 				hideCloseButtonOnMobile : false,
@@ -591,7 +590,6 @@
 			 * Set current slide
 			 */
 			setSlide : function ( index, isFirst ) {
-
 				isFirst = isFirst || false;
 
 				var slider = $( '#swipebox-slider' );
