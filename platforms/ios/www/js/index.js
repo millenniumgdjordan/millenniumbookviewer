@@ -175,7 +175,7 @@ function generateCampaignPage(i, j, k, l) {
                 }
                dynamichtml += '<div class="devicewrap centered"><div class="device"><a class="arrow-left arrow-left-' + campaign.keyid + '" href="#"></a><a class="arrow-right arrow-right-' + campaign.keyid + '" href="#"></a><div class="swiper-container swiper-thumb swiper-' + campaign.keyid + '"><div class="swiper-wrapper">';
                 $.each(campaign.imageUrls, function (i, imageURLS) {
-                    dynamichtml += '<div class="swiper-slide"><a href="#popup_'+ imageURLS.fileName +'" data-rel="popup" data-position-to="window" data-transition="fade"><img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension +'" /></a></div>';
+                    dynamichtml += '<div class="swiper-slide"><a href="#popup_'+ imageURLS.fileName +'" data-rel="popup" data-position-to="window" data-transition="fade"><img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid + '/thumbs_' + imageURLS.fileName + imageURLS.fileExtension +'" /></a></div>';
                 });
                 dynamichtml += '</div></div></div><div class="titleinfo"><h2>' + campaign.campaigntype + '</h2><p>(' + campaign.details + '\" as low as ' + campaign.pricing + ')</p></div></div>';
             }
