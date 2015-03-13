@@ -17,7 +17,6 @@
         <script src="js/jquery.mobile-1.4.5.js"></script>     
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script src="phonegap.js"></script>
         <script>
             app.initialize;
             function openURL(urlString){
@@ -39,6 +38,7 @@
             <ul data-role="listview" id="panellist">
                 <li><a href="#groupselect">Group Select</a></li>
                 <li><a href="#credits">Credits</a></li>
+                <li><a href="#" onClick="openURL('http://www.google.com')">Google</a></li>
                 <li data-icon="power"><a href="#" onclick="logout()">Logout</a></li>
             </ul>
         </div>
