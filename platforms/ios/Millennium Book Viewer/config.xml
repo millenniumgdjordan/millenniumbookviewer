@@ -22,6 +22,9 @@
     <feature name="WKWebViewPolyfill">
         <param name="ios-package" value="WKWebViewPolyfill" />
     </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
     <icon height="180" src="www/res/icon/ios/icon-60@3x.png" width="180" />
     <icon height="60" src="www/res/icon/ios/icon-60.png" width="60" />
     <icon height="120" src="www/res/icon/ios/icon-60@2x.png" width="120" />
@@ -75,7 +78,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="com.jaeger.html5video" version="1.2.1" />
@@ -86,5 +89,5 @@
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
     <gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
-    <access browserOnly="true" origin="*" subdomains="true" />
+    <access origin="*" subdomains="true" />
 </widget>

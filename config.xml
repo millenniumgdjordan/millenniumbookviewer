@@ -39,7 +39,8 @@
     <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.globalization" />-->
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <!--gap:plugin name="org.apache.cordova.inappbrowser" /-->
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <!--gap:plugin name="org.apache.cordova.network-information" /-->
     <gap:plugin name="org.apache.cordova.splashscreen" />
@@ -78,9 +79,6 @@
     <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
-    <feature name="InAppBrowser">
-        <param name="ios-package" value="CDVInAppBrowser" />
-    </feature>
     <gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
     <platform name="ios">
         <!-- images are determined by width and height. The following are supported -->
@@ -97,5 +95,5 @@
     </platform>
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <!--access uri="*" subdomains="true" /-->
-    <access origin="*" subdomains="true" browserOnly="true"/>
+    <access origin="*" subdomains="true"/>
 </widget>

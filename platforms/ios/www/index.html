@@ -19,10 +19,6 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script>
             app.initialize;
-            function openURL(urlString){
-                myURL = encodeURI(urlString);
-                window.open(myURL, '_blank');
-            }
             var $window = $(window);
             $window.bind("orientationchange", function () {
 	           $window.scrollTop(1);
@@ -38,7 +34,8 @@
             <ul data-role="listview" id="panellist">
                 <li><a href="#groupselect">Group Select</a></li>
                 <li><a href="#credits">Credits</a></li>
-                <li><a href="#" onClick="openURL('http://www.google.com')">Google</a></li>
+                <li><a href="#" onclick="window.open('http://www.tempursealy.com','_blank','location=yes','closebuttoncaption=Return');">Tempur Website</a></li>
+                <li><a href="#" onclick="window.open('http://www.millenniumgd.net','_blank','location=yes','closebuttoncaption=Return');">Millennium Website</a></li>
                 <li data-icon="power"><a href="#" onclick="logout()">Logout</a></li>
             </ul>
         </div>
@@ -114,6 +111,7 @@
                 </div>
             </div>
         </div>
+      
         <script type="text/javascript">
             var windowheight;
             $( document ).on("pageshow", "#login", function() {
@@ -128,6 +126,7 @@
                 $("#login_wrapper").css("margin-top", forloginwindow);
                 $("#groupselect_wrapper").css("margin-top", forloginwindow);
             });
+            
             $( document ).on("pageshow", "#groupselect", function() {
                 $( "body>[data-role='panel']" ).panel().enhanceWithin();
                 windowheight = $( window ).height();
