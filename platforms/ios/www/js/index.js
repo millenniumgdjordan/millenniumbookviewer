@@ -34,20 +34,16 @@ function buildPanel () {
 function submitForm() {
     var uname = $("[name='username']").val();
     var _pass = $("[name='password']").val();
-
-    window.localStorage.setItem("username",uname);
-    window.localStorage['pass'] = _pass;
-    var userlist = ["MEGA", "BRANDSOURCE", "NATIONWIDE", "ALL", "TEMPURPEDIC"];
-    var usercheck = userlist.indexOf(uname.toUpperCase());
-    if (usercheck > -1 && _pass == "demo") {
+    Parse.User.logIn(uname.toLowerCase(), _pass, {
+      success: function(user) {
         userToken = uname.toLowerCase();
         window.localStorage['userToken'] = userToken;
         $("#groupselect_data").empty();
         //$.mobile.changePage("#groupselect", {transition: "flip" } );
         $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "flip" } );
-        
-    }
-    else {
+      },
+      error: function(user, error) {
+        // The login failed. Check error to see why.
         $("#login_wrapper").animate({left: '-=10px'}, 100);
         var i;
         for (i = 0; i < 3; i++) {
@@ -55,7 +51,8 @@ function submitForm() {
             $("#login_wrapper").animate({left: '-=20px'}, 100);
         }
         $("#login_wrapper").animate({left: '+=10px'}, 100);
-    }
+      }
+    });
 }
 
 function buildGroupPage() {

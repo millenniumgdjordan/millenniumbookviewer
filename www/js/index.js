@@ -34,20 +34,22 @@ function buildPanel () {
 function submitForm() {
     var uname = $("[name='username']").val();
     var _pass = $("[name='password']").val();
-
-    window.localStorage.setItem("username",uname);
-    window.localStorage['pass'] = _pass;
-    var userlist = ["MEGA", "BRANDSOURCE", "NATIONWIDE", "ALL", "TEMPURPEDIC"];
-    var usercheck = userlist.indexOf(uname.toUpperCase());
-    if (usercheck > -1 && _pass == "demo") {
-        userToken = uname.toLowerCase();
+    Parse.User.logIn(uname.toLowerCase(), _pass, {
+      success: function(user) {
+        var belongsTo = user.get('belongsTo');
+        window.localStorage['userBelongsTo'] = belongsTo;
+        var userToken = user.get('username');
         window.localStorage['userToken'] = userToken;
         $("#groupselect_data").empty();
         //$.mobile.changePage("#groupselect", {transition: "flip" } );
-        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "flip" } );
-        
-    }
-    else {
+        if (belongsTo.length == 1) { 
+            generateGroupPage(belongsTo[0]);
+        } else {
+            $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "flip" } );
+        }
+      },
+      error: function(user, error) {
+        // The login failed. Check error to see why.
         $("#login_wrapper").animate({left: '-=10px'}, 100);
         var i;
         for (i = 0; i < 3; i++) {
@@ -55,7 +57,8 @@ function submitForm() {
             $("#login_wrapper").animate({left: '-=20px'}, 100);
         }
         $("#login_wrapper").animate({left: '+=10px'}, 100);
-    }
+      }
+    });
 }
 
 function buildGroupPage() {
@@ -64,10 +67,9 @@ function buildGroupPage() {
     groupPageHTML += '<div class="ui-grid-a">';
     $.getJSON( "js/feed.json", function( json ) {
         $.each(json.buyinggroup, function (j, eventID) {
-            var belongsto = (eventID.belongsto);
+            var belongsto = window.localStorage.getItem('userBelongsTo');
             var imagepathroot = "images/groups/" + eventID.keyid + "/";
-            var usertoken = window.localStorage.getItem('userToken');
-            var usercheck = belongsto.indexOf(usertoken);
+            var usercheck = belongsto.indexOf(eventID.keyid);
             if (usercheck > -1) {
                 groupPageHTML += '<div class="uiblock centered"><a href="#" onclick="generateGroupPage(\'' + eventID.keyid + '\')"><img src="' + imagepathroot + 'logo_90px.png" width=90 /></a></div>';
             }
