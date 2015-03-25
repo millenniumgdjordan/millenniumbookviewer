@@ -32,7 +32,7 @@ function buildPanel () {
 };
 
 function submitForm() {
-    var uname = $("[name='username']").val();
+    var uname = $("[name='username']").val().trim();
     var _pass = $("[name='password']").val();
     Parse.User.logIn(uname.toLowerCase(), _pass, {
       success: function(user) {
@@ -41,7 +41,6 @@ function submitForm() {
         var userToken = user.get('username');
         window.localStorage['userToken'] = userToken;
         $("#groupselect_data").empty();
-        //$.mobile.changePage("#groupselect", {transition: "flip" } );
         if (belongsTo.length == 1) { 
             generateGroupPage(belongsTo[0]);
         } else {
@@ -150,7 +149,6 @@ function generateGroupPage(groupname) {
             }
         });
         //switch to Main Book Display
-        //$.mobile.changePage(groupnameid, {transition: "slide" });
         $( ":mobile-pagecontainer" ).pagecontainer( "change", groupnameid, { transition: "flip" } );
     });
 
@@ -195,6 +193,7 @@ function generateCampaignPage(i, j, k, l) {
             }
         });
         dynamichtml += '</div><script type="text/javascript">$( document ).on("pageshow", "#campaignpage", function() {';
+        //This section builds the swiper
         $.each(json.buyinggroup[i].year[j].quarter[k].event[l].campaign, function (m, campaign) {
             if (campaign.keyid != "tv") {
                 dynamichtml += 'var swiper_' + campaign.keyid + ' = new Swiper(".swiper-' + campaign.keyid + '",{mode:"horizontal",loop: false, spaceBetween: 20, nextButton: ".arrow-right-' + campaign.keyid + '",prevButton: ".arrow-left-' + campaign.keyid + '"});';
@@ -202,7 +201,6 @@ function generateCampaignPage(i, j, k, l) {
         });
         dynamichtml += '$(".swipebox").swipebox();});</script></div>';
         $(dynamichtml).appendTo($.mobile.pageContainer);
-        //$.mobile.changePage("#campaignpage", {transition: "slide" });
         $( ":mobile-pagecontainer" ).pagecontainer( "change", "#campaignpage", { transition: "slide" } );
     });
 }

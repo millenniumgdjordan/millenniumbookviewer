@@ -32,15 +32,21 @@ function buildPanel () {
 };
 
 function submitForm() {
-    var uname = $("[name='username']").val();
+    var uname = $("[name='username']").val().trim();
     var _pass = $("[name='password']").val();
     Parse.User.logIn(uname.toLowerCase(), _pass, {
       success: function(user) {
-        userToken = uname.toLowerCase();
+        var belongsTo = user.get('belongsTo');
+        window.localStorage['userBelongsTo'] = belongsTo;
+        var userToken = user.get('username');
         window.localStorage['userToken'] = userToken;
         $("#groupselect_data").empty();
         //$.mobile.changePage("#groupselect", {transition: "flip" } );
-        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "flip" } );
+        if (belongsTo.length == 1) { 
+            generateGroupPage(belongsTo[0]);
+        } else {
+            $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "flip" } );
+        }
       },
       error: function(user, error) {
         // The login failed. Check error to see why.
@@ -61,10 +67,9 @@ function buildGroupPage() {
     groupPageHTML += '<div class="ui-grid-a">';
     $.getJSON( "js/feed.json", function( json ) {
         $.each(json.buyinggroup, function (j, eventID) {
-            var belongsto = (eventID.belongsto);
+            var belongsto = window.localStorage.getItem('userBelongsTo');
             var imagepathroot = "images/groups/" + eventID.keyid + "/";
-            var usertoken = window.localStorage.getItem('userToken');
-            var usercheck = belongsto.indexOf(usertoken);
+            var usercheck = belongsto.indexOf(eventID.keyid);
             if (usercheck > -1) {
                 groupPageHTML += '<div class="uiblock centered"><a href="#" onclick="generateGroupPage(\'' + eventID.keyid + '\')"><img src="' + imagepathroot + 'logo_90px.png" width=90 /></a></div>';
             }
