@@ -14,10 +14,12 @@
         <link rel="stylesheet" href="css/swipebox.css">
         <script src="js/swiper.js"></script>
         <script src="js/jquery-1.7.1.min.js"></script>
-        <script src="js/jquery.mobile-1.4.5.js"></script>     
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>     
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+        <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
+        <script src="js/send-email.js"></script>
         <script>
             app.initialize;
             Parse.initialize("VxRvU6L0uCEv0V3UMs15HZ6WL5uhYd2TcjGvUlwb", "npuwG9hyVypuD6Alw6MmuMS4odBUPqFt5CWHigCv");
@@ -48,13 +50,14 @@
                     <img src="images/logo-ts.png" width="85%" />
                 </div>
                 <img src="images/bluepillows300px.jpg" />
-                <div id="login_form">
+                <div class="login_form">
                     <label class="ui-hidden-accessible">Username</label><input name="username" type="text" placeholder="Username">
                     <input id="userpass" name="password" type="password" placeholder="Password">
                     <a id = "login_btn" href="#" data-role="none" data-theme="j" onClick="submitForm();"><span>Login</span></a>
                 </div>
                 <div id="login_bottom">
-                    <img src="images/poweredby@2x.png" width="48px" height="48px" />
+                    <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#passwordreset", { transition: "flip" } );'>I forgot my password.</a>
+                    <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#newusersignup", { transition: "flip" } );'>I need an account.</a>
                 </div>
             </div>
         </div>
@@ -73,8 +76,54 @@
                 </div>
             </div>
         </div>
+        <div data-role="page" id="passwordreset">
+            <div data-role="content" id="passwordreset_wrapper" class="centered">
+                <div id="login_title">
+                    <img src="images/logo-ts.png" width="85%" />
+                    <img src="images/bluepillows300px.jpg" />
+                </div>
+                <div class="login_form">
+                    <label class="ui-hidden-accessible">Email Address:</label><input name="emailaddress" type="text" placeholder="Email Address">
+                    <div id="buttons">
+                        <div id="buttons_left">
+                            <a id = "cancel_btn" href="#" data-role="none" data-theme="j" data-rel="back"><span>Cancel</span></a>
+                        </div>
+                        <div id="buttons_spacer"></div>
+                        <div id="buttons_right">
+                            <a id = "reset_btn" href="#" data-role="none" data-theme="j" onClick='Parse.User.requestPasswordReset($("[name=\"emailaddress\"]").val().trim().toLowerCase(), { success: function(){alert("Password reset instructions have been sent to your email. If you do not receive them, please check your junk folder."); $( ":mobile-pagecontainer" ).pagecontainer( "change", "#login", { transition: "fade" } ); }, error: function(error) {$("#reset_status_msg").html("Error: " + error.code + " " + error.message).css({"color":"red"});}});'><span>Reset</span></a>
+                        </div>
+                    </div>
+                    <p> Enter your email address and we'll send you an email with instructions to reset your password.</p><br />
+                    <p id="reset_status_msg"></p>
+                </div>
+            </div>
+        </div>
+        <div data-role="page" id="newusersignup">
+            <div data-role="content" id="newusersignup_wrapper" class="centered">
+                <div id="login_title">
+                    <img src="images/logo-ts.png" width="85%" />
+                </div>
+                <div class="login_form">
+                    <label class="ui-hidden-accessible">First Name:</label><input class = "signupinput" name="signup_firstname" type="text" placeholder="First Name">
+                    <label class="ui-hidden-accessible">Last Name:</label><input class = "signupinput" name="signup_lastname" type="text" placeholder="Last Name">
+                    <label class="ui-hidden-accessible">Email:</label><input class = "signupinput" name="signup_email" type="text" placeholder="Email Address">
+                    <label class="ui-hidden-accessible">Verify Email:</label><input class = "signupinput" name="signup_verifyemail" type="text" placeholder="Reenter Email Address">
+                    <label class="ui-hidden-accessible">Buying Group:</label><input class = "signupinput" name="signup_groupname" type="text" placeholder="Name of Buying Group">
+                    <div id="buttons">
+                        <div id="buttons_left">
+                            <a id = "cancel_btn" href="#" data-role="none" data-theme="j" data-rel="back"><span>Cancel</span></a>
+                        </div>
+                        <div id="buttons_spacer"></div>
+                        <div id="buttons_right">
+                            <a id = "reset_btn" href="#" data-role="none" data-theme="j" onClick="sendtheMail(); return false;"><span>Sign Up</span></a>
+                        </div>
+                    </div>
+                    <p id="response"></p>
+                </div>
+            </div>
+        </div>
         <div data-role="page" id="credits">
-            <div data-role="header" class="headerwithnav ui-bar" data-position="fixed" data-id="myheader">
+            <div data-role="header" class="headerwithnav ui-bar"  data-id="myheader">
                 <div id="navleft">
                     <div id="navleft_wrapper">
                         <div id="navleft_icon">
@@ -144,6 +193,11 @@
                     $( ":mobile-pagecontainer" ).pagecontainer( "change", "#login", { transition: "fade" } );
                 }
                 
+            });
+            $( document ).on("pageshow", "#newusersignup", function() {
+                windowheight = $( window ).height();
+                var forsignupwindow = (windowheight - 450)/2;
+                $("#newusersignup_wrapper").css("margin-top", forsignupwindow);
             });
         </script>	
         <script type="text/javascript" src="js/jquery.swipebox.js"></script>

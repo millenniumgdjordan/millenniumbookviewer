@@ -321,7 +321,13 @@
                                             "campaigntype" : "TV Spot",
                                             "details": "",
                                             "pricing": "",
-                                            "imageUrls" : []
+                                            "imageUrls" : [],
+                                            "videoUrls" : [
+                                                {
+                                                    "fileName" : "memorial1.mp4",
+                                                    "fileType" : "mp4"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }, {
@@ -464,7 +470,13 @@
                                             "campaigntype" : "TV Spot",
                                             "details": "",
                                             "pricing": "",
-                                            "imageUrls" : []
+                                            "imageUrls" : [],
+                                            "videoUrls" : [
+                                                {
+                                                    "fileName" : "closeout.mp4",
+                                                    "fileType" : "mp4"
+                                                }
+                                            ]
                                         }
                                         
                                     ]
@@ -576,7 +588,13 @@
                                             "campaigntype" : "TV Spot",
                                             "details": "",
                                             "pricing": "",
-                                            "imageUrls" : []
+                                            "imageUrls" : [],
+                                            "videoUrls" : [
+                                                {
+                                                    "fileName" : "coupon.mp4",
+                                                    "fileType" : "mp4"
+                                                }
+                                            ]
                                         }  
                                     ]        
                                 }
@@ -1679,7 +1697,13 @@
                                             "campaigntype" : "TV Spot",
                                             "details": "",
                                             "pricing": "",
-                                            "imageUrls" : []
+                                            "imageUrls" : [],
+                                            "videoUrls" : [
+                                                {
+                                                    "fileName" : "memorial2.mp4",
+                                                    "fileType" : "mp4"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }, {
