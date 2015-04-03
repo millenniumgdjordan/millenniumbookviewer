@@ -16,21 +16,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
-function buildPanel () {
-    var li="";
-    //container for $li to be added
-    li += '<div class="centered chooserhead"><h4>Events</h4></div><li><a href="#millenniumhome">Home</a></li>';
-    $.each(feed.event, function (i, eventID) {
-        //get data from feed and add to li variable
-        li += '<li><a href="#' + eventID.id + '">' + eventID.title+ '</a></li>';
-    });
-    li += '<li><a href="#credits">Credits</a></li>';
-    //append list to the ul
-    $("#panellist").append(li);
-    $( "body>[data-role='panel']" ).panel().enhanceWithin();
-};
-
 function submitForm() {
     var uname = $("[name='username']").val().trim();
     var _pass = $("[name='password']").val();
@@ -138,9 +123,13 @@ function generateGroupPage(groupname) {
                     dynamichtml += '<div id="quarterwrapper" data-role="tabs"> <div id="quarternav" data-role="navbar"> <ul> <li><a href="#q1" data-theme="b" data-ajax="false" class="ui-btn-active">Q1</a></li> <li><a href="#q2" data-theme="b" data-ajax="false">Q2</a></li> <li><a href="#q3" data-theme="b" data-ajax="false">Q3</a></li> <li><a href="#q4" data-theme="b" data-ajax="false">Q4</a></li> </ul> </div>';
                     $.each(eventyear.quarter, function (k, quarter) {
                         dynamichtml += '<div id="' + quarter.keyid + '" class="ui-content" >';
-                        $.each(quarter.event, function (l, eventview) {
-                            dynamichtml += '<div class="onethird"><a href="#" onclick="generateCampaignPage(' + i + ',' + j + ',' + k + ',' + l + ')"><img class="eventicon" src="images/groups/' + buyinggroup.keyid + '/' + eventyear.keyid + '/' + quarter.keyid + '/' + eventview.keyid + '/eventicon300px@2x.png" /></a><div class="onethirdcaption"><p>' + eventview.title + '</p></div></div>';
-                        });
+                        if (quarter.event.length < 1) {
+                            dynamichtml += '<h2>It looks like there\'s nothing here this quarter. <br /> Have you tried other quarters?</h2>';
+                        } else {
+                            $.each(quarter.event, function (l, eventview) {
+                                dynamichtml += '<div class="onethird"><a href="#" onclick="generateCampaignPage(' + i + ',' + j + ',' + k + ',' + l + ')"><img class="eventicon" src="images/groups/' + buyinggroup.keyid + '/' + eventyear.keyid + '/' + quarter.keyid + '/' + eventview.keyid + '/eventicon300px@2x.png" /></a><div class="onethirdcaption"><p>' + eventview.title + '</p></div></div>';
+                            });
+                        }
                         dynamichtml += '</div>';
                     });
                 });

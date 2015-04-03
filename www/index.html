@@ -71,9 +71,7 @@
                 <div class="centered">
                     <a id="logout_btn" href="#" data-role="none" data-theme="j" onClick="logout();"><span>Logout</span></a>
                 </div>
-                <div id="login_bottom">
-                    <img src="images/poweredby@2x.png" width="48px" height="48px" />
-                </div>
+               
             </div>
         </div>
         <div data-role="page" id="passwordreset">
@@ -163,6 +161,9 @@
                 </div>
             </div>
         </div>
+        <div id="loadingDiv">
+        
+        </div>
       
         <script type="text/javascript">
             var windowheight;
@@ -199,6 +200,14 @@
                 var forsignupwindow = (windowheight - 450)/2;
                 $("#newusersignup_wrapper").css("margin-top", forsignupwindow);
             });
+            var $loading = $('#loadingDiv').hide();
+            $(document)
+              .ajaxStart(function () {
+                $loading.show();
+              })
+              .ajaxStop(function () {
+                $loading.hide();
+              });
         </script>	
         <script type="text/javascript" src="js/jquery.swipebox.js"></script>
     </body>

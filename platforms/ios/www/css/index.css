@@ -369,7 +369,7 @@ p {
 }
 
 
-#login_wrapper, #groupselect_wrapper {
+#login_wrapper, #groupselect_wrapper, #passwordreset_wrapper, #newusersignup_wrapper {
     background-color: rgba(255, 255, 255, .8);
     max-width: 300px;
     height: 440px;
@@ -383,7 +383,7 @@ p {
     position: relative;
 }
 
-#login_wrapper input {
+#login_wrapper input, #passwordreset_wrapper input, #newusersignup_wrapper input {
     height: 45px;
 }
 
@@ -391,7 +391,7 @@ p {
     padding-bottom: 10px;
 }
 
-#login_form {
+.login_form {
     width: 280px;
     margin: 10px;
 }
@@ -412,11 +412,44 @@ p {
     border-style: solid;
 }
 
+#reset_btn, #cancel_btn{
+    background-color: rgb(35, 111, 174);
+    color: white;
+    text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #373737 /*{a-bup-shadow-color}*/;
+    height: 45px;
+    width: 100%;
+    border-color:	 		#ddd /*{a-bup-border}*/;
+    text-align: center;
+    border-radius: .3125em;
+    font-size: 1.5em;
+	line-height: 45px;
+	/*font-family: sans-serif /*{global-font-family}*/;
+    font-family:'SourceSansPro', Helvetica, Arial, sans-serif;
+    border-width: 1px;
+    border-style: solid;
+    margin: auto;
+}
 #logout_btn {
     width: 93%;
     margin: 10px;
     position: absolute;
     bottom: 70px;
+}
+
+#buttons {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+#buttons_left, #buttons_right {
+    width: 48%;
+    float: left;
+}
+#buttons_spacer {
+    min-width: 4%;
+    height: 1px;
+    float: left;
 }
 
 #chooser #logout_btn {
@@ -428,17 +461,23 @@ p {
     background-color:#373737;
 }
 
-#login_bottom {
-    position: absolute;
-    bottom: 10px;
-    left: 126px;
+#login_bottom a {
+    text-shadow: none;
+    font-size: 1.2em;
+    line-height: 1.8em;
+   
 }
 
 .uiblock {
     height: 90px;
 }
 
-#groupselect_wrapper p {
+#response {
+    color: red!important;
+    font-size: 1.3em;
+}
+
+#groupselect_wrapper p, #passwordreset_wrapper p, #newusersignup_wrapper p {
     color: #373737;
     text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #fff /*{a-bup-shadow-color}*/;
 }
@@ -503,3 +542,12 @@ p {
 .eventicon:active {
     opacity: .5;
 }
+#loadingDiv {
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    background-image: url("../images/loader.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
