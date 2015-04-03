@@ -211,9 +211,11 @@
 						if ( window.orientation === 0 ) {
 							width = winWidth;
 							height = winHeight;
+                            positionLightbox(); //ADDED THIS FUNCTION TO COMBAT JQUERYMOBILE BUG
 						} else if ( window.orientation === 90 || window.orientation === -90 ) {
 							width = winHeight;
 							height = winWidth;
+                            positionLightbox(); //ADDED THIS FUNCTION TO COMBAT JQUERYMOBILE BUG
 						}
 					}, false );
 
