@@ -139,6 +139,11 @@ function generateGroupPage(groupname) {
         });
         //switch to Main Book Display
         $( ":mobile-pagecontainer" ).pagecontainer( "change", groupnameid, { transition: "flip" } );
+        //push popup
+        var hasshowntoday = false;
+        if (!hasshowntoday) {
+            setTimeout(function() {popupShow(groupnameid);},1000);
+        }
     });
 
 }
@@ -199,4 +204,45 @@ function generateCampaignPage(i, j, k, l) {
 function positionLightbox () {
  var windowTop = $window.scrollTop();
 $("#swipebox-overlay").css("top",windowTop);
+}
+
+function popupShow(groupname) {
+    windowheight = $( window ).height();
+    var adcontainerheight = windowheight * .85;
+    var adcontainerwidth = adcontainerheight / 1.77;
+    var adOptions = { 
+        closeContent: '<div class="popup_close"><button>Close</button></div>', 
+        backOpacity: 0.8, 
+        height: adcontainerheight, 
+        width: adcontainerwidth 
+    }
+    var popup = new $.Popup(adOptions);
+    var groupid = "#" + groupname;
+    getAdInfo().done(
+        function(result) {
+            var theUrl = result.get("linkedUrl");
+            popup.open('<div class="adcontainer"><img class="ad" src="' + result.get("adFile").url() + '" /><div class="invisiblelink" onclick="window.open(\'' + theUrl + '\',\'_blank\',\'location=yes\',\'closebuttoncaption=Return\');"</div>', 'html');
+        }
+    ).fail(
+        function() {
+            console.log('Error!');
+        }
+    );
+}
+
+function getAdInfo () {
+    var D = $.Deferred();
+    var pulledAd = Parse.Object.extend("PopupAd");
+    var query = new Parse.Query(pulledAd);
+    query.equalTo("belongsTo", "all");
+    query.find({
+        success: function(results) {
+            var rand = results[Math.floor(Math.random() * results.length)];
+            D.resolve(rand);
+        },
+        failure: function(object, error) {
+            D.reject();
+        }
+    });
+    return D.promise();
 }

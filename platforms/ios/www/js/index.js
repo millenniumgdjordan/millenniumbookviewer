@@ -139,6 +139,8 @@ function generateGroupPage(groupname) {
         });
         //switch to Main Book Display
         $( ":mobile-pagecontainer" ).pagecontainer( "change", groupnameid, { transition: "flip" } );
+        //push popup
+        popupShow(groupnameid);
     });
 
 }
@@ -199,4 +201,11 @@ function generateCampaignPage(i, j, k, l) {
 function positionLightbox () {
  var windowTop = $window.scrollTop();
 $("#swipebox-overlay").css("top",windowTop);
+}
+
+function popupShow(groupname) {
+    var hasshowntoday = true;
+    if (!hasshowntoday) {
+        document.getElementById("myDialog").showModal();
+    }
 }

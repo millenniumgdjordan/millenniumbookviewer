@@ -20,6 +20,7 @@
         <script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
         <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
         <script src="js/send-email.js"></script>
+        <script src="js/jquery.popup.min.js"></script>
         <script>
             app.initialize;
             Parse.initialize("VxRvU6L0uCEv0V3UMs15HZ6WL5uhYd2TcjGvUlwb", "npuwG9hyVypuD6Alw6MmuMS4odBUPqFt5CWHigCv");
@@ -164,6 +165,7 @@
         <div id="loadingDiv">
         
         </div>
+        
       
         <script type="text/javascript">
             var windowheight;
@@ -181,6 +183,7 @@
             });
             
             $( document ).on("pageshow", "#groupselect", function() {
+                $("#myDialog").popup();
                 $( "body>[data-role='panel']" ).panel().enhanceWithin();
                 windowheight = $( window ).height();
                 var forloginwindow = (windowheight - 450)/2;
