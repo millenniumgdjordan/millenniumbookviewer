@@ -3148,7 +3148,13 @@
                                             "campaigntype" : "TV Spot",
                                             "details": "",
                                             "pricing": "",
-                                            "imageUrls" : []
+                                            "imageUrls" : [],
+                                            "videoUrls" : [
+                                                {
+                                                    "fileName" : "king4queen.mp4",
+                                                    "fileType" : "mp4"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }, {
