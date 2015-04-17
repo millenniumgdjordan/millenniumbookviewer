@@ -2981,10 +2981,167 @@
                             "keyid" : "q2",
                             "event" : [
                                 {
+                                    "keyid" : "96hour",
+                                    "eventcode" : " ",
+                                    "title" : "96 Hour Event",
+                                    "campaign" : [
+                                        {
+                                            "keyid": "ss",
+                                            "campaigntype" : "Single",
+                                            "details": "10 X 11",
+                                            "pricing": "$6.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "ss_96hour_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "ss_96hour_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "dm",
+                                            "campaigntype" : "Direct Mail",
+                                            "details": "11 X 14",
+                                            "pricing": "$0.39",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "dm_96hour_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "dm_96hour_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "4p",
+                                            "campaigntype" : "Four Page Tab",
+                                            "details": "21 X 11",
+                                            "pricing": "$11.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "4p_96hour_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "4p_96hour_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "keyid": "tv",
+                                            "campaigntype" : "TV Spot",
+                                            "details": "",
+                                            "pricing": "",
+                                            "imageUrls" : []
+                                        }
+                                    ]          
+                                },
+                                {
+                                    "keyid" : "bettersleep",
+                                    "eventcode" : " ",
+                                    "title" : "Better Sleep Event",
+                                    "campaign" : [
+                                        {
+                                            "keyid": "ss",
+                                            "campaigntype" : "Single",
+                                            "details": "10 X 11",
+                                            "pricing": "$6.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "ss_bettersleep_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "ss_bettersleep_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "dm",
+                                            "campaigntype" : "Direct Mail",
+                                            "details": "11 X 14",
+                                            "pricing": "$0.39",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "dm_bettersleep_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "dm_bettersleep_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "4p",
+                                            "campaigntype" : "Four Page Tab",
+                                            "details": "21 X 11",
+                                            "pricing": "$11.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "4p_bettersleep_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "4p_bettersleep_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "keyid": "tv",
+                                            "campaigntype" : "TV Spot",
+                                            "details": "",
+                                            "pricing": "",
+                                            "imageUrls" : []
+                                        }
+                                    ]          
+                                },
+                                {
                                     "keyid" : "breeze",
                                     "eventcode" : " ",
                                     "title" : "Summer Breeze",
                                     "campaign" : [
+                                        {
+                                            "keyid": "ss",
+                                            "campaigntype" : "Single",
+                                            "details": "10 X 11",
+                                            "pricing": "$6.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "ss_breeze_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "ss_breeze_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "dm",
+                                            "campaigntype" : "Direct Mail",
+                                            "details": "11 X 14",
+                                            "pricing": "$0.39",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "dm_breeze_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "dm_breeze_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "4p",
+                                            "campaigntype" : "Four Page Tab",
+                                            "details": "21 X 11",
+                                            "pricing": "$11.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "4p_breeze_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "4p_breeze_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, 
                                         {
                                             "keyid": "tv",
                                             "campaigntype" : "TV Spot",
@@ -2999,11 +3156,283 @@
                                             ]
                                         }
                                     ]          
-                                }, {
-                                    "keyid" : "memorialday",
+                                },
+                                {
+                                    "keyid" : "coupon",
                                     "eventcode" : " ",
-                                    "title" : "Memorial Day",
+                                    "title" : "Coupon Sale",
                                     "campaign" : [
+                                        {
+                                            "keyid": "ss",
+                                            "campaigntype" : "Single",
+                                            "details": "10 X 11",
+                                            "pricing": "$6.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "ss_coupon2_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "ss_coupon2_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "dm",
+                                            "campaigntype" : "Direct Mail",
+                                            "details": "11 X 14",
+                                            "pricing": "$0.39",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "dm_coupon2_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "dm_coupon2_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "4p",
+                                            "campaigntype" : "Four Page Tab",
+                                            "details": "21 X 11",
+                                            "pricing": "$11.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "4p_coupon2_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "4p_coupon2_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "keyid": "tv",
+                                            "campaigntype" : "TV Spot",
+                                            "details": "",
+                                            "pricing": "",
+                                            "imageUrls" : []
+                                        }
+                                    ]          
+                                },
+                                {
+                                    "keyid" : "freepillows",
+                                    "eventcode" : " ",
+                                    "title" : "Free Pillows",
+                                    "campaign" : [
+                                        {
+                                            "keyid": "ss",
+                                            "campaigntype" : "Single",
+                                            "details": "10 X 11",
+                                            "pricing": "$6.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "ss_freepillows_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "ss_freepillows_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "dm",
+                                            "campaigntype" : "Direct Mail",
+                                            "details": "11 X 14",
+                                            "pricing": "$0.39",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "dm_freepillows_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "dm_freepillows_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "4p",
+                                            "campaigntype" : "Four Page Tab",
+                                            "details": "21 X 11",
+                                            "pricing": "$11.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "4p_freepillows_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "4p_freepillows_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "keyid": "tv",
+                                            "campaigntype" : "TV Spot",
+                                            "details": "",
+                                            "pricing": "",
+                                            "imageUrls" : []
+                                        }
+                                    ]          
+                                },
+                                {
+                                    "keyid" : "july4",
+                                    "eventcode" : " ",
+                                    "title" : "July 4th Event",
+                                    "campaign" : [
+                                        {
+                                            "keyid": "ss",
+                                            "campaigntype" : "Single",
+                                            "details": "10 X 11",
+                                            "pricing": "$6.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "ss_july4_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "ss_july4_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "dm",
+                                            "campaigntype" : "Direct Mail",
+                                            "details": "11 X 14",
+                                            "pricing": "$0.39",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "dm_july4_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "dm_july4_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "4p",
+                                            "campaigntype" : "Four Page Tab",
+                                            "details": "21 X 11",
+                                            "pricing": "$11.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "4p_july4_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "4p_july4_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "keyid": "tv",
+                                            "campaigntype" : "TV Spot",
+                                            "details": "",
+                                            "pricing": "",
+                                            "imageUrls" : []
+                                        }
+                                    ]          
+                                },
+                                {
+                                    "keyid" : "memorial1",
+                                    "eventcode" : " ",
+                                    "title" : "Memorial Day(1)",
+                                    "campaign" : [
+                                        {
+                                            "keyid": "ss",
+                                            "campaigntype" : "Single",
+                                            "details": "10 X 11",
+                                            "pricing": "$6.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "ss_memorial1_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "ss_memorial1_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "dm",
+                                            "campaigntype" : "Direct Mail",
+                                            "details": "11 X 14",
+                                            "pricing": "$0.39",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "dm_memorial1_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "dm_memorial1_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "4p",
+                                            "campaigntype" : "Four Page Tab",
+                                            "details": "21 X 11",
+                                            "pricing": "$11.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "4p_memorial1_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "4p_memorial1_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "keyid": "tv",
+                                            "campaigntype" : "TV Spot",
+                                            "details": "",
+                                            "pricing": "",
+                                            "imageUrls" : []
+                                        }
+                                    ]          
+                                },
+                                {
+                                    "keyid" : "memorial2",
+                                    "eventcode" : " ",
+                                    "title" : "Memorial Day(2)",
+                                    "campaign" : [
+                                        {
+                                            "keyid": "ss",
+                                            "campaigntype" : "Single",
+                                            "details": "10 X 11",
+                                            "pricing": "$6.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "ss_memorial2_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "ss_memorial2_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "dm",
+                                            "campaigntype" : "Direct Mail",
+                                            "details": "11 X 14",
+                                            "pricing": "$0.39",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "dm_memorial2_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "dm_memorial2_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        }, {
+                                            "keyid": "4p",
+                                            "campaigntype" : "Four Page Tab",
+                                            "details": "21 X 11",
+                                            "pricing": "$11.95/M",
+                                            "imageUrls" : [
+                                                {
+                                                    "fileName" : "4p_memorial2_1",
+                                                    "fileExtension" : ".jpg"
+                                                }, {
+                                                    "fileName" : "4p_memorial2_2",
+                                                    "fileExtension" : ".jpg"
+                                                }
+                                            ]
+                                        },
                                         {
                                             "keyid": "tv",
                                             "campaigntype" : "TV Spot",
@@ -3012,7 +3441,7 @@
                                             "imageUrls" : [],
                                             "videoUrls" : [
                                                 {
-                                                    "fileName" : "memorialday.mp4",
+                                                    "fileName" : "memorial2.mp4",
                                                     "fileType" : "mp4"
                                                 }
                                             ]
@@ -3093,7 +3522,13 @@
                                             "campaigntype" : "TV Spot",
                                             "details": "",
                                             "pricing": "",
-                                            "imageUrls" : []
+                                            "imageUrls" : [],
+                                            "videoUrls" : [
+                                                {
+                                                    "fileName" : "memorial1.mp4",
+                                                    "fileType" : "mp4"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }, {
@@ -3672,7 +4107,13 @@
                                             "campaigntype" : "TV Spot",
                                             "details": "",
                                             "pricing": "",
-                                            "imageUrls" : []
+                                            "imageUrls" : [],
+                                            "videoUrls" : [
+                                                {
+                                                    "fileName" : "memorial1.mp4",
+                                                    "fileType" : "mp4"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }, {
