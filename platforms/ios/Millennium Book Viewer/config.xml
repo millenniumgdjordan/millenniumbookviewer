@@ -78,7 +78,6 @@
     <preference name="DisallowOverscroll" value="true" />
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.device-orientation" />
-    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="com.jaeger.html5video" version="1.2.1" />
