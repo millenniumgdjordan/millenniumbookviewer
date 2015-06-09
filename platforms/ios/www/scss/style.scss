@@ -1,0 +1,7 @@
+/* This is the master SCSS file 
+ * from which all other SCSS files will be called.
+ * Examples taken from http://sass-lang.com/guide
+ */
+
+@import '_mixins.scss';
+@import '_main.scss';
