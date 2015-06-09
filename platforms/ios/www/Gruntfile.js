@@ -15,7 +15,16 @@ module.exports = function(grunt) {
 		    files: {
 		      'css/index.css': 'scss/style.scss'
 		    }
-		  }
+		  },
+          dist: {
+              options: {
+                  style: 'compressed',
+                  sourcemap: 'none',
+              },
+              files: {
+                  'css/index-min.css': 'scss/style.scss'
+              }
+          }
 		},
 
 	  	/**

@@ -1,8 +1,11 @@
 /* 
  * Variables and optional mixins, written in SCSS.
- * Examples taken from http://sass-lang.com/guide
+ * Examples taken from http://sass-lang.com/guides
  *
  */
-
-$font-stack:    Helvetica, sans-serif;
-$primary-color: red;
+$font-stack: 'SourceSansPro', Helvetica, Arial, sans-serif;
+$lightest-blue: rgb(169, 188, 213);
+$medium-blue: rgb(102, 153, 204);
+$darker-blue: rgb( 51, 102, 154);
+$darkest-blue: rgb( 38, 56, 77);
+$gray-blue: rgb( 61, 69, 78);

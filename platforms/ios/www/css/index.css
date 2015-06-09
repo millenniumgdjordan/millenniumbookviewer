@@ -4,7 +4,7 @@
  */
 /* 
  * Variables and optional mixins, written in SCSS.
- * Examples taken from http://sass-lang.com/guide
+ * Examples taken from http://sass-lang.com/guides
  *
  */
 /*
@@ -32,6 +32,7 @@
 
 @font-face {
   font-family: SourceSansPro;
+  font-weight: normal;
   src: url("../fonts/SourceSansPro-Regular.otf") format("opentype");
 }
 @font-face {
@@ -64,26 +65,27 @@ body {
 a {
   text-decoration: none;
   text-decoration-color: #fff;
-  color: #fff;
+  color: #33669a;
   display: block;
 }
 
 h1 {
   margin-bottom: 0px;
-  font-family: 'SourceSansPro', Helvetica, Arial, sans-serif;
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
 h2 {
   margin-bottom: 0px;
-  font-family: 'SourceSansPro', Helvetica, Arial, sans-serif;
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 2em;
   text-overflow: ellipsis;
 }
 
 p {
-  font-family: 'SourceSansPro-Light','SourceSansPro', Helvetica, Arial, sans-serif;
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
 }
 
 /* Portrait layout (default) */
@@ -388,6 +390,10 @@ p {
 
 #login_wrapper input, #passwordreset_wrapper input, #newusersignup_wrapper input {
   height: 45px;
+  border: 1px solid #6699cc;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
 #useruser {
@@ -445,16 +451,15 @@ p {
   }
 }
 #login_btn, #logout_btn {
-  background-color: #236fae;
+  background-color: #33669a;
   color: white;
-  text-shadow: 0 1px 0 #373737;
   height: 45px;
-  border-color: #ddd;
+  border-color: #a9bcd5;
   text-align: center;
-  border-radius: .3125em;
+  border-radius: .5em;
   font-size: 1.5em;
   line-height: 45px;
-  /*font-family: sans-serif /*{global-font-family}*/
+  font-weight: normal;
   font-family: 'SourceSansPro', Helvetica, Arial, sans-serif;
   border-width: 1px;
   border-style: solid;
@@ -462,9 +467,8 @@ p {
 }
 
 #reset_btn, #cancel_btn {
-  background-color: #236fae;
+  background-color: #33669a;
   color: white;
-  text-shadow: 0 1px 0 #373737;
   height: 45px;
   width: 100%;
   border-color: #ddd;
