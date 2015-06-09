@@ -34,13 +34,13 @@ function submitForm() {
       },
       error: function(user, error) {
         // The login failed. Check error to see why.
-        $("#login_wrapper").animate({left: '-=10px'}, 100);
+        $("#login_form_container").animate({left: '-=10px'}, 100);
         var i;
         for (i = 0; i < 3; i++) {
-            $("#login_wrapper").animate({left: '+=20px'}, 100);
-            $("#login_wrapper").animate({left: '-=20px'}, 100);
+            $("#login_form_container").animate({left: '+=20px'}, 100);
+            $("#login_form_container").animate({left: '-=20px'}, 100);
         }
-        $("#login_wrapper").animate({left: '+=10px'}, 100);
+        $("#login_form_container").animate({left: '+=10px'}, 100);
       }
     });
 }

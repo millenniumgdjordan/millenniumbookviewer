@@ -33,7 +33,7 @@
         <title>Millennium Events Assets Viewer</title>
     </head>
     <body>
-        <div data-role='panel' data-position-fixed="true" id="chooser" data-corners="false" data-theme="b" data-position="right" data-display="push">
+        <div data-role='panel' data-position-fixed="true" id="chooser" data-corners="false" data-theme="j" data-position="right" data-display="push">
             <div class="centered chooserhead">
                 <img src="images/logo-ts.png" width="100%" />
             </div>
@@ -50,11 +50,12 @@
                 <div id="login_title">
                     <img src="images/logo-ts.png" width="85%" />
                 </div>
-                <img src="images/bluepillows300px.jpg" />
-                <div class="login_form">
-                    <label class="ui-hidden-accessible">Username</label><input name="username" type="text" placeholder="Username">
-                    <input id="userpass" name="password" type="password" placeholder="Password">
-                    <a id = "login_btn" href="#" data-role="none" data-theme="j" onClick="submitForm();"><span>Login</span></a>
+                <div id = 'login_form_container'>
+                    <div class="login_form">
+                        <label class="ui-hidden-accessible">Username</label><input id="useruser" name="username" type="text" placeholder="Username">
+                        <input id="userpass" name="password" type="password" placeholder="Password">
+                        <a id = "login_btn" href="#" data-role="none" data-theme="j" onClick="submitForm();"><span>Login</span></a>
+                    </div>
                 </div>
                 <div id="login_bottom">
                     <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#passwordreset", { transition: "flip" } );'>I forgot my password.</a>
@@ -79,7 +80,6 @@
             <div data-role="content" id="passwordreset_wrapper" class="centered">
                 <div id="login_title">
                     <img src="images/logo-ts.png" width="85%" />
-                    <img src="images/bluepillows300px.jpg" />
                 </div>
                 <div class="login_form">
                     <label class="ui-hidden-accessible">Email Address:</label><input name="emailaddress" type="text" placeholder="Email Address">
@@ -176,18 +176,18 @@
                     $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "fade" } );
                     
                 }
-                windowheight = $( window ).height();
+                /*windowheight = $( window ).height();
                 var forloginwindow = (windowheight - 450)/2;
                 $("#login_wrapper").css("margin-top", forloginwindow);
-                $("#groupselect_wrapper").css("margin-top", forloginwindow);
+                $("#groupselect_wrapper").css("margin-top", forloginwindow);*/
             });
             
             $( document ).on("pageshow", "#groupselect", function() {
                 $("#myDialog").popup();
                 $( "body>[data-role='panel']" ).panel().enhanceWithin();
                 windowheight = $( window ).height();
-                var forloginwindow = (windowheight - 450)/2;
-                $("#groupselect_wrapper").css("margin-top", forloginwindow);
+                /*var forloginwindow = (windowheight - 450)/2;
+                $("#groupselect_wrapper").css("margin-top", forloginwindow);*/
                 if (window.localStorage.getItem('userToken')) {
                 buildGroupPage();
                 }
@@ -199,9 +199,9 @@
                 
             });
             $( document ).on("pageshow", "#newusersignup", function() {
-                windowheight = $( window ).height();
+                /*windowheight = $( window ).height();
                 var forsignupwindow = (windowheight - 450)/2;
-                $("#newusersignup_wrapper").css("margin-top", forsignupwindow);
+                $("#newusersignup_wrapper").css("margin-top", forsignupwindow);*/
             });
             var $loading = $('#loadingDiv').hide();
             $(document)
