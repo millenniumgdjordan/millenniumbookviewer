@@ -52,7 +52,7 @@ body {
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 
     background-color: #fff;
-    font-family:'SourceSansPro', Helvetica, Arial, sans-serif;
+    font-family: $font-stack;
     
     font-size:12px;
     height:100%;
@@ -87,20 +87,6 @@ h2 {
 p {
     font-family: $font-stack;
     font-weight: lighter;
-}
-
-/* Portrait layout (default) */
-.app {
-    /*background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
 }
 
 .headerwithnav {
@@ -172,23 +158,9 @@ p {
     text-overflow: ellipsis;
 }
 
-.millenniumFooter {
-    background-image: url("../images/barbackground2.jpg");
-    background-repeat: repeat-x;
-    background-size: contain;
-    height: 44pt;
-    text-align: center;
-    
-}
-
 .headimage {
     height: 26px;
     /*padding: 10pt 0;*/
-}
-
-.footImage {
-    height: 32pt;
-    padding: 10px 0px;
 }
 
 .centered {
@@ -448,7 +420,7 @@ p {
     font-size: 1.5em;
 	line-height: 45px;
     font-weight: normal;
-    font-family:'SourceSansPro', Helvetica, Arial, sans-serif;
+    font-family: $font-stack;
     border-width: 1px;
     border-style: solid;
     margin-top: 10px;
@@ -465,7 +437,7 @@ p {
     font-size: 1.5em;
 	line-height: 45px;
 	/*font-family: sans-serif /*{global-font-family}*/;
-    font-family:'SourceSansPro', Helvetica, Arial, sans-serif;
+    font-family:$font-stack;
     border-width: 1px;
     border-style: solid;
     margin: auto;
@@ -620,7 +592,7 @@ p {
 */
 
 .popup_close {
-	color: #888;
+	color: $lightest-blue;
 	cursor: pointer;
 	position: absolute;
 	padding: 5px;
