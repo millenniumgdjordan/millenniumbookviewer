@@ -9,6 +9,8 @@
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.5.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,800,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/index-min.css" />
         <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/swipebox.css">
@@ -65,10 +67,12 @@
         </div>
         <div data-role="page" id="groupselect">
             <div data-role="content" id="groupselect_wrapper">
-                <h2 class="centered">Select desired Buying Group</h1>
+                <div id="groupheading">
+                    <h2 class="centered">Select desired Buying Group</h1>                
+                </div>
                 <div id="groupselect_data">
                 </div>
-                <div class="centered">
+                <div id="logout_button" class="centered">
                     <a id="logout_btn" href="#" data-role="none" data-theme="j" onClick="logout();"><span>Logout</span></a>
                 </div>
                
@@ -119,15 +123,12 @@
                 </div>
             </div>
         </div>
-        <div data-role="page" id="credits">
-            <div data-role="header" class="ui-bar headerwithnav"  data-id="myheader">
+        <div data-role="page" data-theme="c" id="credits">
+            <div data-role="header" data-theme="j" class="ui-bar headerwithnav"  data-id="myheader">
                 <div id="navleft">
                     <div id="navleft_wrapper">
                         <div id="navleft_icon">
-                            <a href="#groupselect" data-rel="back"><img src="images/header_backarrow.svg" width=7 height=14 /></a>
-                        </div>
-                        <div id="navleft_title">
-                            <a href="#groupselect" data-rel="back"><h4>Back</h2></a>
+                            <a href="#groupselect" data-rel="back"><i class="fa fa-chevron-left fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +142,7 @@
                 <div id="navright">
                     <div id="navright_wrapper">
                         <div id="navright_icon">
-                            <a href="#chooser"><img src="images/header_hamburger.svg" width=28 height=14 /></a>
+                            <a href="#chooser"><i class="fa fa-bars fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +157,7 @@
                     <p>Fax 201-644-0871<br /><br /></p>
                     <p>Millennium Graphics<br />317 E. Adrian St.<br />Blissfield, MI 49228<br />Office 517-682-1007<br /><br /></p>
                     <h2 class="centered">Copyright Notice</h2>
-                    <p>All retail advertising appearing on this site is the copyrighted property of Millennium Graphics &amps; Design. They are fully protected by U.S. And International Copyright laws, all rights reserved. The images on this site are for online viewing only and may not be copied, reproduced, Manipulated, or used in any way for commercial or personal use without express written consent of Millennium Graphics & Design. No usage rights are granted until full payment has been received and acknowledged. Unauthorized usage and or reproduction of said retail advertising constitutes copyright infringement, is a violation of federal and international law, and will be charged 3 times the normal usage rate by Millennium Graphics & Design. If the total fee is not paid by the end of 30 days said offenders would be prosecuted to the fullest extent possible. Logos and images provided to Millennium Graphics & Design by Sealy Mattress Company are approved for use with the intent to promote Sealy brands.</p>
+                    <p>All retail advertising appearing on this site is the copyrighted property of Millennium Graphics and Design. They are fully protected by U.S. And International Copyright laws, all rights reserved. The images on this site are for online viewing only and may not be copied, reproduced, Manipulated, or used in any way for commercial or personal use without express written consent of Millennium Graphics & Design. No usage rights are granted until full payment has been received and acknowledged. Unauthorized usage and or reproduction of said retail advertising constitutes copyright infringement, is a violation of federal and international law, and will be charged 3 times the normal usage rate by Millennium Graphics & Design. If the total fee is not paid by the end of 30 days said offenders would be prosecuted to the fullest extent possible. Logos and images provided to Millennium Graphics & Design by Sealy Mattress Company are approved for use with the intent to promote Sealy brands.</p>
                 </div>
             </div>
         </div>
@@ -183,7 +184,7 @@
             $( document ).on("pageshow", "#groupselect", function() {
                 $("#myDialog").popup();
                 $( "body>[data-role='panel']" ).panel().enhanceWithin();
-                windowheight = $( window ).height();
+                vertCenter($('#groupselect_wrapper'));
                 /*var forloginwindow = (windowheight - 450)/2;
                 $("#groupselect_wrapper").css("margin-top", forloginwindow);*/
                 if (window.localStorage.getItem('userToken')) {

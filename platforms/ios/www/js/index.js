@@ -96,6 +96,7 @@ var app = {
     onDeviceReady: function () {
        
         app.receivedEvent('deviceready');
+        navigator.splashscreen.hide();
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
@@ -117,10 +118,10 @@ function generateGroupPage(groupname) {
     $.getJSON( "js/feed.json", function( json ) {
         $.each(json.buyinggroup, function (i, buyinggroup) {
             if (buyinggroup.keyid == groupname) {
-                var dynamichtml =  '<div data-role="page" data-theme="c" id="' + buyinggroup.keyid + '"> <div data-role="header" data-theme="h" class="headerwithnav"  data-id="myheader" data-tap-toggle="false"><div id="navleft"><a href="#" data-rel="back" ><div id="navleft_wrapper"> <div id="navleft_icon"><img src="images/header_backarrow.svg" width=7 height=14 /></div> <div id="navleft_title"><h4>Back</h4></div></div></a></div><div id="navcenter" class="centered"> <div id="navcenter_wrapper"> <div id="navcenter_title"> <h2 class="centered">' + buyinggroup.realname + '</h2> </div> </div> </div> <div id="navright"> <div id="navright_wrapper"> <div id="navright_icon"> <a href="#chooser"><img src="images/header_hamburger.svg" width=28 height=14 /></a> </div> </div> </div> </div> <div data-role="main" class="ui-content centered">';
+                var dynamichtml =  '<div data-role="page" data-theme="c" id="' + buyinggroup.keyid + '"> <div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader><div id=navleft><div id=navleft_wrapper><div id=navleft_icon><a href=#groupselect data-rel=back><i class="fa fa-chevron-left fa-2x"></i></a></div></div></div><div id=navcenter class=centered><div id=navcenter_wrapper><div id=navcenter_title><h2 class=centered>Credits</h2></div></div></div><div id=navright><div id=navright_wrapper><div id=navright_icon><a href=#chooser><i class="fa fa-bars fa-2x"></i></a></div></div></div></div><div data-role="main" class="ui-content centered">';
                 $.each(buyinggroup.year, function (j, eventyear) {
                     dynamichtml += '<h2>' + eventyear.keyid + '</h2>';
-                    dynamichtml += '<div id="quarterwrapper" data-role="tabs"> <div id="quarternav" data-role="navbar"> <ul> <li><a href="#q1" data-theme="j" data-ajax="false" class="ui-btn-active">Q1</a></li> <li><a href="#q2" data-theme="j" data-ajax="false">Q2</a></li> <li><a href="#q3" data-theme="j" data-ajax="false">Q3</a></li> <li><a href="#q4" data-theme="j" data-ajax="false">Q4</a></li> </ul> </div>';
+                    dynamichtml += '<div id="quarterwrapper" data-role="tabs"> <div id="quarternav" data-role="navbar"> <ul id="quarterlist"> <li><a href="#q1" data-theme="j" data-ajax="false" class="ui-btn-active">Q1</a></li> <li><a href="#q2" data-theme="j" data-ajax="false">Q2</a></li> <li><a href="#q3" data-theme="j" data-ajax="false">Q3</a></li> <li><a href="#q4" data-theme="j" data-ajax="false">Q4</a></li> </ul> </div>';
                     $.each(eventyear.quarter, function (k, quarter) {
                         dynamichtml += '<div id="' + quarter.keyid + '" class="ui-content" >';
                         if (quarter.event.length < 1) {
@@ -156,7 +157,7 @@ function generateCampaignPage(i, j, k, l) {
     //start building this page
     var dynamichtml='';
     $.getJSON( "js/feed.json", function( json ) {
-        dynamichtml += '<div data-role="page" data-theme="c" id="campaignpage" class="dynamiccampaignpage"><div data-role="header" data-theme="j" class="headerwithnav" data-id="myheader" data-tap-toggle="false"><div id="navleft"><a href="#" data-rel="back" ><div id="navleft_wrapper"><div id="navleft_icon"><img src="images/header_backarrow.svg" width=7 height=14 /></div><div id="navleft_title"><h4>Back</h2></div></div></a></div><div id="navcenter" class="centered"><div id="navcenter_wrapper"><div id="navcenter_title"><h2 class="centered">' + json.buyinggroup[i].year[j].quarter[k].event[l].title  + '</h2></div></div></div><div id="navright"><div id="navright_wrapper"><div id="navright_icon"><a href="#chooser"><img src="images/header_hamburger.svg" width=28 height=14 /></a></div></div></div></div><div data-role="main" class="ui-content centered"><div id="printwrap">';
+        dynamichtml += '<div data-role="page" data-theme="c" id="campaignpage" class="dynamiccampaignpage"><div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader><div id=navleft><div id=navleft_wrapper><div id=navleft_icon><a href=#groupselect data-rel=back><i class="fa fa-chevron-left fa-2x"></i></a></div></div></div><div id="navcenter" class="centered"><div id="navcenter_wrapper"><div id="navcenter_title"><h2 class="centered">' + json.buyinggroup[i].year[j].quarter[k].event[l].title  + '</h2></div></div></div><div id=navright><div id=navright_wrapper><div id=navright_icon><a href=#chooser><i class="fa fa-bars fa-2x"></i></a></div></div></div></div><div data-role="main" class="ui-content centered"><div id="printwrap">';
         $.each(json.buyinggroup[i].year[j].quarter[k].event[l].campaign, function (m, campaign) {
              var campaignimagepath = 'images/groups/' + json.buyinggroup[i].keyid + '/' + json.buyinggroup[i].year[j].keyid + '/' + json.buyinggroup[i].year[j].quarter[k].keyid + '/' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + '/';
             if (campaign.keyid != "tv") { //build non-tv section
@@ -245,4 +246,11 @@ function getAdInfo () {
         }
     });
     return D.promise();
+}
+
+function vertCenter (el) {
+    var windowheight = $(window).height();
+    var elementheight = 370;
+    var centeredheight = (windowheight - elementheight)/2;
+    el.css('margin-top', centeredheight);
 }

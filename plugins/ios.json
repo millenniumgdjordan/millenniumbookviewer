@@ -23,6 +23,10 @@
                         {
                             "xml": "false",
                             "count": 1
+                        },
+                        {
+                            "xml": false,
+                            "count": 1
                         }
                     ]
                 }
@@ -37,6 +41,10 @@
                         {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -48,6 +56,9 @@
             "PACKAGE_NAME": "com.millenniumgd.bookviewer"
         },
         "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.millenniumgd.bookviewer"
+        },
+        "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.millenniumgd.bookviewer"
         }
     },
