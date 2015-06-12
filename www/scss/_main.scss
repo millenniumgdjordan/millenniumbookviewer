@@ -226,7 +226,8 @@ p {
         padding: 0;
     }
     li {
-        color:#121222;
+        color:$darkest-blue;
+        
     }
     display: none;   
     background-image: url(../images/lifestyle_birthday30.jpg);
@@ -238,6 +239,19 @@ p {
     a {
         color: $gray-blue;
     }
+}
+
+#panellist li a:after {
+    content: "\f0da";
+    font-family: FontAwesome;
+    font-weight: lighter;
+    position: absolute;
+    right: 16px;
+}
+
+#panellist li.power a:after {
+    content: "\f011";
+    right: 12px;
 }
 .ui-navbar li .ui-btn-active {
     background-color: $darker-blue;

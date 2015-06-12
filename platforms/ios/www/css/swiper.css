@@ -403,7 +403,3 @@
     .gallery-thumbs .swiper-slide-active {
         opacity: 1;
     }
-.arrow-left.swiper-button-disabled,
-.arrow-right.swiper-button-disabled {
-  opacity: 0.25;
-}

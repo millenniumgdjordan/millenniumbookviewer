@@ -170,7 +170,7 @@ function generateCampaignPage(i, j, k, l) {
                 else {
                     swipertemplate = "notbroadsheet";
                 }
-               dynamichtml += '<div class="devicewrap centered"><div class="device"><a class="arrow-left arrow-left-' + campaign.keyid + '" href="#"></a><a class="arrow-right arrow-right-' + campaign.keyid + '" href="#"></a><div class="swiper-container swiper-thumb swiper-' + campaign.keyid + '"><div class="swiper-wrapper">';
+               dynamichtml += '<div class="devicewrap centered"><div class="device"><a class="arrow-left arrow-left-' + campaign.keyid + '" href="#"><i class="fa fa-chevron-left fa-2x"></i></a><a class="arrow-right arrow-right-' + campaign.keyid + '" href="#"><i class="fa fa-chevron-right fa-2x"></i></a><div class="swiper-container swiper-thumb swiper-' + campaign.keyid + '"><div class="swiper-wrapper">';
                 $.each(campaign.imageUrls, function (ii, imageURLS) {
                     dynamichtml += '<div class="swiper-slide"><a href="' + campaignimagepath +  campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension + '" onClick="setTimeout(function() {positionLightbox();},100);" data-ajax="false" class="swipebox" rel="' + i + l + campaign.keyid + '"><img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid + '/thumbs_' + imageURLS.fileName + imageURLS.fileExtension +'" /></a></div>';
                 });

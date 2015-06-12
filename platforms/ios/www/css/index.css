@@ -269,25 +269,28 @@ p {
 }
 
 .arrow-left {
-  background: url(../images/arrow_left_grey.png) no-repeat left top;
   position: absolute;
-  background-size: contain;
   left: 10px;
   top: 50%;
   margin-top: -15px;
   width: 17px;
   height: 30px;
+  color: #26384d;
 }
 
 .arrow-right {
-  background: url(../images/arrow_right_grey.png) no-repeat left bottom;
   position: absolute;
   right: 10px;
   top: 50%;
   margin-top: -15px;
   width: 17px;
   height: 30px;
-  background-size: contain;
+  color: #26384d;
+}
+
+.arrow-left.swiper-button-disabled,
+.arrow-right.swiper-button-disabled {
+  color: #a9bcd5;
 }
 
 .devicewrap {
