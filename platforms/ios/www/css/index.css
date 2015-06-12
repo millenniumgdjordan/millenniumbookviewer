@@ -239,10 +239,23 @@ p {
   padding: 0;
 }
 #chooser li {
-  color: #121222;
+  color: #26384d;
 }
 #chooser a {
   color: #3d454e;
+}
+
+#panellist li a:after {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-weight: lighter;
+  position: absolute;
+  right: 16px;
+}
+
+#panellist li.power a:after {
+  content: "\f011";
+  right: 12px;
 }
 
 .ui-navbar li .ui-btn-active {
