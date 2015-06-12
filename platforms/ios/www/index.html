@@ -9,7 +9,6 @@
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.5.css" />
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,800,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/index-min.css" />
         <link rel="stylesheet" href="css/swiper.css">
@@ -48,22 +47,31 @@
             </ul>
         </div>
         <div data-role="page" id="login">
-            <div data-role="content" id="login_wrapper" class="centered">
-                <div id="login_title">
-                    <img src="images/logo-ts.png" width="85%" />
-                </div>
-                <div id = 'login_form_container'>
-                    <div class="login_form">
-                        <label class="ui-hidden-accessible">Username</label><input id="useruser" name="username" type="text" placeholder="Username">
-                        <input id="userpass" name="password" type="password" placeholder="Password">
-                        <a id = "login_btn" href="#" data-role="none" data-theme="j" onClick="submitForm();"><span>Login</span></a>
+            <div class="video-container">
+                <div data-role="content" id="login_wrapper" class="centered">
+                    <div id="login_title">
+                        <img src="images/logo-ts.png" width="85%" />
+                    </div>
+                    <div id = 'login_form_container'>
+                        <div class="login_form">
+                            <label class="ui-hidden-accessible">Username</label><input id="useruser" name="username" type="text" placeholder="Username">
+                            <input id="userpass" name="password" type="password" placeholder="Password">
+                            <a id = "login_btn" href="#" data-role="none" data-theme="j" onClick="submitForm();"><span>Login</span></a>
+                        </div>
+                    </div>
+                    <div id="login_bottom">
+                        <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#passwordreset", { transition: "flip" } );'>I forgot my password.</a>
+                        <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#newusersignup", { transition: "flip" } );'>I need an account.</a>
                     </div>
                 </div>
-                <div id="login_bottom">
-                    <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#passwordreset", { transition: "flip" } );'>I forgot my password.</a>
-                    <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#newusersignup", { transition: "flip" } );'>I need an account.</a>
-                </div>
+                
+                <div class="filter"></div>
+                <video autoplay loop class="fillWidth">
+                    <source src="images/reel_life.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                </video>
+                
             </div>
+            
         </div>
         <div data-role="page" id="groupselect">
             <div data-role="content" id="groupselect_wrapper">
@@ -169,16 +177,34 @@
         <script type="text/javascript">
             var windowheight;
             $( document ).on("pageshow", "#login", function() {
+                scaleVideoContainer();
+                initBannerVideoSize('.video-container .poster img');
+                initBannerVideoSize('.video-container .filter');
+                initBannerVideoSize('.video-container video');
+
+                $(window).on('resize', function() {
+                    setTimeout( function() {
+                        scaleVideoContainer();
+                        scaleBannerVideoSize('.video-container .poster img');
+                        scaleBannerVideoSize('.video-container .filter');
+                        scaleBannerVideoSize('.video-container video');
+                    }, 100);
+                });
+                
+                /*center content
+                setTimeout( function() { //waiting for laggy redraw
+                    var contentwidth = $('#login_wrapper').width();
+                    var contentoffset = -(contentwidth/2);
+                    var contentoffstring = parseFloat(contentoffset) + 'px';
+                    console.log(contentwidth);
+                    console.log(contentoffstring);
+                    $('#login_wrapper').css('margin-left', contentoffstring);
+                }, 500);*/
                 //bypass login if token exists
                 if (window.localStorage.getItem('userToken')) {
-                    //$.mobile.changePage("#groupselect");
                     $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "fade" } );
                     
                 }
-                /*windowheight = $( window ).height();
-                var forloginwindow = (windowheight - 450)/2;
-                $("#login_wrapper").css("margin-top", forloginwindow);
-                $("#groupselect_wrapper").css("margin-top", forloginwindow);*/
             });
             
             $( document ).on("pageshow", "#groupselect", function() {

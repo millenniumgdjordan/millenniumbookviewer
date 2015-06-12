@@ -45,6 +45,23 @@
     src: url("../fonts/SourceSansPro-Bold.otf") format("opentype");
 }
 
+@font-face {
+    font-family: OpenSans;
+    font-weight: 300;
+    src: url("..fonts/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: OpenSans;
+    font-weight: 400;
+    src: url("..fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: OpenSans;
+    font-weight: 700;
+    src: url("..fonts/OpenSans-Bold.ttf") format("truetype");
+}
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
@@ -331,7 +348,7 @@ p {
 }
 
 
-#login, #groupselect, #passwordreset, #newusersignup, #credits {
+ #groupselect, #passwordreset, #newusersignup, #credits {
     background-image: url(../images/lifestyle_birthday30.jpg);
     background-color: rgba(255, 255, 255, .8);
     background-repeat: no-repeat;
@@ -356,8 +373,34 @@ p {
         -webkit-border-radius: 0px;
         border-radius: 0px;
     }
-    margin-top: 25%;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    padding: 0;
+    top: 50%;
+    position: absolute;
+    z-index: 1000;
 }
+
+#login_wrapper {
+    margin-top: -196px;
+}
+
+#passwordreset_wrapper {
+    margin-top: -185px;
+}
+
+#newusersignup_wrapper {
+    margin-top: -258.5px;
+}
+
+@media screen and (max-width: 600px) {
+    #login_wrapper, #passwordreset_wrapper, #newusersignup_wrapper {
+        width: 95%;
+        margin-left: -47.5%;
+    }
+}
+
 
 #useruser {
     background-image: url(../images/fa-user.png);
@@ -374,7 +417,7 @@ p {
 }
 
 #login_title {
-    padding-bottom: 20%;
+    padding-bottom: 65px;
     margin: 0 auto;
 }
 
@@ -640,3 +683,33 @@ div.popup {
     left: 0px;
     bottom: 0px;
 }
+
+/***/
+.video-container {
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+}
+
+.holdme {
+    position: relative;
+}
+
+
+

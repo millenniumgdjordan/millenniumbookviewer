@@ -97,6 +97,8 @@ var app = {
        
         app.receivedEvent('deviceready');
         navigator.splashscreen.hide();
+         // Resive video
+    
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
@@ -118,7 +120,7 @@ function generateGroupPage(groupname) {
     $.getJSON( "js/feed.json", function( json ) {
         $.each(json.buyinggroup, function (i, buyinggroup) {
             if (buyinggroup.keyid == groupname) {
-                var dynamichtml =  '<div data-role="page" data-theme="c" id="' + buyinggroup.keyid + '"> <div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader><div id=navleft><div id=navleft_wrapper><div id=navleft_icon><a href=#groupselect data-rel=back><i class="fa fa-chevron-left fa-2x"></i></a></div></div></div><div id=navcenter class=centered><div id=navcenter_wrapper><div id=navcenter_title><h2 class=centered>Credits</h2></div></div></div><div id=navright><div id=navright_wrapper><div id=navright_icon><a href=#chooser><i class="fa fa-bars fa-2x"></i></a></div></div></div></div><div data-role="main" class="ui-content centered">';
+                var dynamichtml =  '<div data-role="page" data-theme="c" id="' + buyinggroup.keyid + '"> <div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader><div id=navleft><div id=navleft_wrapper><div id=navleft_icon><a href=#groupselect data-rel=back><i class="fa fa-chevron-left fa-2x"></i></a></div></div></div><div id=navcenter class=centered><div id=navcenter_wrapper><div id="navcenter_title"><h2 class="centered">' + json.buyinggroup[i].year[j].quarter[k].event[l].title  + '</h2></div></div></div><div id=navright><div id=navright_wrapper><div id=navright_icon><a href=#chooser><i class="fa fa-bars fa-2x"></i></a></div></div></div></div><div data-role="main" class="ui-content centered">';
                 $.each(buyinggroup.year, function (j, eventyear) {
                     dynamichtml += '<h2>' + eventyear.keyid + '</h2>';
                     dynamichtml += '<div id="quarterwrapper" data-role="tabs"> <div id="quarternav" data-role="navbar"> <ul id="quarterlist"> <li><a href="#q1" data-theme="j" data-ajax="false" class="ui-btn-active">Q1</a></li> <li><a href="#q2" data-theme="j" data-ajax="false">Q2</a></li> <li><a href="#q3" data-theme="j" data-ajax="false">Q3</a></li> <li><a href="#q4" data-theme="j" data-ajax="false">Q4</a></li> </ul> </div>';
@@ -253,4 +255,57 @@ function vertCenter (el) {
     var elementheight = 370;
     var centeredheight = (windowheight - elementheight)/2;
     el.css('margin-top', centeredheight);
+}
+
+/** Reusable Functions **/
+/********************************************************************/
+
+function scaleVideoContainer() {
+
+    var height = $(window).height();
+    var unitHeight = parseInt(height) + 'px';
+    $('.video-container').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+    
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+        windowHeight = $(window).height(),
+        videoWidth,
+        videoHeight;
+    
+    console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width'),
+            windowAspectRatio = windowHeight/windowWidth;
+
+        if (videoAspectRatio > windowAspectRatio ) {
+            videoWidth = windowWidth;
+            videoHeight = videoWidth * videoAspectRatio;
+            $(this).css({'top' : -(videoHeight - windowHeight) / 2 + 'px', 'margin-left' : 0});
+        } else {
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+        }
+
+        $(this).width(videoWidth).height(videoHeight);
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+        
+
+    });
 }
