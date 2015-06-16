@@ -188,7 +188,7 @@
   }
 
   NSNumber* allowInlineMediaPlayback = [self settingForKey:@"AllowInlineMediaPlayback"];
-  BOOL mediaPlaybackRequiresUserAction = YES;  // default value
+  BOOL mediaPlaybackRequiresUserAction = YES;   //default value
   if ([self settingForKey:@"MediaPlaybackRequiresUserAction"]) {
     mediaPlaybackRequiresUserAction = [(NSNumber*)[self settingForKey:@"MediaPlaybackRequiresUserAction"] boolValue];
   }

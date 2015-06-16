@@ -190,6 +190,7 @@
     self.inAppBrowserViewController.webView.scalesPageToFit = browserOptions.enableviewportscale;
     self.inAppBrowserViewController.webView.mediaPlaybackRequiresUserAction = browserOptions.mediaplaybackrequiresuseraction;
     self.inAppBrowserViewController.webView.allowsInlineMediaPlayback = browserOptions.allowinlinemediaplayback;
+    NSLog ( @"JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO : %@", [NSDate date] );
     if (IsAtLeastiOSVersion(@"6.0")) {
         self.inAppBrowserViewController.webView.keyboardDisplayRequiresUserAction = browserOptions.keyboarddisplayrequiresuseraction;
         self.inAppBrowserViewController.webView.suppressesIncrementalRendering = browserOptions.suppressesincrementalrendering;
@@ -924,7 +925,7 @@
 
         self.enableviewportscale = NO;
         self.mediaplaybackrequiresuseraction = NO;
-        self.allowinlinemediaplayback = NO;
+        self.allowinlinemediaplayback = YES;
         self.keyboarddisplayrequiresuseraction = YES;
         self.suppressesincrementalrendering = NO;
         self.hidden = NO;
