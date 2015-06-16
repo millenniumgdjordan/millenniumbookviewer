@@ -286,7 +286,7 @@ function scaleBannerVideoSize(element){
         videoWidth,
         videoHeight;
     
-    console.log(windowHeight);
+    //console.log(windowHeight);
 
     $(element).each(function(){
         var videoAspectRatio = $(this).data('height')/$(this).data('width'),
@@ -309,3 +309,65 @@ function scaleBannerVideoSize(element){
 
     });
 }
+
+            
+$( document ).on("pageshow", "#login", function() {
+   
+
+    /*center content
+    setTimeout( function() { //waiting for laggy redraw
+        var contentwidth = $('#login_wrapper').width();
+        var contentoffset = -(contentwidth/2);
+        var contentoffstring = parseFloat(contentoffset) + 'px';
+        console.log(contentwidth);
+        console.log(contentoffstring);
+        $('#login_wrapper').css('margin-left', contentoffstring);
+    }, 500);*/
+    //bypass login if token exists
+    if (window.localStorage.getItem('userToken')) {
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "fade" } );
+
+    }
+});
+
+$(document).on('pagecontainershow', function(e, ui) {
+    var pageId = $('body').pagecontainer('getActivePage').prop('id');
+    scaleVideoContainer();
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function() {
+        setTimeout( function() {
+            scaleVideoContainer();
+            scaleBannerVideoSize('.video-container .poster img');
+            scaleBannerVideoSize('.video-container .filter');
+            scaleBannerVideoSize('.video-container video');
+        }, 100);
+    });
+    
+});
+
+$( document ).on("pageshow", "#groupselect", function() {
+    $("#myDialog").popup();
+    $( "body>[data-role='panel']" ).panel().enhanceWithin();
+    vertCenter($('#groupselect_wrapper'));
+    /*var forloginwindow = (windowheight - 450)/2;
+    $("#groupselect_wrapper").css("margin-top", forloginwindow);*/
+    if (window.localStorage.getItem('userToken')) {
+    buildGroupPage();
+    }
+    else {
+        alert("Session Expired. Returning to Login");
+        //$.mobile.changePage("#login", {transition: "fade" } );
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", "#login", { transition: "fade" } );
+    }
+
+});
+$( document ).on("pageshow", "#newusersignup", function() {
+    /*windowheight = $( window ).height();
+    var forsignupwindow = (windowheight - 450)/2;
+    $("#newusersignup_wrapper").css("margin-top", forsignupwindow);*/
+});
+
+
