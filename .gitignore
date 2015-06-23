@@ -10,3 +10,4 @@ node_modules
 tmp
 .sass-cache
 *.css.map
+platforms/ios/Millennium\ Book\ Viewer.xcodeproj/project.xcworkspace/xcuserdata/webdev.xcuserdatad/UserInterfaceState.xcuserstate
