@@ -178,7 +178,9 @@ function generateGroupPage(groupname) {
                         dynamichtml +=          '</div>'; //div id quarter.keyid
                     });
                 });
-                dynamichtml +=              '</div>' //quarterwrapper;
+                dynamichtml +=              '</div>' //quarterwrapper
+                +                       '</div>' //data-role main
+                +                   '</div>'; //grouppage
                 $(dynamichtml).appendTo($.mobile.pageContainer);
             }
         });
@@ -201,9 +203,35 @@ function generateCampaignPage(i, j, k, l) {
     //start building this page
     var dynamichtml='';
     $.getJSON( "js/feed.json", function( json ) {
-        dynamichtml += '<div data-role="page" data-theme="c" id="campaignpage" class="dynamiccampaignpage"><div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader><div id=navleft><div id=navleft_wrapper><div id=navleft_icon><a href=#groupselect data-rel=back><i class="fa fa-chevron-left fa-2x"></i></a></div></div></div><div id="navcenter" class="centered"><div id="navcenter_wrapper"><div id="navcenter_title"><h2 class="centered">' + json.buyinggroup[i].year[j].quarter[k].event[l].title  + '</h2></div></div></div><div id=navright><div id=navright_wrapper><div id=navright_icon><a href=#chooser><i class="fa fa-bars fa-2x"></i></a></div></div></div></div><div data-role="main" class="ui-content centered"><div id="printwrap">';
+        dynamichtml +=  '<div data-role="page" data-theme="c" id="campaignpage" class="dynamiccampaignpage">'
+        +                   '<div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader>'
+        +                       '<div id=navleft>'
+        +                           '<div id=navleft_wrapper>'
+        +                               '<div id=navleft_icon>'
+        +                                   '<a href=#groupselect data-rel=back><i class="fa fa-chevron-left fa-2x"></i></a>'
+        +                               '</div>'
+        +                           '</div>'
+        +                       '</div>'
+        +                       '<div id="navcenter" class="centered">'
+        +                           '<div id="navcenter_wrapper">'
+        +                               '<div id="navcenter_title">'
+        +                                   '<h2 class="centered">' + json.buyinggroup[i].year[j].quarter[k].event[l].title  + '</h2>'
+        +                               '</div>'
+        +                           '</div>'
+        +                       '</div>'
+        +                       '<div id=navright>'
+        +                           '<div id=navright_wrapper>'
+        +                               '<div id=navright_icon>'
+        +                                   '<a href=#chooser><i class="fa fa-bars fa-2x"></i></a>'
+        +                               '</div>'
+        +                           '</div>'
+        +                       '</div>'
+        +                   '</div>' //header
+        +                   '<div data-role="main" class="ui-content centered">'
+        +                       '<div id="printwrap">';
         $.each(json.buyinggroup[i].year[j].quarter[k].event[l].campaign, function (m, campaign) {
-             var campaignimagepath = 'images/groups/' + json.buyinggroup[i].keyid + '/' + json.buyinggroup[i].year[j].keyid + '/' + json.buyinggroup[i].year[j].quarter[k].keyid + '/' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + '/';
+            var campaignimagepath = 'images/groups/' + json.buyinggroup[i].keyid + '/' + json.buyinggroup[i].year[j].keyid + '/'
+             + json.buyinggroup[i].year[j].quarter[k].keyid + '/' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + '/';
             if (campaign.keyid != "tv") { //build non-tv section
                 var swipertemplate = "";
                 if (campaign.keyid == "bs") {
@@ -212,33 +240,66 @@ function generateCampaignPage(i, j, k, l) {
                 else {
                     swipertemplate = "notbroadsheet";
                 }
-               dynamichtml += '<div class="devicewrap centered"><div class="device"><a class="arrow-left arrow-left-' + campaign.keyid + '" href="#"><i class="fa fa-chevron-left fa-2x"></i></a><a class="arrow-right arrow-right-' + campaign.keyid + '" href="#"><i class="fa fa-chevron-right fa-2x"></i></a><div class="swiper-container swiper-thumb swiper-' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + campaign.keyid + '"><div class="swiper-wrapper">';
+                dynamichtml +=      '<div class="devicewrap centered">'
+                +                       '<div class="device">'
+                +                           '<a class="arrow-left arrow-left-'+campaign.keyid+'" href="#"><i class="fa fa-chevron-left fa-2x"></i></a>'
+                +                           '<a class="arrow-right arrow-right-'+campaign.keyid+'" href="#"><i class="fa fa-chevron-right fa-2x"></i></a>'
+                +                           '<div class="swiper-container swiper-thumb swiper-' +  campaign.keyid + '">'
+                +                               '<div class="swiper-wrapper">';
                 $.each(campaign.imageUrls, function (ii, imageURLS) {
-                    dynamichtml += '<div class="swiper-slide"><a href="' + campaignimagepath +  campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension + '" onClick="setTimeout(function() {positionLightbox();},100);" data-ajax="false" class="swipebox" rel="' + i + l + campaign.keyid + '"><img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid + '/thumbs_' + imageURLS.fileName + imageURLS.fileExtension +'" /></a></div>';
+                    dynamichtml +=                  '<div class="swiper-slide">'
+                    +                                   '<a href="' + campaignimagepath +  campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension
+                    +                                   '" onClick="setTimeout(function() {positionLightbox();},100);" data-ajax="false" class="swipebox" rel="'
+                    +                                   i + k + l + campaign.keyid + '">'
+                    +                                   '<img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid
+                    +                                   '/thumbs_' + imageURLS.fileName + imageURLS.fileExtension +'" /></a>'
+                    +                               '</div>';
                 });
-                dynamichtml += '</div></div></div><div class="titleinfo"><h2>' + campaign.campaigntype + '</h2><p>(' + campaign.details + '\" as low as ' + campaign.pricing + ')</p></div></div>';
+                dynamichtml +=                  '</div>' //swiper-wrapper
+                +                           '</div>' //swiper-container
+                +                       '</div>' //device
+                +                       '<div class="titleinfo">'
+                +                           '<h2>' + campaign.campaigntype + '</h2>'
+                +                           '<p>(' + campaign.details + '\" as low as ' + campaign.pricing + ')</p>'
+                +                       '</div>'
+                +                   '</div>' //devicewrap;
             }
             else { //build tv section
-                dynamichtml += '</div><div class="tv">';
+                dynamichtml +=  '</div>' //printwrap
+                +               '<div class="tv">';
                 if (campaign.hasOwnProperty('videoUrls')) {
                     $.each(campaign.videoUrls, function (o, videoUrls) {
-                        dynamichtml += '<video width="280" poster="' + campaignimagepath + 'tv/poster.jpg" controls><source src="' + campaignimagepath + 'tv/' + videoUrls.fileName + '" type="video/' + videoUrls.fileType + '">';                            
+                        dynamichtml += ''
+                        +           '<video width="280" poster="' + campaignimagepath + 'tv/poster.jpg" controls>'
+                        +               '<source src="' + campaignimagepath + 'tv/' + videoUrls.fileName + '" type="video/' + videoUrls.fileType + '">';                            
                     });
                 }
                 else {
-                    dynamichtml += '<video width="280" poster="images/events/thumbs_video_placeholder.jpg" controls><source src="video/placeholder.mp4" type="video/mp4">';
+                    dynamichtml += ''
+                    +               '<video width="280" poster="images/events/thumbs_video_placeholder.jpg" controls>'
+                    +                   '<source src="video/placeholder.mp4" type="video/mp4">';
                 }
-                dynamichtml += 'Your browser does not support the video tag.</video></div><div class="titleinfo"><h2>TV</h2><P>(As low as $195.00/30:)</P></div>';
+                dynamichtml +=          'Your browser does not support the video tag.'
+                +                   '</video>'
+                +               '</div>' //tv
+                +               '<div class="titleinfo">'
+                +                   '<h2>TV</h2><p>(As low as $195.00/30:)</p>'
+                +               '</div>';
             }
         });
-        dynamichtml += '</div><script type="text/javascript">$( document ).on("pageshow", "#campaignpage", function() {';
+        dynamichtml +=      '</div>' //data-role main
+        +                   '<script type="text/javascript">$( document ).on("pageshow", "#campaignpage", function() {';
         //This section builds the swiper
         $.each(json.buyinggroup[i].year[j].quarter[k].event[l].campaign, function (m, campaign) {
             if (campaign.keyid != "tv") {
-                dynamichtml += 'var swiper_' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + campaign.keyid + ' = new Swiper(".swiper-' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + campaign.keyid + '",{mode:"horizontal",loop: false, spaceBetween: 20, nextButton: ".arrow-right-' + campaign.keyid + '",prevButton: ".arrow-left-' + campaign.keyid + '"});';
+                dynamichtml +=  'var swiper_' + campaign.keyid + ' = '
+                +               'new Swiper(".swiper-' + campaign.keyid
+                +               '",{mode:"horizontal",loop: false, spaceBetween: 20, nextButton: ".arrow-right-' + campaign.keyid + '",prevButton: ".arrow-left-' + campaign.keyid + '"});';
             }
         });
-        dynamichtml += '$(".swipebox").swipebox();});</script></div>';
+        dynamichtml +=          '$(".swipebox").swipebox();});'
+        +                   '</script>'
+        +               '</div>'; //page
         $(dynamichtml).appendTo($.mobile.pageContainer);
         $( ":mobile-pagecontainer" ).pagecontainer( "change", "#campaignpage", { transition: "slide" } );
     });
