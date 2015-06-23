@@ -170,7 +170,7 @@ function generateCampaignPage(i, j, k, l) {
                 else {
                     swipertemplate = "notbroadsheet";
                 }
-               dynamichtml += '<div class="devicewrap centered"><div class="device"><a class="arrow-left arrow-left-' + campaign.keyid + '" href="#"><i class="fa fa-chevron-left fa-2x"></i></a><a class="arrow-right arrow-right-' + campaign.keyid + '" href="#"><i class="fa fa-chevron-right fa-2x"></i></a><div class="swiper-container swiper-thumb swiper-' + campaign.keyid + '"><div class="swiper-wrapper">';
+               dynamichtml += '<div class="devicewrap centered"><div class="device"><a class="arrow-left arrow-left-' + campaign.keyid + '" href="#"><i class="fa fa-chevron-left fa-2x"></i></a><a class="arrow-right arrow-right-' + campaign.keyid + '" href="#"><i class="fa fa-chevron-right fa-2x"></i></a><div class="swiper-container swiper-thumb swiper-' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + campaign.keyid + '"><div class="swiper-wrapper">';
                 $.each(campaign.imageUrls, function (ii, imageURLS) {
                     dynamichtml += '<div class="swiper-slide"><a href="' + campaignimagepath +  campaign.keyid + '/' + imageURLS.fileName + imageURLS.fileExtension + '" onClick="setTimeout(function() {positionLightbox();},100);" data-ajax="false" class="swipebox" rel="' + i + l + campaign.keyid + '"><img class="thumbswiper-' + swipertemplate + '" src="' + campaignimagepath + campaign.keyid + '/thumbs_' + imageURLS.fileName + imageURLS.fileExtension +'" /></a></div>';
                 });
@@ -193,7 +193,7 @@ function generateCampaignPage(i, j, k, l) {
         //This section builds the swiper
         $.each(json.buyinggroup[i].year[j].quarter[k].event[l].campaign, function (m, campaign) {
             if (campaign.keyid != "tv") {
-                dynamichtml += 'var swiper_' + campaign.keyid + ' = new Swiper(".swiper-' + campaign.keyid + '",{mode:"horizontal",loop: false, spaceBetween: 20, nextButton: ".arrow-right-' + campaign.keyid + '",prevButton: ".arrow-left-' + campaign.keyid + '"});';
+                dynamichtml += 'var swiper_' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + campaign.keyid + ' = new Swiper(".swiper-' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + campaign.keyid + '",{mode:"horizontal",loop: false, spaceBetween: 20, nextButton: ".arrow-right-' + campaign.keyid + '",prevButton: ".arrow-left-' + campaign.keyid + '"});';
             }
         });
         dynamichtml += '$(".swipebox").swipebox();});</script></div>';
