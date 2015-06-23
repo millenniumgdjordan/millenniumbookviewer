@@ -48,17 +48,20 @@ function submitForm() {
 function buildGroupPage() {
     $("#groupselect_data").empty();
     var groupPageHTML ='';
-    groupPageHTML += '<div class="ui-grid-a">';
+    groupPageHTML +=            '<div class="ui-grid-a">';
     $.getJSON( "js/feed.json", function( json ) {
         $.each(json.buyinggroup, function (j, eventID) {
             var belongsto = window.localStorage.getItem('userBelongsTo');
             var imagepathroot = "images/groups/" + eventID.keyid + "/";
             var usercheck = belongsto.indexOf(eventID.keyid);
             if (usercheck > -1) {
-                groupPageHTML += '<div class="uiblock centered"><a href="#" onclick="generateGroupPage(\'' + eventID.keyid + '\')"><img src="' + imagepathroot + 'logo_90px.png" width=90 /></a></div>';
+                groupPageHTML +=    '<div class="uiblock centered">'
+                    +                   '<a href="#" onclick="generateGroupPage(\'' + eventID.keyid + '\')">'
+                    +                   '<img src="' + imagepathroot + 'logo_90px.png" width=90 /></a>'
+                    +               '</div>';
             }
         });
-        groupPageHTML += '</div>';
+        groupPageHTML +=        '</div>';
         $("#groupselect_data").append(groupPageHTML);
         $('.uiblock').each(function(i, el) {
             if (i % 2 === 0) { 
@@ -120,23 +123,62 @@ function generateGroupPage(groupname) {
     $.getJSON( "js/feed.json", function( json ) {
         $.each(json.buyinggroup, function (i, buyinggroup) {
             if (buyinggroup.keyid == groupname) {
-                var dynamichtml =  '<div data-role="page" data-theme="c" id="' + buyinggroup.keyid + '"> <div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader><div id=navleft><div id=navleft_wrapper><div id=navleft_icon><a href=#groupselect data-rel=back><i class="fa fa-chevron-left fa-2x"></i></a></div></div></div><div id=navcenter class=centered><div id=navcenter_wrapper><div id="navcenter_title"> <h2 class="centered">' + buyinggroup.realname + '</h2></div></div></div><div id=navright><div id=navright_wrapper><div id=navright_icon><a href=#chooser><i class="fa fa-bars fa-2x"></i></a></div></div></div></div><div data-role="main" class="ui-content centered">';
+                var dynamichtml =   '<div data-role="page" data-theme="c" id="' + buyinggroup.keyid + '">'
+                +                       '<div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader>'
+                +                           '<div id=navleft>'
+                +                               '<div id=navleft_wrapper>'
+                +                                   '<div id=navleft_icon>'
+                +                                       '<a href=#groupselect data-rel=back><i class="fa fa-chevron-left fa-2x"></i></a>'
+                +                                   '</div>'
+                +                               '</div>'
+                +                           '</div>'
+                +                           '<div id=navcenter class=centered>'
+                +                               '<div id=navcenter_wrapper>'
+                +                                   '<div id="navcenter_title">'
+                +                                       '<h2 class="centered">' + buyinggroup.realname + '</h2>'
+                +                                   '</div>'
+                +                               '</div>'
+                +                           '</div>'
+                +                           '<div id=navright>'
+                +                               '<div id=navright_wrapper>'
+                +                                   '<div id=navright_icon>'
+                +                                       '<a href=#chooser><i class="fa fa-bars fa-2x"></i></a>'
+                +                                   '</div>'
+                +                               '</div>'
+                +                           '</div>'
+                +                       '</div>'
+                +                       '<div data-role="main" class="ui-content centered">';
                 $.each(buyinggroup.year, function (j, eventyear) {
-                    dynamichtml += '<h2>' + eventyear.keyid + '</h2>';
-                    dynamichtml += '<div id="quarterwrapper" data-role="tabs"> <div id="quarternav" data-role="navbar"> <ul id="quarterlist"> <li><a href="#q1" data-theme="j" data-ajax="false" class="ui-btn-active">Q1</a></li> <li><a href="#q2" data-theme="j" data-ajax="false">Q2</a></li> <li><a href="#q3" data-theme="j" data-ajax="false">Q3</a></li> <li><a href="#q4" data-theme="j" data-ajax="false">Q4</a></li> </ul> </div>';
+                    dynamichtml +=          '<h2>' + eventyear.keyid + '</h2>'
+                    +                       '<div id="quarterwrapper" data-role="tabs">'
+                    +                           '<div id="quarternav" data-role="navbar">'
+                    +                               '<ul id="quarterlist">'
+                    +                                   '<li><a href="#q1" data-theme="j" data-ajax="false" class="ui-btn-active">Q1</a></li>'
+                    +                                   '<li><a href="#q2" data-theme="j" data-ajax="false">Q2</a></li>'
+                    +                                   '<li><a href="#q3" data-theme="j" data-ajax="false">Q3</a></li>'
+                    +                                   '<li><a href="#q4" data-theme="j" data-ajax="false">Q4</a></li>'
+                    +                               '</ul>'
+                    +                           '</div>';
                     $.each(eventyear.quarter, function (k, quarter) {
-                        dynamichtml += '<div id="' + quarter.keyid + '" class="ui-content" >';
+                        dynamichtml +=          '<div id="' + quarter.keyid + '" class="ui-content" >';
                         if (quarter.event.length < 1) {
-                            dynamichtml += '<h2>It looks like there\'s nothing here this quarter. <br /> Have you tried other quarters?</h2>';
+                            dynamichtml +=          '<h2>It looks like there\'s nothing here this quarter. <br /> Have you tried other quarters?</h2>';
                         } else {
                             $.each(quarter.event, function (l, eventview) {
-                                dynamichtml += '<div class="onethird"><a href="#" onclick="generateCampaignPage(' + i + ',' + j + ',' + k + ',' + l + ')"><img class="eventicon" src="images/groups/' + buyinggroup.keyid + '/' + eventyear.keyid + '/' + quarter.keyid + '/' + eventview.keyid + '/eventicon300px@2x.png" /></a><div class="onethirdcaption"><p>' + eventview.title + '</p></div></div>';
+                                dynamichtml +=      '<div class="onethird">'
+                                +                       '<a href="#" onclick="generateCampaignPage(' + i + ',' + j + ',' + k + ',' + l + ')">'
+                                +                       '<img class="eventicon" src="images/groups/' + buyinggroup.keyid + '/' + eventyear.keyid + '/'
+                                +                       quarter.keyid + '/' + eventview.keyid + '/eventicon300px@2x.png" /></a>'
+                                +                       '<div class="onethirdcaption">'
+                                +                           '<p>' + eventview.title + '</p>'
+                                +                       '</div>'
+                                +                   '</div>';
                             });
                         }
-                        dynamichtml += '</div>';
+                        dynamichtml +=          '</div>'; //div id quarter.keyid
                     });
                 });
-                dynamichtml += '</div>';
+                dynamichtml +=              '</div>' //quarterwrapper;
                 $(dynamichtml).appendTo($.mobile.pageContainer);
             }
         });
