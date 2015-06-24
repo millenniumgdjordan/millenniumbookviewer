@@ -249,6 +249,15 @@ p {
     right: 16px;
 }
 
+#panellist li a:active {
+    background-color: $lightest-blue;   
+}
+
+#panellist li a {
+    display: block;
+    height: 100%;
+}
+
 #panellist li.power a:after {
     content: "\f011";
     right: 12px;
@@ -591,6 +600,12 @@ p {
     padding: 0;
 }
 
+#quarterlist > li {
+    :active {
+        background-color: $medium-blue;
+    }
+}
+
 .onethird {
     width: 33%;
     float: left;
@@ -633,6 +648,9 @@ p {
     background-image: url("../images/loader.gif");
     background-position: center;
     background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
 }
 
 /*-------------------------------
@@ -729,6 +747,12 @@ div.popup {
 
 .holdme {
     position: relative;
+}
+
+.ui-grid-a {
+    :active {
+        background-color: $medium-blue;
+    }
 }
 
 
