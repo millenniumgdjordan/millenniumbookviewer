@@ -52,7 +52,7 @@ function buildGroupPage() {
     $.getJSON( "js/feed.json", function( json ) {
         $.each(json.buyinggroup, function (j, eventID) {
             var belongsto = window.localStorage.getItem('userBelongsTo');
-            var imagepathroot = "images/groups/" + eventID.keyid + "/";
+            var imagepathroot = "http://www.millenniumgd.net/hello/groups/" + eventID.keyid + "/";
             var usercheck = belongsto.indexOf(eventID.keyid);
             if (usercheck > -1) {
                 groupPageHTML +=    '<div class="uiblock centered">'
@@ -167,7 +167,7 @@ function generateGroupPage(groupname) {
                             $.each(quarter.event, function (l, eventview) {
                                 dynamichtml +=      '<div class="onethird">'
                                 +                       '<a href="#" onclick="generateCampaignPage(' + i + ',' + j + ',' + k + ',' + l + ')">'
-                                +                       '<img class="eventicon" src="images/groups/' + buyinggroup.keyid + '/' + eventyear.keyid + '/'
+                                +                       '<img class="eventicon" src="http://www.millenniumgd.net/hello/groups/' + buyinggroup.keyid + '/' + eventyear.keyid + '/'
                                 +                       quarter.keyid + '/' + eventview.keyid + '/eventicon300px@2x.png" /></a>'
                                 +                       '<div class="onethirdcaption">'
                                 +                           '<p>' + eventview.title + '</p>'
@@ -230,7 +230,7 @@ function generateCampaignPage(i, j, k, l) {
         +                   '<div data-role="main" class="ui-content centered">'
         +                       '<div id="printwrap">';
         $.each(json.buyinggroup[i].year[j].quarter[k].event[l].campaign, function (m, campaign) {
-            var campaignimagepath = 'images/groups/' + json.buyinggroup[i].keyid + '/' + json.buyinggroup[i].year[j].keyid + '/'
+            var campaignimagepath = 'http://www.millenniumgd.net/hello/groups/' + json.buyinggroup[i].keyid + '/' + json.buyinggroup[i].year[j].keyid + '/'
              + json.buyinggroup[i].year[j].quarter[k].keyid + '/' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + '/';
             if (campaign.keyid != "tv") { //build non-tv section
                 var swipertemplate = "";
