@@ -298,7 +298,7 @@ function generateCampaignPage(i, j, k, l) {
                     +                   '</video>'
                     +               '</div>' //tv
                     +               '<div class="titleinfo">'
-                    +                   '<h2>TV</h2><p>(As low as $195.00/30:)</p>'
+                    +                   '<h2>TV</h2><p>($195 / 30sec)</p>'
                     +               '</div>';
                 }
             });
@@ -324,8 +324,8 @@ function generateCampaignPage(i, j, k, l) {
 //creating a function to offset jQuery Mobile static positioning bug. Because of the bug, I've had to turn the static positioning of the swipebox to absolute.
 //this function positions the lightbox appropriately. call function when the thumbnail is clicked.
 function positionLightbox () {
- var windowTop = $window.scrollTop();
-$("#swipebox-overlay").css("top",windowTop);
+    var windowTop = $window.scrollTop();
+    $("#swipebox-overlay").css("top",windowTop);
 }
 
 function popupShow(groupname) {

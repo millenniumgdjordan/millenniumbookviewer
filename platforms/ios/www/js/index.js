@@ -298,7 +298,7 @@ function generateCampaignPage(i, j, k, l) {
                     +                   '</video>'
                     +               '</div>' //tv
                     +               '<div class="titleinfo">'
-                    +                   '<h2>TV</h2><p>(As low as $195.00/30:)</p>'
+                    +                   '<h2>TV</h2><p>(As low as ' + campaign.pricing + ')</p>'
                     +               '</div>';
                 }
             });
