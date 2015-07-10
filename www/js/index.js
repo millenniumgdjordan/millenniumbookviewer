@@ -146,7 +146,11 @@ var popupAd = {
         getAdInfo().done(
             function(result) {
                 var theUrl = result.get("linkedUrl");
-                popup.open('<div class="adcontainer"><img class="ad" src="' + result.get("adFile").url() + '" /><div class="invisiblelink" onclick="window.open(\'' + theUrl + '\',\'_blank\',\'location=yes\',\'closebuttoncaption=Return\');"</div>', 'html');
+                popup.open('<div class="adcontainer"><img class="ad" src="' 
+                           + result.get("adFile").url() 
+                           + '" /><div class="invisiblelink" onclick="window.open(\'' 
+                           + theUrl 
+                           + '\',\'_blank\',\'location=yes\',\'closebuttoncaption=Return\');"</div>', 'html');
                 window.localStorage['lastShown'] = new Date().toDateString();
             }
         ).fail(
