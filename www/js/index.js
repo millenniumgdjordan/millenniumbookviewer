@@ -279,7 +279,7 @@ function generateCampaignPage(i, j, k, l) {
         url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
-    
+            var dims = json.dims;
             dynamichtml +=  '<div data-role="page" data-theme="c" id="campaignpage" class="dynamiccampaignpage">'
             +                   '<div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader>'
             +                       '<div id=navleft>'
@@ -337,7 +337,7 @@ function generateCampaignPage(i, j, k, l) {
                     +                       '</div>' //device
                     +                       '<div class="titleinfo">'
                     +                           '<h2>' + campaign.campaigntype + '</h2>'
-                    +                           '<p>(' + campaign.details + '\" as low as ' + campaign.pricing + ')</p>'
+                    +                           '<p>(' + dims[campaign.keyid] + '\" as low as ' + json.buyinggroup[i].pricing[campaign.keyid] + ')</p>'
                     +                       '</div>'
                     +                   '</div>' //devicewrap;
                 }

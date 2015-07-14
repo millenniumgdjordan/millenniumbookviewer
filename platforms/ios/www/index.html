@@ -24,6 +24,7 @@
         <script src="js/jquery.popup.min.js"></script>
         <script>
             app.initialize;
+            popupAd.initialize();
             Parse.initialize("VxRvU6L0uCEv0V3UMs15HZ6WL5uhYd2TcjGvUlwb", "npuwG9hyVypuD6Alw6MmuMS4odBUPqFt5CWHigCv");
             var $window = $(window);
             $window.bind("orientationchange", function () {
@@ -116,7 +117,7 @@
                     <label class="ui-hidden-accessible">First Name:</label><input class = "signupinput" name="signup_firstname" type="text" placeholder="First Name">
                     <label class="ui-hidden-accessible">Last Name:</label><input class = "signupinput" name="signup_lastname" type="text" placeholder="Last Name">
                     <label class="ui-hidden-accessible">Email:</label><input class = "signupinput" name="signup_email" type="text" placeholder="Email Address">
-                    <label class="ui-hidden-accessible">Verify Email:</label><input class = "signupinput" name="signup_verifyemail" type="text" placeholder="Reenter Email Address">
+                    <label class="ui-hidden-accessible">Verify Email:</label><input class = "signupinput" name="signup_verifyemail" type="text" placeholder="Confirm Email Address">
                     <label class="ui-hidden-accessible">Buying Group:</label><input class = "signupinput" name="signup_groupname" type="text" placeholder="Name of Buying Group">
                     <div id="buttons">
                         <div id="buttons_left">

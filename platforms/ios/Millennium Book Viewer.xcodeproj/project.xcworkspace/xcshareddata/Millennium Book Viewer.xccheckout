@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7C1D5985-1738-49A5-98F0-1116A22A06C5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Millennium Book Viewer</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A42E8AAACE9419B1A162A4D34D79F4D40F70913D</key>
 		<string>https://github.com/millenniumgdjordan/millenniumbookviewer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>platforms/ios/Millennium Book Viewer.xcodeproj</string>
+	<string>platforms/ios/Millennium Book Viewer.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A42E8AAACE9419B1A162A4D34D79F4D40F70913D</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>A42E8AAACE9419B1A162A4D34D79F4D40F70913D</string>
 			<key>IDESourceControlWCCName</key>
-			<string>megabook</string>
+			<string>millenniumbookviewer</string>
 		</dict>
 	</array>
 </dict>

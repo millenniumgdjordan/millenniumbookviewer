@@ -20,28 +20,28 @@ function submitForm() {
     var uname = $("[name='username']").val().trim();
     var _pass = $("[name='password']").val();
     Parse.User.logIn(uname.toLowerCase(), _pass, {
-      success: function(user) {
-        var belongsTo = user.get('belongsTo');
-        window.localStorage['userBelongsTo'] = belongsTo;
-        var userToken = user.get('username');
-        window.localStorage['userToken'] = userToken;
-        $("#groupselect_data").empty();
-        if (belongsTo.length == 1) { 
-            generateGroupPage(belongsTo[0]);
-        } else {
-            $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "flip" } );
+        success: function(user) {
+            var belongsTo = user.get('belongsTo');
+            window.localStorage['userBelongsTo'] = belongsTo;
+            var userToken = user.get('username');
+            window.localStorage['userToken'] = userToken;
+            $("#groupselect_data").empty();
+            if (belongsTo.length == 1) { 
+                generateGroupPage(belongsTo[0]);
+            } else {
+                $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "flip" } );
+            }
+        },
+        error: function(user, error) {
+            // The login failed. Check error to see why.
+            $("#login_form_container").animate({left: '-=10px'}, 100);
+            var i;
+            for (i = 0; i < 3; i++) {
+                $("#login_form_container").animate({left: '+=20px'}, 100);
+                $("#login_form_container").animate({left: '-=20px'}, 100);
+            }
+            $("#login_form_container").animate({left: '+=10px'}, 100);
         }
-      },
-      error: function(user, error) {
-        // The login failed. Check error to see why.
-        $("#login_form_container").animate({left: '-=10px'}, 100);
-        var i;
-        for (i = 0; i < 3; i++) {
-            $("#login_form_container").animate({left: '+=20px'}, 100);
-            $("#login_form_container").animate({left: '-=20px'}, 100);
-        }
-        $("#login_form_container").animate({left: '+=10px'}, 100);
-      }
     });
 }
 
@@ -115,6 +115,69 @@ var app = {
    
 };
 
+var popupAd = {
+    initialize: function() {
+        if (typeof window.localStorage.getItem('lastShown') === 'undefined') {
+            window.localStorage['lastShown'] = "";
+        }        
+    },
+    hasShown: function() {
+        var now = new Date().toDateString();
+        var lastShown = window.localStorage.getItem('lastShown');
+        if (now === lastShown) {
+            return true;
+            
+        } else {
+            return false;
+        }
+    },
+    show: function(groupname) {
+        windowheight = $( window ).height();
+        var adcontainerheight = windowheight * .85;
+        var adcontainerwidth = adcontainerheight / 1.77;
+        var adOptions = { 
+            closeContent: '<div class="popup_close"><button>Close</button></div>', 
+            backOpacity: 0.8, 
+            height: adcontainerheight, 
+            width: adcontainerwidth 
+        }
+        var popup = new $.Popup(adOptions);
+        var groupid = "#" + groupname;
+        getAdInfo().done(
+            function(result) {
+                var theUrl = result.get("linkedUrl");
+                popup.open('<div class="adcontainer"><img class="ad" src="' 
+                           + result.get("adFile").url() 
+                           + '" /><div class="invisiblelink" onclick="window.open(\'' 
+                           + theUrl 
+                           + '\',\'_blank\',\'location=yes\',\'closebuttoncaption=Return\');"</div>', 'html');
+                window.localStorage['lastShown'] = new Date().toDateString();
+            }
+        ).fail(
+            function() {
+                console.log('Error!');
+            }
+        );
+    }
+};
+
+
+function getAdInfo () {
+    var D = $.Deferred();
+    var pulledAd = Parse.Object.extend("PopupAd");
+    var query = new Parse.Query(pulledAd);
+    query.equalTo("belongsTo", "all");
+    query.find({
+        success: function(results) {
+            var rand = results[Math.floor(Math.random() * results.length)];
+            D.resolve(rand);
+        },
+        failure: function(object, error) {
+            D.reject();
+        }
+    });
+    return D.promise();
+}
 
 function generateGroupPage(groupname) {
     
@@ -196,9 +259,8 @@ function generateGroupPage(groupname) {
             //switch to Main Book Display
             $( ":mobile-pagecontainer" ).pagecontainer( "change", groupnameid, { transition: "flip" } );
             //push popup
-            var hasshowntoday = false;
-            if (!hasshowntoday) {
-                setTimeout(function() {popupShow(groupnameid);},1000);
+            if (!popupAd.hasShown()) {//if the popup ad has not shown today, show it
+                setTimeout(function() {popupAd.show(groupnameid);},1000);
             }
         }
     });
@@ -217,7 +279,7 @@ function generateCampaignPage(i, j, k, l) {
         url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
-    
+            var dims = json.dims;
             dynamichtml +=  '<div data-role="page" data-theme="c" id="campaignpage" class="dynamiccampaignpage">'
             +                   '<div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader>'
             +                       '<div id=navleft>'
@@ -275,7 +337,7 @@ function generateCampaignPage(i, j, k, l) {
                     +                       '</div>' //device
                     +                       '<div class="titleinfo">'
                     +                           '<h2>' + campaign.campaigntype + '</h2>'
-                    +                           '<p>(' + campaign.details + '\" as low as ' + campaign.pricing + ')</p>'
+                    +                           '<p>(' + dims.campaign.keyid + '\" as low as ' + campaign.pricing + ')</p>'
                     +                       '</div>'
                     +                   '</div>' //devicewrap;
                 }
@@ -298,7 +360,7 @@ function generateCampaignPage(i, j, k, l) {
                     +                   '</video>'
                     +               '</div>' //tv
                     +               '<div class="titleinfo">'
-                    +                   '<h2>TV</h2><p>(As low as ' + campaign.pricing + ')</p>'
+                    +                   '<h2>TV</h2><p>($195 / 30sec)</p>'
                     +               '</div>';
                 }
             });
@@ -324,49 +386,8 @@ function generateCampaignPage(i, j, k, l) {
 //creating a function to offset jQuery Mobile static positioning bug. Because of the bug, I've had to turn the static positioning of the swipebox to absolute.
 //this function positions the lightbox appropriately. call function when the thumbnail is clicked.
 function positionLightbox () {
- var windowTop = $window.scrollTop();
-$("#swipebox-overlay").css("top",windowTop);
-}
-
-function popupShow(groupname) {
-    windowheight = $( window ).height();
-    var adcontainerheight = windowheight * .85;
-    var adcontainerwidth = adcontainerheight / 1.77;
-    var adOptions = { 
-        closeContent: '<div class="popup_close"><button>Close</button></div>', 
-        backOpacity: 0.8, 
-        height: adcontainerheight, 
-        width: adcontainerwidth 
-    }
-    var popup = new $.Popup(adOptions);
-    var groupid = "#" + groupname;
-    getAdInfo().done(
-        function(result) {
-            var theUrl = result.get("linkedUrl");
-            popup.open('<div class="adcontainer"><img class="ad" src="' + result.get("adFile").url() + '" /><div class="invisiblelink" onclick="window.open(\'' + theUrl + '\',\'_blank\',\'location=yes\',\'closebuttoncaption=Return\');"</div>', 'html');
-        }
-    ).fail(
-        function() {
-            console.log('Error!');
-        }
-    );
-}
-
-function getAdInfo () {
-    var D = $.Deferred();
-    var pulledAd = Parse.Object.extend("PopupAd");
-    var query = new Parse.Query(pulledAd);
-    query.equalTo("belongsTo", "all");
-    query.find({
-        success: function(results) {
-            var rand = results[Math.floor(Math.random() * results.length)];
-            D.resolve(rand);
-        },
-        failure: function(object, error) {
-            D.reject();
-        }
-    });
-    return D.promise();
+    var windowTop = $window.scrollTop();
+    $("#swipebox-overlay").css("top",windowTop);
 }
 
 function vertCenter (el) {
