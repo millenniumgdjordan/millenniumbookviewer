@@ -337,7 +337,7 @@ function generateCampaignPage(i, j, k, l) {
                     +                       '</div>' //device
                     +                       '<div class="titleinfo">'
                     +                           '<h2>' + campaign.campaigntype + '</h2>'
-                    +                           '<p>(' + dims.campaign.keyid + '\" as low as ' + campaign.pricing + ')</p>'
+                    +                           '<p>(' + dims[campaign.keyid] + '\" as low as ' + json.buyinggroup[i].pricing[campaign.keyid] + ')</p>'
                     +                       '</div>'
                     +                   '</div>' //devicewrap;
                 }
