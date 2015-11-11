@@ -21,6 +21,7 @@
 	body {
 		-webkit-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
+        
 	}
 }
 * {
@@ -355,7 +356,7 @@ p {
     line-height: 22pt;
 }
 
-#instructions, {
+#instructions {
     margin-top: 2em;
     padding: 0 16px;
 }
@@ -367,7 +368,9 @@ p {
 #credits p {
     font-size: 14pt;
 }
-
+#panel-logo {
+    width: 100%;    
+}
 #panellinks {
     margin-top: 20pt;
 }

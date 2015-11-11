@@ -373,6 +373,10 @@ p {
   font-size: 14pt;
 }
 
+#panel-logo {
+  width: 100%;
+}
+
 #panellinks {
   margin-top: 20pt;
 }
