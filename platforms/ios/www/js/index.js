@@ -26,7 +26,7 @@ function submitForm() {
             var userToken = user.get('username');
             window.localStorage['userToken'] = userToken;
             $("#groupselect_data").empty();
-            if (belongsTo.length == 1) { 
+            if (belongsTo.length === 1) { 
                 generateGroupPage(belongsTo[0]);
             } else {
                 $( ":mobile-pagecontainer" ).pagecontainer( "change", "#groupselect", { transition: "flip" } );
@@ -34,6 +34,7 @@ function submitForm() {
         },
         error: function(user, error) {
             // The login failed. Check error to see why.
+            console.log(uname + " " + error.message);
             $("#login_form_container").animate({left: '-=10px'}, 100);
             var i;
             for (i = 0; i < 3; i++) {
@@ -110,7 +111,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
-    },
+    }
     
    
 };
@@ -140,7 +141,7 @@ var popupAd = {
             backOpacity: 0.8, 
             height: adcontainerheight, 
             width: adcontainerwidth 
-        }
+        };
         var popup = new $.Popup(adOptions);
         var groupid = "#" + groupname;
         getAdInfo().done(
@@ -194,7 +195,7 @@ function generateGroupPage(groupname) {
         jsonpCallback: "dataHandler",
         success: function(json) {
             $.each(json.buyinggroup, function (i, buyinggroup) {
-                if (buyinggroup.keyid == groupname) {
+                if (buyinggroup.keyid === groupname) {
                     var dynamichtml =   '<div data-role="page" data-theme="c" id="' + buyinggroup.keyid + '">'
                     +                       '<div data-role=header data-theme=j class="ui-bar headerwithnav" data-id=myheader>'
                     +                           '<div id=navleft>'
@@ -309,9 +310,9 @@ function generateCampaignPage(i, j, k, l) {
             $.each(json.buyinggroup[i].year[j].quarter[k].event[l].campaign, function (m, campaign) {
                 var campaignimagepath = 'http://www.millenniumgd.net/hello/groups/' + json.buyinggroup[i].keyid + '/' + json.buyinggroup[i].year[j].keyid + '/'
                  + json.buyinggroup[i].year[j].quarter[k].keyid + '/' + json.buyinggroup[i].year[j].quarter[k].event[l].keyid + '/';
-                if (campaign.keyid != "tv") { //build non-tv section
+                if (campaign.keyid !== "tv") { //build non-tv section
                     var swipertemplate = "";
-                    if (campaign.keyid == "bs") {
+                    if (campaign.keyid === "bs") {
                         swipertemplate = "broadsheet";
                     }
                     else {
@@ -360,7 +361,8 @@ function generateCampaignPage(i, j, k, l) {
                     +                   '</video>'
                     +               '</div>' //tv
                     +               '<div class="titleinfo">'
-                    +                   '<h2>TV</h2><p>($195 / 30sec)</p>'
+                    +                   '<h2>TV</h2><p>Regular price: <span class="strikethrough">$795</span></p>'
+                    +                   '<p>Buying Group price $195</p><p>Plus use your co-op dollars and only pay $100</p>'
                     +               '</div>';
                 }
             });
@@ -368,7 +370,7 @@ function generateCampaignPage(i, j, k, l) {
             +                   '<script type="text/javascript">$( document ).on("pageshow", "#campaignpage", function() {';
             //This section builds the swiper
             $.each(json.buyinggroup[i].year[j].quarter[k].event[l].campaign, function (m, campaign) {
-                if (campaign.keyid != "tv") {
+                if (campaign.keyid !== "tv") {
                     dynamichtml +=  'var swiper_' + campaign.keyid + ' = '
                     +               'new Swiper(".swiper-' + campaign.keyid
                     +               '",{mode:"horizontal",loop: false, spaceBetween: 20, nextButton: ".arrow-right-' + campaign.keyid + '",prevButton: ".arrow-left-' + campaign.keyid + '"});';
@@ -386,7 +388,7 @@ function generateCampaignPage(i, j, k, l) {
 //creating a function to offset jQuery Mobile static positioning bug. Because of the bug, I've had to turn the static positioning of the swipebox to absolute.
 //this function positions the lightbox appropriately. call function when the thumbnail is clicked.
 function positionLightbox () {
-    var windowTop = $window.scrollTop();
+    var windowTop = $(window).scrollTop();
     $("#swipebox-overlay").css("top",windowTop);
 }
 
@@ -510,4 +512,12 @@ $( document ).on("pageshow", "#newusersignup", function() {
     $("#newusersignup_wrapper").css("margin-top", forsignupwindow);*/
 });
 
+$( document ).on("pageshow", "#credits", function() {
+    if (!(window.localStorage.getItem('userToken'))) {
+        $( '#navright_icon' ).css("display", "none");
+    }
+    else {
+        $( '#navright_icon' ).css("display", "block");
+    }
+});
 

@@ -179,6 +179,9 @@ p {
     text-overflow: ellipsis;
 }
 
+//#navright_icon {
+//    display: none;
+//}
 .headimage {
     height: 26px;
     /*padding: 10pt 0;*/
@@ -386,11 +389,6 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /*max-width: 300px; OLD-windowed version 
-    height: 440px;                         
-    border: 2px solid;
-    border-radius: 15px;                  */                    
-    /*margin-top: 44pt;*/
     margin-left: auto;
     margin-right: auto;
     padding: 0;
@@ -758,5 +756,9 @@ div.popup {
     }
 }
 
+.strikethrough {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
 
 

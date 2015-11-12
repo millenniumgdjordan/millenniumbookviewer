@@ -391,11 +391,6 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /*max-width: 300px; OLD-windowed version 
-  height: 440px;                         
-  border: 2px solid;
-  border-radius: 15px;                  */
-  /*margin-top: 44pt;*/
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -748,4 +743,9 @@ div.popup {
 
 .ui-grid-a :active {
   background-color: #6699cc;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: red;
 }

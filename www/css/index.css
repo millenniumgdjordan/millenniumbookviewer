@@ -744,3 +744,8 @@ div.popup {
 .ui-grid-a :active {
   background-color: #6699cc;
 }
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}

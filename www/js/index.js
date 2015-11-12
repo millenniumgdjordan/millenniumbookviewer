@@ -34,6 +34,7 @@ function submitForm() {
         },
         error: function(user, error) {
             // The login failed. Check error to see why.
+            console.log(uname + " " + error.message);
             $("#login_form_container").animate({left: '-=10px'}, 100);
             var i;
             for (i = 0; i < 3; i++) {
@@ -360,7 +361,8 @@ function generateCampaignPage(i, j, k, l) {
                     +                   '</video>'
                     +               '</div>' //tv
                     +               '<div class="titleinfo">'
-                    +                   '<h2>TV</h2><p>($195 / 30sec)</p>'
+                    +                   '<h2>TV</h2><p>Regular price: <span class="strikethrough">$795</span></p>'
+                    +                   '<p>Buying Group price $195</p><p>Plus use your co-op dollars and only pay $100</p>'
                     +               '</div>';
                 }
             });
@@ -510,4 +512,12 @@ $( document ).on("pageshow", "#newusersignup", function() {
     $("#newusersignup_wrapper").css("margin-top", forsignupwindow);*/
 });
 
+$( document ).on("pageshow", "#credits", function() {
+    if (!(window.localStorage.getItem('userToken'))) {
+        $( '#navright_icon' ).css("display", "none");
+    }
+    else {
+        $( '#navright_icon' ).css("display", "block");
+    }
+});
 

@@ -179,6 +179,9 @@ p {
     text-overflow: ellipsis;
 }
 
+//#navright_icon {
+//    display: none;
+//}
 .headimage {
     height: 26px;
     /*padding: 10pt 0;*/
@@ -753,5 +756,9 @@ div.popup {
     }
 }
 
+.strikethrough {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
 
 
