@@ -190,7 +190,6 @@
     self.inAppBrowserViewController.webView.scalesPageToFit = browserOptions.enableviewportscale;
     self.inAppBrowserViewController.webView.mediaPlaybackRequiresUserAction = browserOptions.mediaplaybackrequiresuseraction;
     self.inAppBrowserViewController.webView.allowsInlineMediaPlayback = browserOptions.allowinlinemediaplayback;
-    NSLog ( @"JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO JOJO : %@", [NSDate date] );
     if (IsAtLeastiOSVersion(@"6.0")) {
         self.inAppBrowserViewController.webView.keyboardDisplayRequiresUserAction = browserOptions.keyboarddisplayrequiresuseraction;
         self.inAppBrowserViewController.webView.suppressesIncrementalRendering = browserOptions.suppressesincrementalrendering;
@@ -730,7 +729,7 @@
 
 - (void)viewDidUnload
 {
-    [self.webView loadHTMLString:nil baseURL:nil];
+    [self.webView loadHTMLString:@"" baseURL:[NSURL URLWithString:@"http://"] ];
     [CDVUserAgentUtil releaseLock:&_userAgentLockToken];
     [super viewDidUnload];
 }
@@ -986,7 +985,7 @@
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     if ((self.orientationDelegate != nil) && [self.orientationDelegate respondsToSelector:@selector(supportedInterfaceOrientations)]) {
         return [self.orientationDelegate supportedInterfaceOrientations];

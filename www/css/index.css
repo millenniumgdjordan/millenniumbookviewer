@@ -502,6 +502,14 @@ p {
   margin-top: 10px;
 }
 
+#calcButton {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #33669a;
+  color: white;
+}
+
 #reset_btn, #cancel_btn {
   background-color: #33669a;
   color: white;
@@ -547,7 +555,7 @@ p {
   bottom: 10px;
 }
 
-#login_btn:active, #logout_btn:active {
+#login_btn:active, #logout_btn:active, #calcButton:active {
   background-color: #3d454e;
 }
 
@@ -624,6 +632,11 @@ p {
   right: 11px;
 }
 
+#calcClose {
+  top: -11px;
+  right: -11px;
+}
+
 .ui-popup > img.popphoto {
   width: 100%;
   max-height: 1000%;
@@ -649,7 +662,7 @@ p {
 /*-------------------------------
 	POPUP.CSS
 -------------------------------*/
-.popup_back {
+.popsup_back {
   height: 100%;
   left: 0;
   position: fixed;
@@ -658,7 +671,7 @@ p {
   z-index: 1000;
 }
 
-.popup_cont {
+.popsup_cont {
   position: fixed;
   z-index: 1001;
 }
@@ -670,7 +683,7 @@ p {
 /*---------------------
 	EDIT BELOW
 */
-.popup_close {
+.popsup_close {
   color: #a9bcd5;
   cursor: pointer;
   position: absolute;
@@ -679,16 +692,16 @@ p {
   top: 0;
 }
 
-.popup_close:hover {
+.popsup_close:hover {
   color: #111;
 }
 
-.popup_back {
+.popsup_back {
   cursor: pointer;
   background-color: #222;
 }
 
-div.popup {
+div.popsup {
   background: #fff;
   padding: 5px;
   box-shadow: 0 3px 10px #222;
@@ -748,4 +761,9 @@ div.popup {
 .strikethrough {
   text-decoration: line-through;
   text-decoration-color: red;
+}
+
+#calcTotal {
+  color: green;
+  font-size: 2em;
 }

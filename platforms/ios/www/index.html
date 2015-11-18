@@ -18,13 +18,14 @@
         <script src="js/jquery.mobile-1.4.5.min.js"></script>     
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+        <script src="https://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
         <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
         <script src="js/send-email.js"></script>
-        <script src="js/jquery.popup.min.js"></script>
+        <script src="js/jquery.popsup.min.js"></script>
+        <script src="js/accounting.min.js"></script>
         <script>
             app.initialize;
-            popupAd.initialize();
+            popsupAd.initialize();
             Parse.initialize("VxRvU6L0uCEv0V3UMs15HZ6WL5uhYd2TcjGvUlwb", "npuwG9hyVypuD6Alw6MmuMS4odBUPqFt5CWHigCv");
             var $window = $(window);
             $window.bind("orientationchange", function () {
@@ -41,7 +42,7 @@
             </div>
             <ul data-role="listview" id="panellist">
                 <li data-icon="false"><a href="#groupselect">Group Select</a></li>
-                <li data-icon="false"><a href="#credits">Credits</a></li>
+                <li data-icon="false"><a href="#credits">Contact</a></li>
                 <li data-icon="false"><a href="#" onclick="window.open('http://www.tempursealy.com','_blank','location=yes','closebuttoncaption=Return');">Tempur Website</a></li>
                 <li data-icon="false"><a href="#" onclick="window.open('http://www.millenniumgd.net','_blank','location=yes','closebuttoncaption=Return');">Millennium Website</a></li>
                 <li data-icon="false" class="power"><a href="#" onclick="logout()">Logout</a></li>
@@ -61,8 +62,8 @@
                         </div>
                     </div>
                     <div id="login_bottom">
-                        <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#passwordreset", { transition: "flip" } );'>I forgot my password.</a>
-                        <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#newusersignup", { transition: "flip" } );'>I need an account.</a>
+                        <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#passwordreset", { transition: "flip" } );'>I Forgot my Password</a>
+                        <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#newusersignup", { transition: "flip" } );'>I Need an Account</a>
                         <a href="#" onclick='$( ":mobile-pagecontainer" ).pagecontainer( "change", "#credits", {transition: "flip" } );'>Contact Information</a>
                     </div>
                 </div>
@@ -145,10 +146,11 @@
                 <div id="navcenter" class="centered">
                     <div id="navcenter_wrapper">
                         <div id="navcenter_title">
-                            <h2 class="centered">Credits</h2>
+                            <h2 class="centered">Contact Information</h2>
                         </div>
                     </div>
                 </div>
+<!--
                 <div id="navright">
                     <div id="navright_wrapper">
                         <div id="navright_icon">
@@ -156,6 +158,7 @@
                         </div>
                     </div>
                 </div>
+-->
             </div>
             <div data-role="main" class="ui-content">
                
@@ -163,17 +166,19 @@
                     <p><strong>Millennium Graphics</strong></p>
                     <p>3 Fir Ct. Suite 4</p>
                     <p>Oakland NJ 07436 </p>
-                    <p>(201)644-0870</p>
+                    <p>(201)644-0870<br /><br /></p>
                     <!-- h1 class="centered">Copyright Notice<br /></h2> -->
                     <!-- p>All retail advertising appearing on this site is the copyrighted property of Millennium Graphics and Design. They are fully protected by U.S. And International Copyright laws, all rights reserved. The images on this site are for online viewing only and may not be copied, reproduced, Manipulated, or used in any way for commercial or personal use without express written consent of Millennium Graphics & Design. No usage rights are granted until full payment has been received and acknowledged. Unauthorized usage and or reproduction of said retail advertising constitutes copyright infringement, is a violation of federal and international law, and will be charged 3 times the normal usage rate by Millennium Graphics & Design. If the total fee is not paid by the end of 30 days said offenders would be prosecuted to the fullest extent possible. Logos and images provided to Millennium Graphics & Design by Sealy Mattress Company are approved for use with the intent to promote Sealy brands.</p> -->
                     <p><strong>Email contacts:</strong></p>
-                    <p><a href="mailto:eryer@millenniumgd.com">Ed Ryer - Owner</a></p>
-                    <p><a href="mailto:eryer@millenniumgd.com">Ed Ryer - Owner</a></p>
-                    <p><a href="mailto:eryer@millenniumgd.com">Ed Ryer - Owner</a></p>
-                    <p><a href="mailto:eryer@millenniumgd.com">Ed Ryer - Owner</a></p>
-                    <p><a href="mailto:eryer@millenniumgd.com">Ed Ryer - Owner</a></p>
-                    <p><a href="mailto:eryer@millenniumgd.com">Ed Ryer - Owner</a></p>
-                    <p><a href="mailto:eryer@millenniumgd.com">Ed Ryer - Owner</a></p>
+                    <p><a href="#" onclick="window.open('mailto:eryer@millenniumgd.com?subject=App%20Contact','_self');">Ed Ryer - Owner</a></p>
+                    <p><a href="#" onclick="window.open('mailto:jordan@millenniumgd.com?subject=App%20Contact','_self');">Jordan Passmore - Web and Mobile Apps</a></p>
+                    <p><a href="#" onclick="window.open('mailto:adam@millenniumgd.com?subject=App%20Contact','_self');">Adam Melter - Direct Mail</a></p>
+                    <p><a href="#" onclick="window.open('mailto:bryan@millenniumgd.com?subject=App%20Contact','_self');">Brian Dack - Direct Mail</a></p>
+                    <p><a href="#" onclick="window.open('mailto:nicole@millenniumgd.com?subject=App%20Contact','_self');">Nicole Birchenough - Inserts and Point of Sale</a></p>
+                    <p><a href="#" onclick="window.open('mailto:dave@millenniumgd.com?subject=App%20Contact','_self');">Dave Jablonski - Television</a></p>
+                    <p><a href="#" onclick="window.open('mailto:alexb@millenniumgd.com?subject=App%20Contact','_self');">Alex Babich - Television</a></p>
+                    
+                   
                 </div>
             </div>
         </div>

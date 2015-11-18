@@ -7,7 +7,6 @@
   @protected CDVWebViewOperationsDelegate* _webViewOperationsDelegate;
 }
 
-@property (nonatomic, strong) IBOutlet UIWebView* webView;
 @property (nonatomic, strong) IBOutlet WKWebView* wkWebView;
 
 @property (nonatomic, readwrite, copy) NSString* uiWebViewLS;

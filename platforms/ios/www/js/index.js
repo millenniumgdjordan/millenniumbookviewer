@@ -116,7 +116,7 @@ var app = {
    
 };
 
-var popupAd = {
+var popsupAd = {
     initialize: function() {
         if (typeof window.localStorage.getItem('lastShown') === 'undefined') {
             window.localStorage['lastShown'] = "";
@@ -137,17 +137,17 @@ var popupAd = {
         var adcontainerheight = windowheight * .85;
         var adcontainerwidth = adcontainerheight / 1.77;
         var adOptions = { 
-            closeContent: '<div class="popup_close"><button>Close</button></div>', 
+            closeContent: '<div class="popsup_close"><button>Close</button></div>', 
             backOpacity: 0.8, 
             height: adcontainerheight, 
             width: adcontainerwidth 
         };
-        var popup = new $.Popup(adOptions);
+        var popsup = new $.Popsup(adOptions);
         var groupid = "#" + groupname;
         getAdInfo().done(
             function(result) {
                 var theUrl = result.get("linkedUrl");
-                popup.open('<div class="adcontainer"><img class="ad" src="' 
+                popsup.open('<div class="adcontainer"><img class="ad" src="' 
                            + result.get("adFile").url() 
                            + '" /><div class="invisiblelink" onclick="window.open(\'' 
                            + theUrl 
@@ -260,8 +260,8 @@ function generateGroupPage(groupname) {
             //switch to Main Book Display
             $( ":mobile-pagecontainer" ).pagecontainer( "change", groupnameid, { transition: "flip" } );
             //push popup
-            if (!popupAd.hasShown()) {//if the popup ad has not shown today, show it
-                setTimeout(function() {popupAd.show(groupnameid);},1000);
+            if (!popsupAd.hasShown()) {//if the popup ad has not shown today, show it
+                setTimeout(function() {popsupAd.show(groupnameid);},1000);
             }
         }
     });
@@ -338,8 +338,34 @@ function generateCampaignPage(i, j, k, l) {
                     +                       '</div>' //device
                     +                       '<div class="titleinfo">'
                     +                           '<h2>' + campaign.campaigntype + '</h2>'
-                    +                           '<p>(' + dims[campaign.keyid] + '\" as low as ' + json.buyinggroup[i].pricing[campaign.keyid] + ')</p>'
-                    +                       '</div>'
+                    +                           '<p>(' + dims[campaign.keyid] + '\" as low as $' + json.buyinggroup[i].pricing[campaign.keyid] + ' each. )</p>';
+                    if (campaign.keyid === "dm") {
+                        var eachPrice = json.buyinggroup[i].pricing[campaign.keyid];
+                        dynamichtml +=          '<a href="#" id="calcButton" data-role="button" data-inline="true" onclick="calculateCost(' + eachPrice + ')">Estimate Cost</a>'
+                        +                       '<div data-role="popup" id="calcPopup" data-theme="a" class="ui-corner-all ui-popup ui-body-a ui-overlay-shadow">'
+                        +                            '<a href="#" id="calcClose" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>'
+			            +                            '<form id="calcForm">'
+				        +                            '<div style="padding:10px 20px;">'
+				        +                               '<h3>Cost Estimator</h3>'
+                        +                               '<p>Enter the number of mailers to send out (minimum order of 10,000) and select your advertising options, and an estimated cost will be generated.</p><br />'
+		                +                               '<label for="qty">Quantity:</label>'
+		                +                               '<input type="number" name="quantity" id="qty" value="10000" placeholder="Quantity" data-theme="a">'
+                        +                               '<fieldset data-role="controlgroup">'
+                        +                               '<legend>Choose Discounts:</legend>'
+                        +                               '<input type="radio" name="discount_choices" id="discount_none" value=0 checked="checked">'
+                        +                               '<label for="discount_none">No Discount</label>'
+                        +                               '<input type="radio" name="discount_choices" id="discount_sealy" value=500>'
+                        +                               '<label for="discount_sealy">Sealy Only Ad (Save $500)</label>'
+                        +                               '<input type="radio" name="discount_choices" id="discount_both" value=1000>'
+                        +                               '<label for="discount_both">Sealy / Tempur-Pedic Mailer (Save $1000)</label>'
+                        +                               '</fieldset>'
+                        +                               '<label for="calcTotal">Total Cost</label>'
+                        +                               '<input type="text" id="calcTotal" name="calcTotal" readonly="readonly">'
+				        +                            '</div>'
+			            +                            '</form>'
+		                +                        '</div>';
+                    }
+                    dynamichtml +=          '</div>' //titleinfo
                     +                   '</div>' //devicewrap;
                 }
                 else { //build tv section
@@ -487,11 +513,13 @@ $(document).on('pagecontainershow', function(e, ui) {
             scaleBannerVideoSize('.video-container video');
         }, 100);
     });
+    if (pageId === "campaignpage") {
+        
+    }
     
 });
 
 $( document ).on("pageshow", "#groupselect", function() {
-    $("#myDialog").popup();
     $( "body>[data-role='panel']" ).panel().enhanceWithin();
     vertCenter($('#groupselect_wrapper'));
     /*var forloginwindow = (windowheight - 450)/2;
@@ -506,18 +534,38 @@ $( document ).on("pageshow", "#groupselect", function() {
     }
 
 });
+
+
 $( document ).on("pageshow", "#newusersignup", function() {
     /*windowheight = $( window ).height();
     var forsignupwindow = (windowheight - 450)/2;
     $("#newusersignup_wrapper").css("margin-top", forsignupwindow);*/
 });
 
-$( document ).on("pageshow", "#credits", function() {
-    if (!(window.localStorage.getItem('userToken'))) {
-        $( '#navright_icon' ).css("display", "none");
-    }
-    else {
-        $( '#navright_icon' ).css("display", "block");
-    }
-});
+//$( document ).on("pageshow", "#credits", function() {
+//    if (!(window.localStorage.getItem('userToken'))) {
+//        $( '#navright_icon' ).css("display", "none");
+//    }
+//    else {
+//        $( '#navright_icon' ).css("display", "block");
+//    }
+//});
 
+function calculateCost( each_cost ) {
+    $('#calcPopup').popup( "open");
+    makeTheCalc();
+    var $inputs = $('#calcForm :input');
+    $inputs.on('keyup change', function() {
+        makeTheCalc();
+    });
+    function makeTheCalc() {
+        var theQty = $('#qty').val();
+        if (theQty <= 10000) {
+            theQty = 10000;
+        }
+        var theDiscount = $("input:radio[name='discount_choices']:checked").val();
+        var theTotal = theQty * each_cost - theDiscount;
+        var theDollars = accounting.formatMoney(theTotal);
+        $('#calcTotal').val( theDollars );
+    }
+}
