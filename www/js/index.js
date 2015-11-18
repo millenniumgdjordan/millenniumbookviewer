@@ -220,38 +220,47 @@ function generateGroupPage(groupname) {
                     +                               '</div>'
                     +                           '</div>'
                     +                       '</div>'
-                    +                       '<div data-role="main" class="ui-content centered">';
+                    +                       '<div data-role="main" class="ui-content centered">'
+                    +                           '<div data-role="collapsible-set" data-inset="false" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">';
                     $.each(buyinggroup.year, function (j, eventyear) {
-                        dynamichtml +=          '<h2>' + eventyear.keyid + '</h2>'
-                        +                       '<div id="quarterwrapper" data-role="tabs">'
-                        +                           '<div id="quarternav" data-role="navbar">'
-                        +                               '<ul id="quarterlist">'
-                        +                                   '<li><a href="#q1" data-theme="j" data-ajax="false" class="ui-btn-active">Q1</a></li>'
-                        +                                   '<li><a href="#q2" data-theme="j" data-ajax="false">Q2</a></li>'
-                        +                                   '<li><a href="#q3" data-theme="j" data-ajax="false">Q3</a></li>'
-                        +                                   '<li><a href="#q4" data-theme="j" data-ajax="false">Q4</a></li>'
-                        +                               '</ul>'
-                        +                           '</div>';
+                        if (j === 0) {          
+                        dynamichtml +=              '<div data-role="collapsible" data-collapsed="false">';
+                        }
+                        else {
+                        dynamichtml +=              '<div data-role="collapsible">';
+                        }
+                        dynamichtml +=                  '<h2 class="yeartitle">' + eventyear.keyid + '</h2>'
+                        +                               '<div id="quarterwrapper" data-role="tabs">'
+                        +                                   '<div id="quarternav" data-role="navbar">'
+                        +                                       '<ul id="quarterlist">'
+                        +                                           '<li><a href="#q1" data-theme="j" data-ajax="false" class="ui-btn-active">Q1</a></li>'
+                        +                                           '<li><a href="#q2" data-theme="j" data-ajax="false">Q2</a></li>'
+                        +                                           '<li><a href="#q3" data-theme="j" data-ajax="false">Q3</a></li>'
+                        +                                           '<li><a href="#q4" data-theme="j" data-ajax="false">Q4</a></li>'
+                        +                                       '</ul>'
+                        +                                   '</div>';
                         $.each(eventyear.quarter, function (k, quarter) {
-                            dynamichtml +=          '<div id="' + quarter.keyid + '" class="ui-content" >';
+                            dynamichtml +=                  '<div id="' + quarter.keyid + '" class="ui-content" >';
                             if (quarter.event.length < 1) {
-                                dynamichtml +=          '<h2>It looks like there\'s nothing here this quarter. <br /> Have you tried other quarters?</h2>';
+                                dynamichtml +=                  '<h2>It looks like there\'s nothing here this quarter. <br /> Have you tried other quarters?</h2>';
                             } else {
                                 $.each(quarter.event, function (l, eventview) {
-                                    dynamichtml +=      '<div class="onethird">'
-                                    +                       '<a href="#" onclick="generateCampaignPage(' + i + ',' + j + ',' + k + ',' + l + ')">'
-                                    +                       '<img class="eventicon" src="http://www.millenniumgd.net/hello/groups/' + buyinggroup.keyid + '/' + eventyear.keyid + '/'
-                                    +                       quarter.keyid + '/' + eventview.keyid + '/eventicon300px@2x.png" /></a>'
-                                    +                       '<div class="onethirdcaption">'
-                                    +                           '<p>' + eventview.title + '</p>'
-                                    +                       '</div>'
-                                    +                   '</div>';
+                                    dynamichtml +=              '<div class="onethird">'
+                                    +                               '<a href="#" onclick="generateCampaignPage(' + i + ',' + j + ',' + k + ',' + l + ')">'
+                                    +                               '<img class="eventicon" src="http://www.millenniumgd.net/hello/groups/' + buyinggroup.keyid + '/' + eventyear.keyid + '/'
+                                    +                               quarter.keyid + '/' + eventview.keyid + '/eventicon300px@2x.png" /></a>'
+                                    +                               '<div class="onethirdcaption">'
+                                    +                                   '<p>' + eventview.title + '</p>'
+                                    +                               '</div>'
+                                    +                           '</div>';
                                 });
                             }
-                            dynamichtml +=          '</div>'; //div id quarter.keyid
+                            dynamichtml +=                  '</div>'; //div id quarter.keyid
                         });
+                        dynamichtml +=                  '</div>' //quarterwrapper
+                    +                               '</div>' //collapsible
                     });
-                    dynamichtml +=              '</div>' //quarterwrapper
+                    dynamichtml +=            '</div>' //collapsible-set
                     +                       '</div>' //data-role main
                     +                   '</div>'; //grouppage
                     $(dynamichtml).appendTo($.mobile.pageContainer);

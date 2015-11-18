@@ -217,6 +217,10 @@ p {
     width: 100%;  
 }
 
+.yeartitle {
+    text-align: center;
+}
+
 #chooser-popup {
     right: 0 !important;
     left: auto !important;
@@ -782,5 +786,12 @@ div.popsup {
     font-size: 2em;
 }
 
+.ui-collapsible-heading .ui-btn {
+    text-align: center;
+}
+
+.yeartitle a {
+    padding-left: 1em;
+}
 
 
