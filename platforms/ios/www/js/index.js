@@ -52,8 +52,7 @@ function buildGroupPage() {
     groupPageHTML +=            '<div class="ui-grid-a">';
     $.ajax({
         dataType: "jsonp",
-        //url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
-        url: "js/feed.jsonp",
+        url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
             $.each(json.buyinggroup, function (j, eventID) {
@@ -192,8 +191,7 @@ function generateGroupPage(groupname) {
     //generate Main Book Display
     $.ajax({
         dataType: "jsonp",
-        //url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
-        url: "js/feed.jsonp",
+        url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
             $.each(json.buyinggroup, function (i, buyinggroup) {
@@ -288,8 +286,7 @@ function generateCampaignPage(i, j, k, l) {
     var dynamichtml='';
     $.ajax({
         dataType: "jsonp",
-        //url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
-        url: "js/feed.jsonp",
+        url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
             var dims = json.dims;

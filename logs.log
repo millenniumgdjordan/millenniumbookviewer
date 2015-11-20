@@ -1,0 +1,680 @@
+[36m[phonegap][39m executing 'cordova build -d ios'...
+Generating config.xml from defaults for platform "ios"
+
+Calling plugman.prepare for platform "ios"
+
+Preparing ios project
+
+Processing configuration changes for plugins.
+
+Iterating over installed plugins: [ 'com.telerik.plugins.wkwebview',
+  'org.apache.cordova.inappbrowser',
+  'cordova-plugin-splashscreen' ]
+
+Writing out cordova_plugins.js...
+
+Wrote out iOS Bundle Identifier to "com.millenniumgd.bookviewer"
+
+Wrote out iOS Bundle Version to "1.3"
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-60.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-60.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-60@2x.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-60@2x.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-60@3x.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-60@3x.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-76.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-76.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-76@2x.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-76@2x.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-small.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-small.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-small@2x.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-small@2x.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-40.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-40.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-40@2x.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-40@2x.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon@2x.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon@2x.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-72.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-72.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-72@2x.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-72@2x.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-50.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-50.png
+
+Copying icon from /Users/webdev/Sandbox/millenniumbookviewer/res/icon/ios/icon-50@2x.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/icons/icon-50@2x.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default~iphone.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default~iphone.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default@2x~iphone.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default@2x~iphone.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default-Portrait~ipad.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Portrait~ipad.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default-Portrait@2x~ipad.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Portrait@2x~ipad.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default-Landscape~ipad.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Landscape~ipad.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default-Landscape@2x~ipad.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Landscape@2x~ipad.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default-568h@2x~iphone.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default-568h@2x~iphone.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default-667h.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default-667h.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default-736h.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default-736h.png
+
+Copying splash from /Users/webdev/Sandbox/millenniumbookviewer/res/screen/ios/Default-Landscape-736h.png to /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Resources/splash/Default-Landscape-736h.png
+
+Set TARGETED_DEVICE_FAMILY to "1,2".
+
+iOS Product Name has not changed (still "Millennium Book Viewer")
+
+Discovered plugin "InAppBrowser" in config.xml. Installing to the project
+
+Running command: /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/cordova/build 
+
+Build settings from command line:
+
+    ARCHS = i386
+    CONFIGURATION_BUILD_DIR = /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator
+    SDKROOT = iphonesimulator9.1
+    SHARED_PRECOMPS_DIR = /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/sharedpch
+    VALID_ARCHS = i386
+
+
+=== BUILD TARGET CordovaLib OF PROJECT CordovaLib WITH CONFIGURATION Debug ===
+
+
+Check dependencies
+
+
+
+=== BUILD TARGET Millennium Book Viewer OF PROJECT Millennium Book Viewer WITH CONFIGURATION Debug ===
+
+
+Check dependencies
+
+
+
+PhaseScriptExecution Copy\ www\ directory build/Millennium\ Book\ Viewer.build/Debug-iphonesimulator/Millennium\ Book\ Viewer.build/Script-304B58A110DAC018002A0835.sh
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    /bin/sh -c \"/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium\ Book\ Viewer.build/Debug-iphonesimulator/Millennium\ Book\ Viewer.build/Script-304B58A110DAC018002A0835.sh\"
+
+
+
+real	0m0.161s
+user	0m0.059s
+
+sys	0m0.093s
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-76.png build/emulator/Millennium\ Book\ Viewer.app/icon-76.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-76.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-40@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-40@2x.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-40@2x.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-72.png build/emulator/Millennium\ Book\ Viewer.app/icon-72.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-72.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-736h.png build/emulator/Millennium\ Book\ Viewer.app/Default-736h.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-736h.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon.png build/emulator/Millennium\ Book\ Viewer.app/icon.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon@2x.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon@2x.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-50.png build/emulator/Millennium\ Book\ Viewer.app/icon-50.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-50.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-60@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-60@2x.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-60@2x.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-small.png build/emulator/Millennium\ Book\ Viewer.app/icon-small.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-small.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Millennium\ Book\ Viewer.app/Default-Landscape@2x~ipad.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Landscape@2x~ipad.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Landscape~ipad.png build/emulator/Millennium\ Book\ Viewer.app/Default-Landscape~ipad.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Landscape~ipad.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Millennium\ Book\ Viewer.app/Default-Portrait@2x~ipad.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Portrait@2x~ipad.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-small@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-small@2x.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-small@2x.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Portrait~ipad.png build/emulator/Millennium\ Book\ Viewer.app/Default-Portrait~ipad.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Portrait~ipad.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-667h.png build/emulator/Millennium\ Book\ Viewer.app/Default-667h.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-667h.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-40.png build/emulator/Millennium\ Book\ Viewer.app/icon-40.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-40.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default@2x~iphone.png build/emulator/Millennium\ Book\ Viewer.app/Default@2x~iphone.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default@2x~iphone.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-60.png build/emulator/Millennium\ Book\ Viewer.app/icon-60.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-60.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default~iphone.png build/emulator/Millennium\ Book\ Viewer.app/Default~iphone.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default~iphone.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-568h@2x~iphone.png build/emulator/Millennium\ Book\ Viewer.app/Default-568h@2x~iphone.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-568h@2x~iphone.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/splash/Default-Landscape-736h.png build/emulator/Millennium\ Book\ Viewer.app/Default-Landscape-736h.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/splash/Default-Landscape-736h.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-60@3x.png build/emulator/Millennium\ Book\ Viewer.app/icon-60@3x.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-60@3x.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-76@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-76@2x.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-76@2x.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-50@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-50@2x.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-50@2x.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+CpResource Millennium\ Book\ Viewer/Resources/icons/icon-72@2x.png build/emulator/Millennium\ Book\ Viewer.app/icon-72@2x.png
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Resources/icons/icon-72@2x.png /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+ProcessInfoPlistFile build/emulator/Millennium\ Book\ Viewer.app/Info.plist Millennium\ Book\ Viewer/Millennium\ Book\ Viewer-Info.plist
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    builtin-infoPlistUtility /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium\ Book\ Viewer/Millennium\ Book\ Viewer-Info.plist -genpkginfo /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium\ Book\ Viewer.build/Debug-iphonesimulator/Millennium\ Book\ Viewer.build/MainViewController-PartialInfo.plist -o /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app/Info.plist
+
+
+
+GenerateDSYMFile build/emulator/Millennium\ Book\ Viewer.app.dSYM build/emulator/Millennium\ Book\ Viewer.app/Millennium\ Book\ Viewer
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app/Millennium\ Book\ Viewer -o /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app.dSYM
+
+
+
+PhaseScriptExecution Run\ Script build/Millennium\ Book\ Viewer.build/Debug-iphonesimulator/Millennium\ Book\ Viewer.build/Script-7989DCFE1B30B14700B92C15.sh
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export ACTION=build
+    export AD_HOC_CODE_SIGNING_ALLOWED=NO
+    export ALTERNATE_GROUP=staff
+    export ALTERNATE_MODE=u+w,go-w,a+rX
+    export ALTERNATE_OWNER=webdev
+    export ALWAYS_SEARCH_USER_PATHS=NO
+    export ALWAYS_USE_SEPARATE_HEADERMAPS=NO
+    export APPLE_INTERNAL_DEVELOPER_DIR=/AppleInternal/Developer
+    export APPLE_INTERNAL_DIR=/AppleInternal
+    export APPLE_INTERNAL_DOCUMENTATION_DIR=/AppleInternal/Documentation
+    export APPLE_INTERNAL_LIBRARY_DIR=/AppleInternal/Library
+    export APPLE_INTERNAL_TOOLS=/AppleInternal/Developer/Tools
+    export APPLICATION_EXTENSION_API_ONLY=NO
+    export APPLY_RULES_IN_COPY_FILES=NO
+    export ARCHS=i386
+    export ARCHS_STANDARD="i386 x86_64"
+    export ARCHS_STANDARD_32_64_BIT="i386 x86_64"
+    export ARCHS_STANDARD_32_BIT=i386
+    export ARCHS_STANDARD_64_BIT=x86_64
+    export ARCHS_STANDARD_INCLUDING_64_BIT="i386 x86_64"
+    export AVAILABLE_PLATFORMS="watchos iphonesimulator macosx appletvsimulator watchsimulator appletvos iphoneos"
+    export BITCODE_GENERATION_MODE=marker
+    export BUILD_ACTIVE_RESOURCES_ONLY=NO
+    export BUILD_COMPONENTS="headers build"
+    export BUILD_DIR=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build
+    export BUILD_ROOT=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build
+    export BUILD_STYLE=
+    export BUILD_VARIANTS=normal
+    export BUILT_PRODUCTS_DIR=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator
+    export CACHE_ROOT=/var/folders/v_/6kb0lt1d6gv2r1svyrmkv6n80000gn/C/com.apple.DeveloperTools/7.1-7B91b/Xcode
+    export CCHROOT=/var/folders/v_/6kb0lt1d6gv2r1svyrmkv6n80000gn/C/com.apple.DeveloperTools/7.1-7B91b/Xcode
+    export CHMOD=/bin/chmod
+    export CHOWN=/usr/sbin/chown
+    export CLANG_ENABLE_OBJC_ARC=YES
+    export CLANG_MODULES_BUILD_SESSION_FILE=/var/folders/v_/6kb0lt1d6gv2r1svyrmkv6n80000gn/C/org.llvm.clang/ModuleCache/Session.modulevalidation
+    export CLANG_WARN_BOOL_CONVERSION=YES
+    export CLANG_WARN_CONSTANT_CONVERSION=YES
+    export CLANG_WARN_EMPTY_BODY=YES
+    export CLANG_WARN_ENUM_CONVERSION=YES
+    export CLANG_WARN_INT_CONVERSION=YES
+    export CLANG_WARN__DUPLICATE_METHOD_MATCH=YES
+    export CLASS_FILE_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/JavaClasses"
+    export CLEAN_PRECOMPS=YES
+    export CLONE_HEADERS=NO
+    export CODESIGNING_FOLDER_PATH="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium Book Viewer.app"
+    export CODE_SIGNING_ALLOWED=NO
+    export CODE_SIGN_CONTEXT_CLASS=XCiPhoneSimulatorCodeSignContext
+    export CODE_SIGN_IDENTITY="iPhone Developer"
+    export COLOR_DIAGNOSTICS=NO
+    export COMBINE_HIDPI_IMAGES=NO
+    export COMMAND_MODE=legacy
+    export COMPOSITE_SDK_DIRS=/var/folders/v_/6kb0lt1d6gv2r1svyrmkv6n80000gn/C/com.apple.DeveloperTools/7.1-7B91b/Xcode/CompositeSDKs
+    export COMPRESS_PNG_FILES=YES
+    export CONFIGURATION=Debug
+    export CONFIGURATION_BUILD_DIR=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator
+    export CONFIGURATION_TEMP_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator"
+    export CONTENTS_FOLDER_PATH="Millennium Book Viewer.app"
+    export COPYING_PRESERVES_HFS_DATA=NO
+    export COPY_HEADERS_RUN_UNIFDEF=NO
+    export COPY_PHASE_STRIP=NO
+    export COPY_RESOURCES_FROM_STATIC_FRAMEWORKS=YES
+    export CORRESPONDING_DEVICE_PLATFORM_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform
+    export CORRESPONDING_DEVICE_PLATFORM_NAME=iphoneos
+    export CORRESPONDING_DEVICE_SDK_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk
+    export CORRESPONDING_DEVICE_SDK_NAME=iphoneos9.1
+    export CP=/bin/cp
+    export CREATE_INFOPLIST_SECTION_IN_BINARY=NO
+    export CURRENT_ARCH=i386
+    export CURRENT_VARIANT=normal
+    export DEAD_CODE_STRIPPING=NO
+    export DEBUGGING_SYMBOLS=YES
+    export DEBUG_INFORMATION_FORMAT=dwarf-with-dsym
+    export DEFAULT_COMPILER=com.apple.compilers.llvm.clang.1_0
+    export DEFAULT_KEXT_INSTALL_PATH=/System/Library/Extensions
+    export DEFINES_MODULE=NO
+    export DEPLOYMENT_LOCATION=NO
+    export DEPLOYMENT_POSTPROCESSING=NO
+    export DEPLOYMENT_TARGET_CLANG_ENV_NAME=IPHONEOS_DEPLOYMENT_TARGET
+    export DEPLOYMENT_TARGET_CLANG_FLAG_NAME=mios-simulator-version-min
+    export DEPLOYMENT_TARGET_CLANG_FLAG_PREFIX=-mios-simulator-version-min=
+    export DEPLOYMENT_TARGET_SETTING_NAME=IPHONEOS_DEPLOYMENT_TARGET
+    export DEPLOYMENT_TARGET_SUGGESTED_VALUES="6.0 6.1 7.0 7.1 8.0 8.1 8.2 8.3 8.4 9.0 9.1"
+    export DERIVED_FILES_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/DerivedSources"
+    export DERIVED_FILE_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/DerivedSources"
+    export DERIVED_SOURCES_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/DerivedSources"
+    export DEVELOPER_APPLICATIONS_DIR=/Applications/Xcode.app/Contents/Developer/Applications
+    export DEVELOPER_BIN_DIR=/Applications/Xcode.app/Contents/Developer/usr/bin
+    export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+    export DEVELOPER_FRAMEWORKS_DIR=/Applications/Xcode.app/Contents/Developer/Library/Frameworks
+    export DEVELOPER_FRAMEWORKS_DIR_QUOTED=/Applications/Xcode.app/Contents/Developer/Library/Frameworks
+    export DEVELOPER_LIBRARY_DIR=/Applications/Xcode.app/Contents/Developer/Library
+    export DEVELOPER_SDK_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs
+    export DEVELOPER_TOOLS_DIR=/Applications/Xcode.app/Contents/Developer/Tools
+    export DEVELOPER_USR_DIR=/Applications/Xcode.app/Contents/Developer/usr
+    export DEVELOPMENT_LANGUAGE=English
+    export DOCUMENTATION_FOLDER_PATH="Millennium Book Viewer.app/English.lproj/Documentation"
+    export DO_HEADER_SCANNING_IN_JAM=NO
+    export DSTROOT="/tmp/Millennium Book Viewer.dst"
+    export DT_TOOLCHAIN_DIR=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+    export DWARF_DSYM_FILE_NAME="Millennium Book Viewer.app.dSYM"
+    export DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT=NO
+    export DWARF_DSYM_FOLDER_PATH=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator
+    export EFFECTIVE_PLATFORM_NAME=-iphonesimulator
+    export EMBEDDED_CONTENT_CONTAINS_SWIFT=NO
+    export EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE=NO
+    export ENABLE_BITCODE=NO
+    export ENABLE_HEADER_DEPENDENCIES=YES
+    export ENABLE_ON_DEMAND_RESOURCES=YES
+    export ENABLE_TESTABILITY=YES
+    export EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS=".DS_Store .svn .git .hg CVS"
+    export EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES="*.nib *.lproj *.framework *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj"
+    export EXECUTABLES_FOLDER_PATH="Millennium Book Viewer.app/Executables"
+    export EXECUTABLE_FOLDER_PATH="Millennium Book Viewer.app"
+    export EXECUTABLE_NAME="Millennium Book Viewer"
+    export EXECUTABLE_PATH="Millennium Book Viewer.app/Millennium Book Viewer"
+    export EXPANDED_CODE_SIGN_IDENTITY=
+    export EXPANDED_CODE_SIGN_IDENTITY_NAME=
+    export EXPANDED_PROVISIONING_PROFILE=
+    export FILE_LIST="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/Objects/LinkFileList"
+    export FIXED_FILES_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/FixedFiles"
+    export
+ FRAMEWORKS_FOLDER_PATH="Millennium Book Viewer.app/Frameworks"
+    export FRAMEWORK_FLAG_PREFIX=-framework
+    export FRAMEWORK_SEARCH_PATHS="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator  \"Millennium Book Viewer/Plugins/com.telerik.plugins.wkwebview\""
+    export FRAMEWORK_VERSION=A
+    export FULL_PRODUCT_NAME="Millennium Book Viewer.app"
+    export GCC3_VERSION=3.3
+    export GCC_C_LANGUAGE_STANDARD=c99
+    export GCC_DYNAMIC_NO_PIC=NO
+    export GCC_INLINES_ARE_PRIVATE_EXTERN=YES
+    export GCC_OBJC_LEGACY_DISPATCH=YES
+    export GCC_OPTIMIZATION_LEVEL=0
+    export GCC_PFE_FILE_C_DIALECTS="c objective-c c++ objective-c++"
+    export GCC_PRECOMPILE_PREFIX_HEADER=YES
+    export GCC_PREFIX_HEADER="Millennium Book Viewer/Millennium Book Viewer-Prefix.pch"
+    export GCC_SYMBOLS_PRIVATE_EXTERN=NO
+    export GCC_THUMB_SUPPORT=NO
+    export GCC_TREAT_WARNINGS_AS_ERRORS=NO
+    export GCC_VERSION=com.apple.compilers.llvm.clang.1_0
+    export GCC_VERSION_IDENTIFIER=com_apple_compilers_llvm_clang_1_0
+    export GCC_WARN_ABOUT_RETURN_TYPE=YES
+    export GCC_WARN_UNDECLARED_SELECTOR=YES
+    export GCC_WARN_UNINITIALIZED_AUTOS=YES
+    export GCC_WARN_UNUSED_FUNCTION=YES
+    export GCC_WARN_UNUSED_VARIABLE=YES
+    export GENERATE_MASTER_OBJECT_FILE=NO
+    export GENERATE_PKGINFO_FILE=YES
+    export GENERATE_PROFILING_CODE=NO
+    export GID=20
+    export GROUP=staff
+    export HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT=YES
+    export HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES=YES
+    export HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS=YES
+    export HEADERMAP_INCLUDES_PROJECT_HEADERS=YES
+    export HEADERMAP_USES_FRAMEWORK_PREFIX_ENTRIES=YES
+    export HEADERMAP_USES_VFS=NO
+    export HEADER_SEARCH_PATHS="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/include \"/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/usr/local/lib/include\" \"/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/UninstalledProducts/include\" \"/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator\""
+    export HIDE_BITCODE_SYMBOLS=YES
+    export HOME=/Users/webdev
+    export ICONV=/usr/bin/iconv
+    export INFOPLIST_EXPAND_BUILD_SETTINGS=YES
+    export INFOPLIST_FILE="Millennium Book Viewer/Millennium Book Viewer-Info.plist"
+    export INFOPLIST_OUTPUT_FORMAT=binary
+    export INFOPLIST_PATH="Millennium Book Viewer.app/Info.plist"
+    export INFOPLIST_PREPROCESS=NO
+    export INFOSTRINGS_PATH="Millennium Book Viewer.app/English.lproj/InfoPlist.strings"
+    export INSTALL_DIR="/tmp/Millennium Book Viewer.dst/Applications"
+    export INSTALL_GROUP=staff
+    export INSTALL_MODE_FLAG=u+w,go-w,a+rX
+    export INSTALL_OWNER=webdev
+    export INSTALL_PATH=/Applications
+    export INSTALL_ROOT="/tmp/Millennium Book Viewer.dst"
+    export IPHONEOS_DEPLOYMENT_TARGET=6.0
+    export JAVAC_DEFAULT_FLAGS="-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"
+    export JAVA_APP_STUB=/System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub
+    export JAVA_ARCHIVE_CLASSES=YES
+    export JAVA_ARCHIVE_TYPE=JAR
+    export JAVA_COMPILER=/usr/bin/javac
+    export JAVA_FOLDER_PATH="Millennium Book Viewer.app/Java"
+    export JAVA_FRAMEWORK_RESOURCES_DIRS=Resources
+    export JAVA_JAR_FLAGS=cv
+    export JAVA_SOURCE_SUBDIR=.
+    export JAVA_USE_DEPENDENCIES=YES
+    export JAVA_ZIP_FLAGS=-urg
+    export JIKES_DEFAULT_FLAGS="+E +OLDCSO"
+    export KEEP_PRIVATE_EXTERNS=NO
+    export LD_DEPENDENCY_INFO_FILE="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/Objects-normal/i386/Millennium Book Viewer_dependency_info.dat"
+    export LD_GENERATE_MAP_FILE=NO
+    export LD_MAP_FILE_PATH="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/Millennium Book Viewer-LinkMap-normal-i386.txt"
+    export LD_NO_PIE=NO
+    export LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER=YES
+    export LEGACY_DEVELOPER_DIR=/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer
+    export LEX=lex
+    export LIBRARY_FLAG_NOSPACE=YES
+    export LIBRARY_FLAG_PREFIX=-l
+    export LIBRARY_KEXT_INSTALL_PATH=/Library/Extensions
+    export LIBRARY_SEARCH_PATHS="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator "
+    export LINKER_DISPLAYS_MANGLED_NAMES=NO
+    export LINK_FILE_LIST_normal_i386="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/Objects-normal/i386/Millennium Book Viewer.LinkFileList"
+    export LINK_WITH_STANDARD_LIBRARIES=YES
+    export LOCALIZABLE_CONTENT_DIR=
+    export LOCALIZED_RESOURCES_FOLDER_PATH="Millennium Book Viewer.app/English.lproj"
+    export LOCAL_ADMIN_APPS_DIR=/Applications/Utilities
+    export LOCAL_APPS_DIR=/Applications
+    export LOCAL_DEVELOPER_DIR=/Library/Developer
+    export LOCAL_LIBRARY_DIR=/Library
+    export LOCROOT=
+    export LOCSYMROOT=
+    export MACH_O_TYPE=mh_execute
+    export MAC_OS_X_PRODUCT_BUILD_VERSION=15B42
+    export MAC_OS_X_VERSION_ACTUAL=101101
+    export MAC_OS_X_VERSION_MAJOR=101100
+    export MAC_OS_X_VERSION_MINOR=1101
+    export NATIVE_ARCH=i386
+    export NATIVE_ARCH_32_BIT=i386
+    export NATIVE_ARCH_64_BIT=x86_64
+    export NATIVE_ARCH_ACTUAL=x86_64
+    export NO_COMMON=YES
+    export OBJC_ABI_VERSION=2
+    export OBJECT_FILE_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/Objects"
+    export OBJECT_FILE_DIR_normal="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/Objects-normal"
+    export OBJROOT=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build
+    export ONLY_ACTIVE_ARCH=YES
+    export OPTIMIZATION_LEVEL=0
+    export OS=MACOS
+    export OSAC=/usr/bin/osacompile
+    export OTHER_LDFLAGS="-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -ObjC"
+    export PACKAGE_TYPE=com.apple.package-type.wrapper.application
+    export PASCAL_STRINGS=YES
+    export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    export PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES="/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"
+    export PBDEVELOPMENTPLIST_PATH="Millennium Book Viewer.app/pbdevelopment.plist"
+    export PFE_FILE_C_DIALECTS=objective-c
+    export PKGINFO_FILE_PATH="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/PkgInfo"
+    export PKGINFO_PATH="Millennium Book Viewer.app/PkgInfo"
+    export PLATFORM_DEVELOPER_APPLICATIONS_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications
+    export PLATFORM_DEVELOPER_BIN_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin
+    export PLATFORM_DEVELOPER_LIB
+RARY_DIR=/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library
+    export PLATFORM_DEVELOPER_SDK_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs
+    export PLATFORM_DEVELOPER_TOOLS_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools
+    export PLATFORM_DEVELOPER_USR_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr
+    export PLATFORM_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform
+    export PLATFORM_DISPLAY_NAME="iOS Simulator"
+    export PLATFORM_NAME=iphonesimulator
+    export PLATFORM_PREFERRED_ARCH=x86_64
+    export PLATFORM_VERSION_AVAILABILITY_H_FORMAT=90100
+    export PLIST_FILE_OUTPUT_FORMAT=binary
+    export PLUGINS_FOLDER_PATH="Millennium Book Viewer.app/PlugIns"
+    export PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR=YES
+    export PRECOMP_DESTINATION_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/PrefixHeaders"
+    export PRESERVE_DEAD_CODE_INITS_AND_TERMS=NO
+    export PRIVATE_HEADERS_FOLDER_PATH="Millennium Book Viewer.app/PrivateHeaders"
+    export PRODUCT_BUNDLE_IDENTIFIER=com.millenniumgd.bookviewer
+    export PRODUCT_MODULE_NAME=Millennium_Book_Viewer
+    export PRODUCT_NAME="Millennium Book Viewer"
+    export PRODUCT_SETTINGS_PATH="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer/Millennium Book Viewer-Info.plist"
+    export PRODUCT_TYPE=com.apple.product-type.application
+    export PROFILING_CODE=NO
+    export PROJECT="Millennium Book Viewer"
+    export PROJECT_DERIVED_FILE_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/DerivedSources"
+    export PROJECT_DIR=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PROJECT_FILE_PATH="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/Millennium Book Viewer.xcodeproj"
+    export PROJECT_NAME="Millennium Book Viewer"
+    export PROJECT_TEMP_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build"
+    export PROJECT_TEMP_ROOT=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build
+    export PUBLIC_HEADERS_FOLDER_PATH="Millennium Book Viewer.app/Headers"
+    export RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS=YES
+    export REMOVE_CVS_FROM_RESOURCES=YES
+    export REMOVE_GIT_FROM_RESOURCES=YES
+    export REMOVE_HEADERS_FROM_EMBEDDED_BUNDLES=YES
+    export REMOVE_HG_FROM_RESOURCES=YES
+    export REMOVE_SVN_FROM_RESOURCES=YES
+    export REZ_COLLECTOR_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/ResourceManagerResources"
+    export REZ_OBJECTS_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build/ResourceManagerResources/Objects"
+    export REZ_SEARCH_PATHS="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator "
+    export SCAN_ALL_SOURCE_FILES_FOR_INCLUDES=NO
+    export SCRIPTS_FOLDER_PATH="Millennium Book Viewer.app/Scripts"
+    export SCRIPT_INPUT_FILE_COUNT=0
+    export SCRIPT_OUTPUT_FILE_COUNT=0
+    export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.1.sdk
+    export SDK_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.1.sdk
+    export SDK_DIR_iphonesimulator9_1=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.1.sdk
+    export SDK_NAME=iphonesimulator9.1
+    export SDK_NAMES=iphonesimulator9.1
+    export SDK_PRODUCT_BUILD_VERSION=13B137
+    export SDK_VERSION=9.1
+    export SDK_VERSION_ACTUAL=90100
+    export SDK_VERSION_MAJOR=90000
+    export SDK_VERSION_MINOR=100
+    export SED=/usr/bin/sed
+    export SEPARATE_STRIP=NO
+    export SEPARATE_SYMBOL_EDIT=NO
+    export SET_DIR_MODE_OWNER_GROUP=YES
+    export SET_FILE_MODE_OWNER_GROUP=NO
+    export SHALLOW_BUNDLE=YES
+    export SHARED_DERIVED_FILE_DIR=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/DerivedSources
+    export SHARED_FRAMEWORKS_FOLDER_PATH="Millennium Book Viewer.app/SharedFrameworks"
+    export SHARED_PRECOMPS_DIR=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/sharedpch
+    export SHARED_SUPPORT_FOLDER_PATH="Millennium Book Viewer.app/SharedSupport"
+    export SKIP_INSTALL=NO
+    export SOURCE_ROOT=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export SRCROOT=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export STRINGS_FILE_OUTPUT_ENCODING=binary
+    export STRIP_BITCODE_FROM_COPIED_FILES=NO
+    export STRIP_INSTALLED_PRODUCT=YES
+    export STRIP_STYLE=all
+    export SUPPORTED_DEVICE_FAMILIES=1,2
+    export SUPPORTED_PLATFORMS="iphonesimulator iphoneos"
+    export SUPPORTS_TEXT_BASED_API=NO
+    export SWIFT_PLATFORM_TARGET_PREFIX=ios
+    export SYMROOT=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build
+    export SYSTEM_ADMIN_APPS_DIR=/Applications/Utilities
+    export SYSTEM_APPS_DIR=/Applications
+    export SYSTEM_CORE_SERVICES_DIR=/System/Library/CoreServices
+    export SYSTEM_DEMOS_DIR=/Applications/Extras
+    export SYSTEM_DEVELOPER_APPS_DIR=/Applications/Xcode.app/Contents/Developer/Applications
+    export SYSTEM_DEVELOPER_BIN_DIR=/Applications/Xcode.app/Contents/Developer/usr/bin
+    export SYSTEM_DEVELOPER_DEMOS_DIR="/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"
+    export SYSTEM_DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+    export SYSTEM_DEVELOPER_DOC_DIR="/Applications/Xcode.app/Contents/Developer/ADC Reference Library"
+    export SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR="/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"
+    export SYSTEM_DEVELOPER_JAVA_TOOLS_DIR="/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"
+    export SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR="/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"
+    export SYSTEM_DEVELOPER_RELEASENOTES_DIR="/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"
+    export SYSTEM_DEVELOPER_TOOLS=/Applications/Xcode.app/Contents/Developer/Tools
+    export SYSTEM_DEVELOPER_TOOLS_DOC_DIR="/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"
+    export SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR="/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"
+    export SYSTEM_DEVELOPER_USR_DIR=/Applications/Xcode.app/Contents/Developer/usr
+    export SYSTEM_DEVELOPER_UTILITIES_DIR=/Applications/Xcode.app/Contents/Developer/Applications/Utilities
+    export SYSTEM_DOCUMENTATION_DIR=/Library/Documentation
+    export SYSTEM_KEXT_INSTALL_PATH=/System/Library/Extensions
+    export SYSTEM_LIBRARY_DIR=/System/Library
+    export TARGETED_DEVICE_FAMILY=1,2
+    export TARGETNAME="Millennium Book Viewer"
+    export TARGET_BUILD_DIR=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator
+    export TARGET_NAME="Millennium Book Viewer"
+    export TARGET_TEMP_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build"
+    export TEMP_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build"
+    export TEMP_FILES_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build"
+    export TEMP_FILE_DIR="/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium Book Viewer.build/Debug-iphonesimulator/Millennium Book Viewer.build"
+    export TEMP_ROOT=/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build
+    export TOOLCHAI
+NS=com.apple.dt.toolchain.XcodeDefault
+    export TOOLCHAIN_DIR=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+    export TREAT_MISSING_BASELINES_AS_TEST_FAILURES=NO
+    export UID=501
+    export UNLOCALIZED_RESOURCES_FOLDER_PATH="Millennium Book Viewer.app"
+    export UNSTRIPPED_PRODUCT=NO
+    export USER=webdev
+    export USER_APPS_DIR=/Users/webdev/Applications
+    export USER_LIBRARY_DIR=/Users/webdev/Library
+    export USE_DYNAMIC_NO_PIC=YES
+    export USE_HEADERMAP=YES
+    export USE_HEADER_SYMLINKS=NO
+    export VALIDATE_PRODUCT=NO
+    export VALID_ARCHS=i386
+    export VERBOSE_PBXCP=NO
+    export VERSIONPLIST_PATH="Millennium Book Viewer.app/version.plist"
+    export VERSION_INFO_BUILDER=webdev
+    export VERSION_INFO_FILE="Millennium Book Viewer_vers.c"
+    export VERSION_INFO_STRING="\"@(#)PROGRAM:Millennium Book Viewer  PROJECT:Millennium Book Viewer-\""
+    export WRAPPER_EXTENSION=app
+    export WRAPPER_NAME="Millennium Book Viewer.app"
+    export WRAPPER_SUFFIX=.app
+    export WRAP_ASSET_PACKS_IN_SEPARATE_DIRECTORIES=NO
+    export XCODE_APP_SUPPORT_DIR=/Applications/Xcode.app/Contents/Developer/Library/Xcode
+    export XCODE_PRODUCT_BUILD_VERSION=7B91b
+    export XCODE_VERSION_ACTUAL=0710
+    export XCODE_VERSION_MAJOR=0700
+    export XCODE_VERSION_MINOR=0710
+    export XPCSERVICES_FOLDER_PATH="Millennium Book Viewer.app/XPCServices"
+    export YACC=yacc
+    export arch=i386
+    export variant=normal
+    /bin/sh -c \"/Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/Millennium\ Book\ Viewer.build/Debug-iphonesimulator/Millennium\ Book\ Viewer.build/Script-7989DCFE1B30B14700B92C15.sh\"
+
+Debug  build - Not bumping build number.
+
+
+
+Touch build/emulator/Millennium\ Book\ Viewer.app
+    cd /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/users/webdev/bin/Sencha/Cmd/5.1.3.61"
+    /usr/bin/touch -c /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/build/emulator/Millennium\ Book\ Viewer.app
+
+
+
+** BUILD SUCCEEDED **
+
+
+Command finished with error code 0: /Users/webdev/Sandbox/millenniumbookviewer/platforms/ios/cordova/build 
+
+[36m[phonegap][39m completed 'cordova build -d ios'

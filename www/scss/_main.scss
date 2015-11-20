@@ -28,23 +28,23 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-@font-face {
-    font-family: SourceSansPro;
-    font-weight: normal;
-    src: url("../fonts/SourceSansPro-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: SourceSansPro;
-    font-weight: lighter;
-    src: url("../fonts/SourceSansPro-Light.otf") format("opentype");
-}
-
-@font-face {
-    font-family: SourceSansPro;
-    font-weight: bold;
-    src: url("../fonts/SourceSansPro-Bold.otf") format("opentype");
-}
+//@font-face {
+//    font-family: SourceSansPro;
+//    font-weight: normal;
+//    src: url("../fonts/SourceSansPro-Regular.otf") format("opentype");
+//}
+//
+//@font-face {
+//    font-family: SourceSansPro;
+//    font-weight: lighter;
+//    src: url("../fonts/SourceSansPro-Light.otf") format("opentype");
+//}
+//
+//@font-face {
+//    font-family: SourceSansPro;
+//    font-weight: bold;
+//    src: url("../fonts/SourceSansPro-Bold.otf") format("opentype");
+//}
 
 @font-face {
     font-family: OpenSans;
@@ -793,5 +793,7 @@ div.popsup {
 .yeartitle a {
     padding-left: 1em;
 }
+
+.millenniumtest{padding: 10;}
 
 
