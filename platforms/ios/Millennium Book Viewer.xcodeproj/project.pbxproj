@@ -516,7 +516,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.millenniumgd.bookviewer;
 				PRODUCT_NAME = "Millennium Book Viewer";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "48851825-121f-46d0-a932-9befb7f9e2e8";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -554,7 +554,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.millenniumgd.bookviewer;
 				PRODUCT_NAME = "Millennium Book Viewer";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "48851825-121f-46d0-a932-9befb7f9e2e8";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -615,7 +615,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
