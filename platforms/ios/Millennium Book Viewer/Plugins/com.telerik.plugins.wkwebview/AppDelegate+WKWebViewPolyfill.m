@@ -2,6 +2,7 @@
 #import "AppDelegate.h"
 #import "MyMainViewController.h"
 #import <GCDWebServer/GCDWebServer.h>
+#import <Parse/Parse.h>
 
 // need to swap out a method, so swizzling it here
 static void swizzleMethod(Class class, SEL destinationSelector, SEL sourceSelector);
@@ -48,7 +49,20 @@ NSMutableDictionary* _webServerOptions;
     
     // Update Swizzled ViewController with port currently used by local Server
     [myMainViewController setServerPort:_webServer.port];
-
+    
+   
+    [Parse setApplicationId:@"VxRvU6L0uCEv0V3UMs15HZ6WL5uhYd2TcjGvUlwb"
+                  clientKey:@"36PbrShleW8VLZYzqM3cScE1xcJvXZIjlsLqcTny"];
+     NSLog ( @"After set applicationID" );
+    // Register for Push Notitications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
     return YES;
 }
 
@@ -60,6 +74,35 @@ NSMutableDictionary* _webServerOptions;
     // call super
     return [self identity_application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
+
+// parse's remote noification handler
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+    NSLog ( @"The current date and time of REGISTERING FOR NOTIFICATIONS is: %@", [NSDate date] );
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+    // re-post ( broadcast )
+    NSString* token = [[[[deviceToken description]
+                         stringByReplacingOccurrencesOfString:@"<" withString:@""]
+                        stringByReplacingOccurrencesOfString:@">" withString:@""]
+                       stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:CDVRemoteNotification object:token];
+}
+
+- (void)                                 application:(UIApplication*)application
+    didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+    // re-post ( broadcast )
+    [[NSNotificationCenter defaultCenter] postNotificationName:CDVRemoteNotificationError object:error];
+}
+
 
 - (void)startServer
 {

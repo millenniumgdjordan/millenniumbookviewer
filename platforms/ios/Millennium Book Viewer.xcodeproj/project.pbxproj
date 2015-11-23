@@ -33,6 +33,17 @@
 		6321028BFB6949A6AE2D4AD1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F15DFAEE283497C8CFC1617 /* WebKit.framework */; };
 		763D0F6B1A5540B59B8200D7 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751C15D691E417F976DD183 /* CDVSplashScreen.m */; };
 		771FF2AF157C4AC7BB1574CF /* GCDWebServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A600C2FA887B421D9806897D /* GCDWebServer.framework */; };
+		7978290D1BFFD46C005D1DCC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7978290B1BFFD46C005D1DCC /* Bolts.framework */; };
+		7978290E1BFFD46C005D1DCC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7978290C1BFFD46C005D1DCC /* Parse.framework */; };
+		797829101C035207005D1DCC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7978290F1C035207005D1DCC /* AudioToolbox.framework */; };
+		797829121C035223005D1DCC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797829111C035223005D1DCC /* CFNetwork.framework */; };
+		797829141C035235005D1DCC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797829131C035235005D1DCC /* CoreLocation.framework */; };
+		797829161C03523D005D1DCC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797829151C03523D005D1DCC /* QuartzCore.framework */; };
+		797829181C035244005D1DCC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797829171C035244005D1DCC /* Security.framework */; };
+		7978291A1C03524E005D1DCC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797829191C03524E005D1DCC /* StoreKit.framework */; };
+		7978291C1C035258005D1DCC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7978291B1C035258005D1DCC /* SystemConfiguration.framework */; };
+		7978291E1C035262005D1DCC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7978291D1C035262005D1DCC /* libz.tbd */; };
+		797829201C035270005D1DCC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7978291F1C035270005D1DCC /* libsqlite3.tbd */; };
 		7E7966DE1810823500FA85AD /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D41810823500FA85AD /* icon-40.png */; };
 		7E7966DF1810823500FA85AD /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D51810823500FA85AD /* icon-40@2x.png */; };
 		7E7966E01810823500FA85AD /* icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D61810823500FA85AD /* icon-50.png */; };
@@ -109,6 +120,17 @@
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		67BC18C7F2B049D284037D2B /* CDVInAppBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVInAppBrowser.m; path = org.apache.cordova.inappbrowser/CDVInAppBrowser.m; sourceTree = "<group>"; };
 		6A74AE106F9C457EB46F9920 /* ReroutingUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReroutingUIWebView.m; path = com.telerik.plugins.wkwebview/ReroutingUIWebView.m; sourceTree = "<group>"; };
+		7978290B1BFFD46C005D1DCC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		7978290C1BFFD46C005D1DCC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		7978290F1C035207005D1DCC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		797829111C035223005D1DCC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		797829131C035235005D1DCC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		797829151C03523D005D1DCC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		797829171C035244005D1DCC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		797829191C03524E005D1DCC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		7978291B1C035258005D1DCC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7978291D1C035262005D1DCC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7978291F1C035270005D1DCC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7E7966D41810823500FA85AD /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40.png"; sourceTree = "<group>"; };
 		7E7966D51810823500FA85AD /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
 		7E7966D61810823500FA85AD /* icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50.png"; sourceTree = "<group>"; };
@@ -139,13 +161,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
-				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				797829201C035270005D1DCC /* libsqlite3.tbd in Frameworks */,
+				7978291E1C035262005D1DCC /* libz.tbd in Frameworks */,
+				7978291C1C035258005D1DCC /* SystemConfiguration.framework in Frameworks */,
+				7978291A1C03524E005D1DCC /* StoreKit.framework in Frameworks */,
+				797829181C035244005D1DCC /* Security.framework in Frameworks */,
+				797829161C03523D005D1DCC /* QuartzCore.framework in Frameworks */,
+				797829141C035235005D1DCC /* CoreLocation.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				797829121C035223005D1DCC /* CFNetwork.framework in Frameworks */,
+				797829101C035207005D1DCC /* AudioToolbox.framework in Frameworks */,
+				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
+				7978290E1BFFD46C005D1DCC /* Parse.framework in Frameworks */,
+				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				771FF2AF157C4AC7BB1574CF /* GCDWebServer.framework in Frameworks */,
 				6321028BFB6949A6AE2D4AD1 /* WebKit.framework in Frameworks */,
 				9C101D4BD57F4CD683097722 /* libz.dylib in Frameworks */,
+				7978290D1BFFD46C005D1DCC /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +248,17 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7978291F1C035270005D1DCC /* libsqlite3.tbd */,
+				7978291D1C035262005D1DCC /* libz.tbd */,
+				7978291B1C035258005D1DCC /* SystemConfiguration.framework */,
+				797829191C03524E005D1DCC /* StoreKit.framework */,
+				797829171C035244005D1DCC /* Security.framework */,
+				797829151C03523D005D1DCC /* QuartzCore.framework */,
+				797829131C035235005D1DCC /* CoreLocation.framework */,
+				797829111C035223005D1DCC /* CFNetwork.framework */,
+				7978290F1C035207005D1DCC /* AudioToolbox.framework */,
+				7978290B1BFFD46C005D1DCC /* Bolts.framework */,
+				7978290C1BFFD46C005D1DCC /* Parse.framework */,
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
@@ -492,7 +536,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"Millennium Book Viewer/Plugins/com.telerik.plugins.wkwebview\"",
+					Millennium,
+					Book,
+					Viewer/Plugins/com.telerik.plugins.wkwebview,
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -532,7 +579,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"Millennium Book Viewer/Plugins/com.telerik.plugins.wkwebview\"",
+					Millennium,
+					Book,
+					Viewer/Plugins/com.telerik.plugins.wkwebview,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Millennium Book Viewer/Millennium Book Viewer-Prefix.pch";

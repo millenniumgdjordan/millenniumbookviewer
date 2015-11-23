@@ -25,10 +25,14 @@
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
+
 #import "AppDelegate.h"
 #import "MainViewController.h"
 
 #import <Cordova/CDVPlugin.h>
+#import <Parse/Parse.h>
+
+
 
 @implementation AppDelegate
 
@@ -63,6 +67,18 @@
  */
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    
+    NSLog ( @"After set applicationID" );
+    [Parse setApplicationId:@"VxRvU6L0uCEv0V3UMs15HZ6WL5uhYd2TcjGvUlwb"
+                  clientKey:@"36PbrShleW8VLZYzqM3cScE1xcJvXZIjlsLqcTny"];
+    // Register for Push Notitications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     
 #if __has_feature(objc_arc)
@@ -108,16 +124,24 @@
 }
 
 // repost all remote and local notification using the default NSNotificationCenter so multiple plugins may respond
-- (void)            application:(UIApplication*)application
-    didReceiveLocalNotification:(UILocalNotification*)notification
+- (void)application:(UIApplication*)application didReceiveLocalNotification:(UILocalNotification*)notification
 {
     // re-post ( broadcast )
     [[NSNotificationCenter defaultCenter] postNotificationName:CDVLocalNotification object:notification];
 }
 
-- (void)                                 application:(UIApplication*)application
-    didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+// parse's remote noification handler
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
+    NSLog ( @"The current date and time of REGISTERING FOR NOTIFICATIONS is: %@", [NSDate date] );
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
     // re-post ( broadcast )
     NSString* token = [[[[deviceToken description]
         stringByReplacingOccurrencesOfString:@"<" withString:@""]
