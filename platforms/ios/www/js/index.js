@@ -362,8 +362,9 @@ function generateCampaignPage(i, j, k, l) {
                         +                               '<fieldset data-role="controlgroup">'
                         +                               '<legend>Choose Discounts:</legend>'
                         +                               '<input type="radio" name="discount_choices" id="discount_none" value=0 checked="checked">'
-                        +                               '<label for="discount_none">No Discount</label>'
-                        +                               '<input type="radio" name="discount_choices" id="discount_sealy" value=500>'
+                        +                               '<label for="discount_none">No Discount</label>';
+                                                        console.log(json.buyinggroup[i].discounts);
+                        dynamichtml +=                  '<input type="radio" name="discount_choices" id="discount_sealy" value=500>'
                         +                               '<label for="discount_sealy">Sealy Only Ad (Save $500)</label>'
                         +                               '<input type="radio" name="discount_choices" id="discount_both" value=1000>'
                         +                               '<label for="discount_both">Sealy / Tempur-Pedic Mailer (Save $1000)</label>'
