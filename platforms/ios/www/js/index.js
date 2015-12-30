@@ -363,12 +363,18 @@ function generateCampaignPage(i, j, k, l) {
                         +                               '<legend>Choose Discounts:</legend>'
                         +                               '<input type="radio" name="discount_choices" id="discount_none" value=0 checked="checked">'
                         +                               '<label for="discount_none">No Discount</label>';
-                                                        console.log(json.buyinggroup[i].discounts);
-                        dynamichtml +=                  '<input type="radio" name="discount_choices" id="discount_sealy" value=500>'
-                        +                               '<label for="discount_sealy">Sealy Only Ad (Save $500)</label>'
-                        +                               '<input type="radio" name="discount_choices" id="discount_both" value=1000>'
-                        +                               '<label for="discount_both">Sealy / Tempur-Pedic Mailer (Save $1000)</label>'
-                        +                               '</fieldset>'
+                                                        var discounts = json.buyinggroup[i].discounts;
+                                                        if (typeof discounts !== 'undefined') {
+                                                            $.each(discounts, function (dd, thediscount) { 
+                                                                console.log(thediscount.keyid) 
+                                                                dynamichtml += '<input type="radio" name="discount_choices" id="' + dd + '" value=' + thediscount.amount + '>'
+                                                                +              '<label for="' + dd + '">' + thediscount.keyid + ' <br />(Save $' + thediscount.amount + ')</label>';
+                                                            });                        
+                                                        } else {
+                                                            dynamichtml += '<p>No additional discounts available.</p>';
+                                                        }
+                                                        
+                        dynamichtml +=                  '</fieldset>'
                         +                               '<label for="calcTotal">Total Cost</label>'
                         +                               '<input type="text" id="calcTotal" name="calcTotal" readonly="readonly">'
 				        +                            '</div>'
