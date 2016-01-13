@@ -52,7 +52,7 @@ function buildGroupPage() {
     groupPageHTML +=            '<div class="ui-grid-a">';
     $.ajax({
         dataType: "jsonp",
-        url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
+        url: "http://www.millenniumgd.net/hello/groups/feed2.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
             $.each(json.buyinggroup, function (j, eventID) {
@@ -191,7 +191,7 @@ function generateGroupPage(groupname) {
     //generate Main Book Display
     $.ajax({
         dataType: "jsonp",
-        url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
+        url: "http://www.millenniumgd.net/hello/groups/feed2.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
             $.each(json.buyinggroup, function (i, buyinggroup) {
@@ -286,7 +286,7 @@ function generateCampaignPage(i, j, k, l) {
     var dynamichtml='';
     $.ajax({
         dataType: "jsonp",
-        url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
+        url: "http://www.millenniumgd.net/hello/groups/feed2.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
             var dims = json.dims;
@@ -310,9 +310,9 @@ function generateCampaignPage(i, j, k, l) {
             +                           '<div id=navright_wrapper>'
             +                               '<div id=navright_icon>'
             +                                   '<a href=#chooser><i class="fa fa-bars fa-2x"></i></a>'
-            +                               '</div>'
+            +                               '</div>'//navright
             +                           '</div>'
-            +                       '</div>'
+            +                       '</div>' //navright
             +                   '</div>' //header
             +                   '<div data-role="main" class="ui-content centered">'
             +                       '<div id="printwrap">';
@@ -347,7 +347,7 @@ function generateCampaignPage(i, j, k, l) {
                     +                       '</div>' //device
                     +                       '<div class="titleinfo">'
                     +                           '<h2>' + campaign.campaigntype + '</h2>'
-                    +                           '<p>(' + dims[campaign.keyid] + '\" as low as $' + json.buyinggroup[i].pricing[campaign.keyid] + ' each. )</p>';
+                    +                           '<p>(' + dims[campaign.keyid] + '\" as low as $' + json.buyinggroup[i].pricing[campaign.keyid] + ' ' + json.priceunit[campaign.keyid] + '. )</p>';
                     if (campaign.keyid === "dm") {
                         var eachPrice = json.buyinggroup[i].pricing[campaign.keyid];
                         dynamichtml +=          '<a href="#" id="calcButton" data-role="button" data-inline="true" onclick="calculateCost(' + eachPrice + ')">Estimate Cost</a>'
@@ -362,12 +362,19 @@ function generateCampaignPage(i, j, k, l) {
                         +                               '<fieldset data-role="controlgroup">'
                         +                               '<legend>Choose Discounts:</legend>'
                         +                               '<input type="radio" name="discount_choices" id="discount_none" value=0 checked="checked">'
-                        +                               '<label for="discount_none">No Discount</label>'
-                        +                               '<input type="radio" name="discount_choices" id="discount_sealy" value=500>'
-                        +                               '<label for="discount_sealy">Sealy Only Ad (Save $500)</label>'
-                        +                               '<input type="radio" name="discount_choices" id="discount_both" value=1000>'
-                        +                               '<label for="discount_both">Sealy / Tempur-Pedic Mailer (Save $1000)</label>'
-                        +                               '</fieldset>'
+                        +                               '<label for="discount_none">No Discount</label>';
+                                                        var discounts = json.buyinggroup[i].discounts;
+                                                        if (typeof discounts !== 'undefined') {
+                                                            $.each(discounts, function (dd, thediscount) { 
+                                                                console.log(thediscount.keyid) 
+                                                                dynamichtml += '<input type="radio" name="discount_choices" id="' + dd + '" value=' + thediscount.amount + '>'
+                                                                +              '<label for="' + dd + '">' + thediscount.keyid + ' <br />(Save $' + thediscount.amount + ')</label>';
+                                                            });                        
+                                                        } else {
+                                                            dynamichtml += '<p>No additional discounts available.</p>';
+                                                        }
+                                                        
+                        dynamichtml +=                  '</fieldset>'
                         +                               '<label for="calcTotal">Total Cost</label>'
                         +                               '<input type="text" id="calcTotal" name="calcTotal" readonly="readonly">'
 				        +                            '</div>'

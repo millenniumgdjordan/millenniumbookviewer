@@ -25,10 +25,13 @@
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
+
 #import "AppDelegate.h"
 #import "MainViewController.h"
 
 #import <Cordova/CDVPlugin.h>
+
+
 
 @implementation AppDelegate
 
@@ -63,7 +66,8 @@
  */
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
     
 #if __has_feature(objc_arc)
         self.window = [[UIWindow alloc] initWithFrame:screenBounds];
@@ -108,17 +112,17 @@
 }
 
 // repost all remote and local notification using the default NSNotificationCenter so multiple plugins may respond
-- (void)            application:(UIApplication*)application
-    didReceiveLocalNotification:(UILocalNotification*)notification
+- (void)application:(UIApplication*)application didReceiveLocalNotification:(UILocalNotification*)notification
 {
     // re-post ( broadcast )
     [[NSNotificationCenter defaultCenter] postNotificationName:CDVLocalNotification object:notification];
 }
 
-- (void)                                 application:(UIApplication*)application
-    didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
-    // re-post ( broadcast )
+    NSLog ( @"The current date and time of REGISTERING FOR NOTIFICATIONS is: %@", [NSDate date] );
+        // re-post ( broadcast )
     NSString* token = [[[[deviceToken description]
         stringByReplacingOccurrencesOfString:@"<" withString:@""]
         stringByReplacingOccurrencesOfString:@">" withString:@""]
