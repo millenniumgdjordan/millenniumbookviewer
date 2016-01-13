@@ -52,7 +52,7 @@ function buildGroupPage() {
     groupPageHTML +=            '<div class="ui-grid-a">';
     $.ajax({
         dataType: "jsonp",
-        url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
+        url: "http://www.millenniumgd.net/hello/groups/feed2.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
             $.each(json.buyinggroup, function (j, eventID) {
@@ -191,7 +191,7 @@ function generateGroupPage(groupname) {
     //generate Main Book Display
     $.ajax({
         dataType: "jsonp",
-        url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
+        url: "http://www.millenniumgd.net/hello/groups/feed2.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
             $.each(json.buyinggroup, function (i, buyinggroup) {
@@ -286,7 +286,7 @@ function generateCampaignPage(i, j, k, l) {
     var dynamichtml='';
     $.ajax({
         dataType: "jsonp",
-        url: "http://www.millenniumgd.net/hello/groups/feed.jsonp",
+        url: "http://www.millenniumgd.net/hello/groups/feed2.jsonp",
         jsonpCallback: "dataHandler",
         success: function(json) {
             var dims = json.dims;
@@ -310,9 +310,9 @@ function generateCampaignPage(i, j, k, l) {
             +                           '<div id=navright_wrapper>'
             +                               '<div id=navright_icon>'
             +                                   '<a href=#chooser><i class="fa fa-bars fa-2x"></i></a>'
-            +                               '</div>'
+            +                               '</div>'//navright
             +                           '</div>'
-            +                       '</div>'
+            +                       '</div>' //navright
             +                   '</div>' //header
             +                   '<div data-role="main" class="ui-content centered">'
             +                       '<div id="printwrap">';
@@ -347,7 +347,7 @@ function generateCampaignPage(i, j, k, l) {
                     +                       '</div>' //device
                     +                       '<div class="titleinfo">'
                     +                           '<h2>' + campaign.campaigntype + '</h2>'
-                    +                           '<p>(' + dims[campaign.keyid] + '\" as low as $' + json.buyinggroup[i].pricing[campaign.keyid] + ' each. )</p>';
+                    +                           '<p>(' + dims[campaign.keyid] + '\" as low as $' + json.buyinggroup[i].pricing[campaign.keyid] + ' ' + json.priceunit[campaign.keyid] + '. )</p>';
                     if (campaign.keyid === "dm") {
                         var eachPrice = json.buyinggroup[i].pricing[campaign.keyid];
                         dynamichtml +=          '<a href="#" id="calcButton" data-role="button" data-inline="true" onclick="calculateCost(' + eachPrice + ')">Estimate Cost</a>'
