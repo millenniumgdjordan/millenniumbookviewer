@@ -60,6 +60,9 @@
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.millenniumgd.bookviewer"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.millenniumgd.bookviewer"
         }
     },
     "dependent_plugins": {}

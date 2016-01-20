@@ -28,7 +28,8 @@ module.exports.metadata =
 {
     "com.telerik.plugins.wkwebview": "0.3.5",
     "org.apache.cordova.inappbrowser": "0.6.1-dev",
-    "cordova-plugin-splashscreen": "2.0.1-dev"
+    "cordova-plugin-splashscreen": "2.0.1-dev",
+    "cordova-plugin-whitelist": "1.2.2-dev"
 }
 // BOTTOM OF METADATA
 });
