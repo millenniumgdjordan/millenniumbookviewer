@@ -36,6 +36,7 @@
     <gap:plugin name="org.apache.cordova.device" />
     <!--gap:plugin name="org.apache.cordova.device-motion" /-->
     <gap:plugin name="org.apache.cordova.device-orientation" />
+    <plugin name="org.apache.cordova.whitelist.WhitelistPlugin" />
     <!--<gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="org.apache.cordova.file" />
     <gap:plugin name="org.apache.cordova.file-transfer" />
@@ -77,11 +78,14 @@
               <icon src="res/icon/ios/icon-50.png" width="50" height="50" />
               <icon src="res/icon/ios/icon-50@2x.png" width="100" height="100" />
      </platform>
-    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
-    <gap:splash gap:platform="blackberry" src="res/screen/blackberry/screen-225.png" />
+     <platform name="android">
+              <preference name="SplashScreen" value="none" />
+              <icon src="res/icon/android/ldpi.png" density="ldpi" />
+              <icon src="res/icon/android/mdpi.png" density="mdpi" />
+              <icon src="res/icon/android/hdpi.png" density="hdpi" />
+              <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
+     </platform>
+    
     <platform name="ios">
         <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
@@ -97,5 +101,9 @@
     </platform>
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <!--access uri="*" subdomains="true" /-->
-    <access origin="*" subdomains="true"/>
+    <access origin="https://mandrillapp.com" />
+    <access origin="https://*.parsecdn.com" />
+    <access origin="https://*.parse.com" />
+    <access origin="http://*.parsetfss.com" />
+    <allow-navigation href="http://www.millenniumgd.net" />
 </widget>
