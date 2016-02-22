@@ -26,23 +26,12 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="10" />
     <preference name="android-installLocation" value="auto" />
+    <preference name="SplashScreen" value="none" />
     <preference name="splashScreenDelay" value="10000" />
     <preference name="DisallowOverscroll" value="true" />
-    <!--<gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="org.apache.cordova.camera" />
-    <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.console" />
-    <gap:plugin name="org.apache.cordova.contacts" />-->
     <gap:plugin name="org.apache.cordova.device" />
-    <!--gap:plugin name="org.apache.cordova.device-motion" /-->
     <gap:plugin name="org.apache.cordova.device-orientation" />
     <plugin name="org.apache.cordova.whitelist.WhitelistPlugin" />
-    <!--<gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.file" />
-    <gap:plugin name="org.apache.cordova.file-transfer" />
-    <gap:plugin name="org.apache.cordova.geolocation" />
-    <gap:plugin name="org.apache.cordova.globalization" />-->
-    <!--gap:plugin name="org.apache.cordova.inappbrowser" /-->
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <!--gap:plugin name="org.apache.cordova.network-information" /-->
@@ -78,13 +67,12 @@
               <icon src="res/icon/ios/icon-50.png" width="50" height="50" />
               <icon src="res/icon/ios/icon-50@2x.png" width="100" height="100" />
      </platform>
-     <platform name="android">
-              <preference name="SplashScreen" value="none" />
+    <platform name="android">
               <icon src="res/icon/android/ldpi.png" density="ldpi" />
               <icon src="res/icon/android/mdpi.png" density="mdpi" />
               <icon src="res/icon/android/hdpi.png" density="hdpi" />
               <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
-     </platform>
+    </platform>
     
     <platform name="ios">
         <!-- images are determined by width and height. The following are supported -->
@@ -105,5 +93,10 @@
     <access origin="https://*.parsecdn.com" />
     <access origin="https://*.parse.com" />
     <access origin="http://*.parsetfss.com" />
+    <access origin="tel:*" launch-external="yes"/>
+    <access origin="geo:*" launch-external="yes"/>
+    <access origin="mailto:*" launch-external="yes"/>
+    <access origin="sms:*" launch-external="yes"/>
+    <access origin="market:*" launch-external="yes"/>
     <allow-navigation href="http://www.millenniumgd.net" />
 </widget>

@@ -149,7 +149,7 @@ var popsupAd = {
                 var theUrl = result.get("linkedUrl");
                 popsup.open('<div class="adcontainer"><img class="ad" src="' 
                            + result.get("adFile").url() 
-                           + '" /><div class="invisiblelink" onclick="window.open(\'' 
+                           + '" width=' + adcontainerwidth + ' height=' + adcontainerheight + ' /><div class="invisiblelink" onclick="window.open(\'' 
                            + theUrl 
                            + '\',\'_blank\',\'location=yes\',\'closebuttoncaption=Return\');"</div>', 'html');
                 window.localStorage['lastShown'] = new Date().toDateString();
@@ -397,7 +397,7 @@ function generateCampaignPage(i, j, k, l) {
                     else {
                         dynamichtml += ''
                         +               '<video width="280" poster="images/events/thumbs_video_placeholder.jpg" controls>'
-                        +                   '<source src="video/placeholder.mp4" type="video/mp4">';
+                        +                   '<source src="video/in_production.mp4" type="video/mp4">';
                     }
                     dynamichtml +=          'Your browser does not support the video tag.'
                     +                   '</video>'
@@ -585,3 +585,4 @@ function calculateCost( each_cost ) {
         $('#calcTotal').val( theDollars );
     }
 }
+

@@ -142,12 +142,10 @@ p {
 
 #navcenter_wrapper {
     position: absolute;
-    bottom: 1em;
 }
 
 #navleft_wrapper, #navright_wrapper {
     position: absolute;
-    bottom: 1.35em;
     font-weight: 400;
 }
 
@@ -360,7 +358,7 @@ p {
 
 #navcenter_title h2 {
     font-size: 1.5em;
-    line-height: 22pt;
+    line-height: 44pt;
 }
 
 #instructions {
@@ -796,4 +794,6 @@ div.popsup {
 
 .millenniumtest{padding: 10;}
 
-
+.fa-2x {
+    line-height: 44pt;
+}

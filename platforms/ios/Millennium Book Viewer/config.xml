@@ -77,8 +77,9 @@
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="false" />
     <preference name="disable-cursor" value="false" />
-    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-minSdkVersion" value="10" />
     <preference name="android-installLocation" value="auto" />
+    <preference name="SplashScreen" value="none" />
     <preference name="splashScreenDelay" value="10000" />
     <preference name="DisallowOverscroll" value="true" />
     <gap:plugin name="org.apache.cordova.device" />
@@ -87,11 +88,15 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="com.jaeger.html5video" version="1.2.1" />
     <icon src="icon.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
-    <gap:splash gap:platform="blackberry" src="res/screen/blackberry/screen-225.png" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
-    <access origin="*" subdomains="true" />
+    <access origin="https://mandrillapp.com" />
+    <access origin="https://*.parsecdn.com" />
+    <access origin="https://*.parse.com" />
+    <access origin="http://*.parsetfss.com" />
+    <access launch-external="yes" origin="tel:*" />
+    <access launch-external="yes" origin="geo:*" />
+    <access launch-external="yes" origin="mailto:*" />
+    <access launch-external="yes" origin="sms:*" />
+    <access launch-external="yes" origin="market:*" />
+    <allow-navigation href="http://www.millenniumgd.net" />
 </widget>
