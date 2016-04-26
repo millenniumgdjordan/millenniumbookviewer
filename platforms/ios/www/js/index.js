@@ -515,11 +515,15 @@ $( document ).on("pageshow", "#login", function() {
 });
 
 $(document).on('pagecontainershow', function(e, ui) {
+    console.log('pagecontainershowinit');
     var pageId = $('body').pagecontainer('getActivePage').prop('id');
+    console.log(pageId);
     scaleVideoContainer();
+    console.log('just scaled VideoContainer');
     initBannerVideoSize('.video-container .poster img');
     initBannerVideoSize('.video-container .filter');
     initBannerVideoSize('.video-container video');
+    console.log('inited video container elements');
 
     $(window).on('resize', function() {
         setTimeout( function() {
