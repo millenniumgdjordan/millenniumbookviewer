@@ -144,7 +144,7 @@ var popsupAd = {
         };
         var popsup = new $.Popsup(adOptions);
         var groupid = "#" + groupname;
-        getAdInfo().done(
+        getAdInfo(groupname).done(
             function(result) {
                 var theUrl = result.get("linkedUrl");
                 popsup.open('<div class="adcontainer"><img class="ad" src="' 
@@ -163,11 +163,11 @@ var popsupAd = {
 };
 
 
-function getAdInfo () {
+function getAdInfo (groupname) {
     var D = $.Deferred();
     var pulledAd = Parse.Object.extend("PopupAd");
     var query = new Parse.Query(pulledAd);
-    query.equalTo("belongsTo", "all");
+    query.equalTo("belongsTo", groupname);
     query.find({
         success: function(results) {
             var rand = results[Math.floor(Math.random() * results.length)];

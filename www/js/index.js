@@ -144,7 +144,7 @@ var popsupAd = {
         };
         var popsup = new $.Popsup(adOptions);
         var groupid = "#" + groupname;
-        getAdInfo().done(
+        getAdInfo(groupname).done(
             function(result) {
                 var theUrl = result.get("linkedUrl");
                 popsup.open('<div class="adcontainer"><img class="ad" src="' 
@@ -163,11 +163,11 @@ var popsupAd = {
 };
 
 
-function getAdInfo () {
+function getAdInfo (groupname) {
     var D = $.Deferred();
     var pulledAd = Parse.Object.extend("PopupAd");
     var query = new Parse.Query(pulledAd);
-    query.equalTo("belongsTo", "all");
+    query.equalTo("buyingGroups", groupname);
     query.find({
         success: function(results) {
             var rand = results[Math.floor(Math.random() * results.length)];
@@ -270,7 +270,7 @@ function generateGroupPage(groupname) {
             $( ":mobile-pagecontainer" ).pagecontainer( "change", groupnameid, { transition: "flip" } );
             //push popup
             if (!popsupAd.hasShown()) {//if the popup ad has not shown today, show it
-                setTimeout(function() {popsupAd.show(groupnameid);},1000);
+                setTimeout(function() {popsupAd.show(groupname);},1000);
             }
         }
     });
