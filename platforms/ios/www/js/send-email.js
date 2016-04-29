@@ -11,8 +11,8 @@ var m = new mandrill.Mandrill('JU-57-H2ZOybh2O8UXG4iw');
 function buildParams (firstname, lastname, verifyemail, buyinggroup) {
     params = {
         "message": {
-            "from_email":"jordan@millenniumgd.com",
-            "to":[{"email":"jordan@millenniumgd.com"}],
+            "from_email":"webhosting@millenniumgd.com",
+            "to":[{"email":"webhosting@millenniumgd.com"}],
             "subject": "New Signup Request",
             "html": "<p>You Have a new signup request. The Details are as follows: </p><br /><ul><li>Name: " + firstname + " " + lastname +".</li><li>Email Address: " + signupemail + ".</li><li>Buying Group: "+ buyinggroup + ".</li></ul><p>Please respond to the request within one business day!</p>"
         }
